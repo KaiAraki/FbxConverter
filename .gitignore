@@ -1,0 +1,15 @@
+.vs/
+Debug/
+ipch/
+Release/
+*.iobj
+*.ipdb
+*.pdb
+*.sdf
+*.sln
+*.suo
+*.VC.db
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.ilk
