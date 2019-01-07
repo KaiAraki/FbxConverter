@@ -16,7 +16,7 @@
 using UnityEngine;
 using System.Collections;
 
-namespace UnityChan
+namespace CameraController
 {
 	enum MouseButtonDown
 	{
