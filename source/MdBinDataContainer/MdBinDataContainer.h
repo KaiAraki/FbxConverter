@@ -647,7 +647,7 @@ public:
 	// 変数
 	//====================
 	private:
-		std::vector<Vector3> vertex_array_;		//!< 頂点配列
+		std::vector<Vector3> position_array_;	//!< 座標配列
 		std::vector<Vector3> normal_array_;		//!< 法線配列
 		std::vector<UVSet> uv_set_array_;		//!< UVセット配列
 		std::vector<int> index_array_;			//!< インデックス配列
@@ -667,20 +667,28 @@ public:
 		int getVertexArraySize();
 
 		//----------------------------------------
-		//! @brief 頂点配列サイズ設定関数
+		//! @brief 座標配列サイズ取得関数
+		//! @details
+		//! @param void なし 
+		//! @retval int サイズ
+		//----------------------------------------
+		int getPositionArraySize();
+
+		//----------------------------------------
+		//! @brief 座標配列サイズ設定関数
 		//! @details
 		//! @param value サイズ 
 		//! @retval void なし
 		//----------------------------------------
-		void setVertexArraySize(int value);
+		void setPositionArraySize(int value);
 
 		//----------------------------------------
-		//! @brief 頂点取得関数
+		//! @brief 座標取得関数
 		//! @details
 		//! @param index インデックス
 		//! @retval Vector3* 頂点
 		//----------------------------------------
-		Vector3* getpVertex(int index);
+		Vector3* getpPosition(int index);
 
 		//----------------------------------------
 		//! @brief 法線配列サイズ取得関数

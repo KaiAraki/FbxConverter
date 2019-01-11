@@ -263,21 +263,28 @@ MdBinDataContainer::Material::Texture* MdBinDataContainer::Mesh::UVSet::getpText
 
 int MdBinDataContainer::Mesh::getVertexArraySize()
 {
-	return vertex_array_.size();
+	return position_array_.size();
 }
 
 
 
-void MdBinDataContainer::Mesh::setVertexArraySize(int value)
+int MdBinDataContainer::Mesh::getPositionArraySize()
 {
-	vertex_array_.resize(value);
+	return position_array_.size();
 }
 
 
 
-MdBinDataContainer::Vector3* MdBinDataContainer::Mesh::getpVertex(int index)
+void MdBinDataContainer::Mesh::setPositionArraySize(int value)
 {
-	return &vertex_array_[index];
+	position_array_.resize(value);
+}
+
+
+
+MdBinDataContainer::Vector3* MdBinDataContainer::Mesh::getpPosition(int index)
+{
+	return &position_array_[index];
 }
 
 
