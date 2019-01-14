@@ -211,18 +211,18 @@ void FbxConverter::ExtractMaterialData()
 	for (int i = 0; i < material_num; i++)
 	{
 		// マテリアル取得
-		//FbxSurfaceMaterial* material = scene_->GetMaterial(i);
+		FbxSurfaceMaterial* material = scene_->GetMaterial(i);
 	
 		// 各種マテリアル情報抽出
-		//ExtractMaterialName(i, material);
-		//ExtractAmbientData(i, material);
-		//ExtractDiffuseData(i, material);
-		//ExtractEmissiveData(i, material);
-		//ExtractBumpData(i, material);
-		//ExtractTransparentData(i, material);
-		//ExtractSpecularData(i, material);
-		//ExtractPowerData(i, material);
-		//ExtractReflectionData(i, material);
+		ExtractMaterialName(i, material);
+		ExtractAmbientData(i, material);
+		ExtractDiffuseData(i, material);
+		ExtractEmissiveData(i, material);
+		ExtractBumpData(i, material);
+		ExtractTransparentData(i, material);
+		ExtractSpecularData(i, material);
+		ExtractPowerData(i, material);
+		ExtractReflectionData(i, material);
 	}
 }
 
@@ -243,14 +243,14 @@ void FbxConverter::ExtractMeshData()
 		// 各種メッシュ情報抽出
 		ExtractIndexData(i, mesh);
 		ExtractVertexData(i, mesh);
-		//ExtractNormalData(i, mesh);
-		//ExtractUVSetData(i, mesh);
-		//
-		//// マテリアルデータとの関連付け
-		//AssociateWithMaterialData(i, mesh);
-		//
-		//// UVセットデータとテクスチャの関連付け
-		//AssociatingUVSetDataAndTexture(i);
+		ExtractNormalData(i, mesh);
+		ExtractUVSetData(i, mesh);
+		
+		// マテリアルデータとの関連付け
+		AssociateWithMaterialData(i, mesh);
+		
+		// UVセットデータとテクスチャの関連付け
+		AssociatingUVSetDataAndTexture(i);
 	}
 }
 
@@ -649,10 +649,7 @@ bool FbxConverter::ExportOfMdBinFile(std::string* file_path)
 		if (temp == "n") return true;
 	}
 	MdBinDataContainer::ExportData(&md_bin_data_container_, export_file_path);
-	//ExportTextData(&export_txt_data_file_path);
-
-	MdBinDataContainer test;
-	MdBinDataContainer::InportData(&test, export_file_path);
+	ExportTextData(&export_txt_data_file_path);
 
 	std::cout << "\n下記のファイルを出力しました。" << std::endl;
 	std::cout << "『" << export_file_path << "』" << std::endl;

@@ -24,7 +24,7 @@ bool MdBinDataContainer::InportData(MdBinDataContainer* md_bin_data_container,
 									std::string file_path)
 {
 	// ファイルオープン
-	std::ifstream ifstream(file_path);
+	std::ifstream ifstream(file_path, std::ios::binary);
 	if (!ifstream) return false;
 	boost::archive::binary_iarchive iarchive(ifstream);
 
@@ -42,7 +42,7 @@ bool MdBinDataContainer::ExportData(MdBinDataContainer* md_bin_data_container,
 									std::string file_path)
 {
 	// ファイルオープン
-	std::ofstream ofstream(file_path);
+	std::ofstream ofstream(file_path, std::ios::binary);
 	boost::archive::binary_oarchive oarchive(ofstream);
 
 	// 書き込み

@@ -27,10 +27,6 @@ int main(void)
 	// ƒƒ‚ƒŠƒŠ[ƒNŒŸo
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF | _CRTDBG_CHECK_ALWAYS_DF);
 
-	//MdBinDataContainer test;
-	//std::string test_st = "MdBin/mdbin_l/unitychan_tex/unitychan_tex.mdbin_l";
-	//MdBinDataContainer::InportData(&test, test_st);
-
 	// ‰Šú‰»
 	FbxConverter fbx_converter;
 	if (!fbx_converter.Init())
