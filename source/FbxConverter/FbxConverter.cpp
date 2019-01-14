@@ -211,18 +211,18 @@ void FbxConverter::ExtractMaterialData()
 	for (int i = 0; i < material_num; i++)
 	{
 		// マテリアル取得
-		FbxSurfaceMaterial* material = scene_->GetMaterial(i);
+		//FbxSurfaceMaterial* material = scene_->GetMaterial(i);
 	
 		// 各種マテリアル情報抽出
-		ExtractMaterialName(i, material);
-		ExtractAmbientData(i, material);
-		ExtractDiffuseData(i, material);
-		ExtractEmissiveData(i, material);
-		ExtractBumpData(i, material);
-		ExtractTransparentData(i, material);
-		ExtractSpecularData(i, material);
-		ExtractPowerData(i, material);
-		ExtractReflectionData(i, material);
+		//ExtractMaterialName(i, material);
+		//ExtractAmbientData(i, material);
+		//ExtractDiffuseData(i, material);
+		//ExtractEmissiveData(i, material);
+		//ExtractBumpData(i, material);
+		//ExtractTransparentData(i, material);
+		//ExtractSpecularData(i, material);
+		//ExtractPowerData(i, material);
+		//ExtractReflectionData(i, material);
 	}
 }
 
@@ -243,14 +243,14 @@ void FbxConverter::ExtractMeshData()
 		// 各種メッシュ情報抽出
 		ExtractIndexData(i, mesh);
 		ExtractVertexData(i, mesh);
-		ExtractNormalData(i, mesh);
-		ExtractUVSetData(i, mesh);
-
-		// マテリアルデータとの関連付け
-		AssociateWithMaterialData(i, mesh);
-
-		// UVセットデータとテクスチャの関連付け
-		AssociatingUVSetDataAndTexture(i);
+		//ExtractNormalData(i, mesh);
+		//ExtractUVSetData(i, mesh);
+		//
+		//// マテリアルデータとの関連付け
+		//AssociateWithMaterialData(i, mesh);
+		//
+		//// UVセットデータとテクスチャの関連付け
+		//AssociatingUVSetDataAndTexture(i);
 	}
 }
 
@@ -471,16 +471,16 @@ void FbxConverter::ExtractIndexData(int mesh_index, FbxMesh* mesh)
 void FbxConverter::ExtractVertexData(int mesh_index, FbxMesh* mesh)
 {
 	// 頂点数をインデックス数分確保
-	md_bin_data_container_.getpMesh(mesh_index)->setVertexArraySize((md_bin_data_container_.getpMesh(mesh_index)->getIndexArraySize()));
+	md_bin_data_container_.getpMesh(mesh_index)->setPositionArraySize((md_bin_data_container_.getpMesh(mesh_index)->getIndexArraySize()));
 
 	// 頂点取得
 	FbxVector4* vertex_array = mesh->GetControlPoints();	// 頂点配列
-	for (int i = 0; i < md_bin_data_container_.getpMesh(mesh_index)->getVertexArraySize(); i++)
+	for (int i = 0; i < md_bin_data_container_.getpMesh(mesh_index)->getPositionArraySize(); i++)
 	{
 		FbxVector4 vertex = vertex_array[*md_bin_data_container_.getpMesh(mesh_index)->getpIndex(i)];
-		*md_bin_data_container_.getpMesh(mesh_index)->getpVertex(i)->getpX() = (float)vertex[0];
-		*md_bin_data_container_.getpMesh(mesh_index)->getpVertex(i)->getpY() = (float)vertex[1];
-		*md_bin_data_container_.getpMesh(mesh_index)->getpVertex(i)->getpZ() = (float)vertex[2];
+		*md_bin_data_container_.getpMesh(mesh_index)->getpPosition(i)->getpX() = (float)vertex[0];
+		*md_bin_data_container_.getpMesh(mesh_index)->getpPosition(i)->getpY() = (float)vertex[1];
+		*md_bin_data_container_.getpMesh(mesh_index)->getpPosition(i)->getpZ() = (float)vertex[2];
 	}
 }
 
@@ -649,7 +649,10 @@ bool FbxConverter::ExportOfMdBinFile(std::string* file_path)
 		if (temp == "n") return true;
 	}
 	MdBinDataContainer::ExportData(&md_bin_data_container_, export_file_path);
-	ExportTextData(&export_txt_data_file_path);
+	//ExportTextData(&export_txt_data_file_path);
+
+	MdBinDataContainer test;
+	MdBinDataContainer::InportData(&test, export_file_path);
 
 	std::cout << "\n下記のファイルを出力しました。" << std::endl;
 	std::cout << "『" << export_file_path << "』" << std::endl;
@@ -721,7 +724,7 @@ void FbxConverter::CreateExportDirectoryPath(std::string* directory_path,
 											 std::string* file_name)
 {
 	*directory_path = (axis_system_ == FbxAxisSystem::DirectX ?
-					   "mdbin\\mdbin_l\\" : "mdbin\\mdbin_r\\");
+					   "MdBin\\mdbin_l\\" : "MdBin\\mdbin_r\\");
 	*directory_path += *file_name + "\\";
 }
 
@@ -798,9 +801,10 @@ void FbxConverter::ExportTextData(std::string* export_txt_data_file_path)
 		ofstream << "Reflection  : "
 			<< *md_bin_data_container_.getpMaterial(i)->getpReflection()
 			<< "\n" << std::endl;
+
 		for (int j = 0; j < md_bin_data_container_.getpMaterial(i)->getTextureArraySize(); j++)
 		{
-			ofstream << "TextureName : " << *md_bin_data_container_.getpMaterial(j)->getpTexture(j)->getpFilePath() << std::endl;
+			ofstream << "TextureName : " << *md_bin_data_container_.getpMaterial(i)->getpTexture(j)->getpFilePath() << std::endl;
 		}
 
 		ofstream << "==============================\n" << std::endl;
@@ -834,9 +838,9 @@ void FbxConverter::ExportTextData(std::string* export_txt_data_file_path)
 		for (int j = 0; j < vertex_num; j++)
 		{
 			ofstream << "頂点番号" << j << " : "
-				<< "{ " << *md_bin_data_container_.getpMesh(i)->getpVertex(j)->getpX()
-				<< ", " << *md_bin_data_container_.getpMesh(i)->getpVertex(j)->getpY()
-				<< ", " << *md_bin_data_container_.getpMesh(i)->getpVertex(j)->getpZ()
+				<< "{ " << *md_bin_data_container_.getpMesh(i)->getpPosition(j)->getpX()
+				<< ", " << *md_bin_data_container_.getpMesh(i)->getpPosition(j)->getpY()
+				<< ", " << *md_bin_data_container_.getpMesh(i)->getpPosition(j)->getpZ()
 				<< " }" << std::endl;
 		}
 		ofstream << std::endl;

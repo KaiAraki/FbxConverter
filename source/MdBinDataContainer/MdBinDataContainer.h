@@ -788,7 +788,7 @@ public:
 		{
 			if (version) {}
 
-			archive & vertex_array_;
+			archive & position_array_;
 			archive & normal_array_;
 			archive & uv_set_array_;
 			archive & index_array_;
@@ -845,7 +845,7 @@ public:
 	//! @param file_path              ファイルパス
 	//! @retval bool 読み込み成功の有無
 	//----------------------------------------
-	static bool InportData(MdBinDataContainer* md_bin_data_container, 
+	static bool InportData(MdBinDataContainer* md_bin_data_container,
 						   std::string file_path);
 
 	//----------------------------------------
