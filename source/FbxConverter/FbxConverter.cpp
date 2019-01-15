@@ -120,13 +120,19 @@ bool FbxConverter::Load(std::string* file_path)
 		return false;
 	}
 
-	// シーンの流し込みとインポーターの解放
+	// シーンの流し込み
 	importer->Import(scene_);
+	std::cout << "★シーンを作成" << std::endl;
+
+	// フレーム情報抽出
+	ExtractFrameData(importer);
+
+	// インポーター解放
 	importer->Destroy();
 
 	// 座標系の変換
 	std::string temp;
-	std::cout << "★どちらの座標系にしますか？ DirectX[y], OpenGL[n]" << std::endl;
+	std::cout << "\n★どちらの座標系にしますか？ DirectX[y], OpenGL[n]" << std::endl;
 	do
 	{
 		std::cout << "⇒";
@@ -137,47 +143,57 @@ bool FbxConverter::Load(std::string* file_path)
 
 	if (scene_->GetGlobalSettings().GetAxisSystem() != axis_system_)
 	{
-		std::cout << "★指定座標系と異なる為変換 ⇒ ";
+		std::cout << "※元データが指定座標系と異なる為変換\n⇒";
 
 		if (axis_system_ == FbxAxisSystem::DirectX)
 		{
 			FbxAxisSystem::DirectX.ConvertScene(scene_);
-			std::cout << "左手系座標へ変換" << std::endl;
+			std::cout << "左手系座標へ変換完了" << std::endl;
 		}
 		else
 		{
 			FbxAxisSystem::OpenGL.ConvertScene(scene_);
-			std::cout << "右手系座標へ変換" << std::endl;
+			std::cout << "右手系座標へ変換完了" << std::endl;
 		}
 	}
+
+	// α値反転の確認
+	std::cout << "\n★α値を反転しますか？ Yes[y], No[n]" << std::endl;
+	do
+	{
+		std::cout << "⇒";
+		std::cin >> temp;
+	} while (temp != "y" && temp != "n");
+
+	is_reverse_alpha_ = temp == "y";
 
 	// スケールを㎝単位へ変換
 	FbxSystemUnit system_unit = scene_->GetGlobalSettings().GetSystemUnit();
 	if (system_unit.GetScaleFactor() != 1.0f)
 	{
 		FbxSystemUnit::cm.ConvertScene(scene_);
-		std::cout << "★スケールを㎝単位へ変換" << std::endl;
+		std::cout << "\n★スケールを㎝単位へ変換" << std::endl;
 	}
 
 	// 全ポリゴンを三角形ポリゴンへ変換
 	FbxGeometryConverter geometry_converter(manager_);
 	if (geometry_converter.Triangulate(scene_, true))
 	{
-		std::cout << "★全ポリゴンを三角形ポリゴンへ変換" << std::endl;
+		std::cout << "\n★全ポリゴンを三角形ポリゴンへ変換" << std::endl;
 		geometry_converter.RemoveBadPolygonsFromMeshes(scene_);
 	}
 
 	// マテリアルごとにメッシュを分割
 	if (geometry_converter.SplitMeshesPerMaterial(scene_, true))
 	{
-		std::cout << "★マテリアルごとにメッシュを分割" << std::endl;
+		std::cout << "\n★マテリアルごとにメッシュを分割" << std::endl;
 	}
 
 	// ルートノードの取得
 	root_node_ = scene_->GetRootNode();
 	if (!root_node_)
 	{
-		std::cout << "※ルートノードの取得に失敗" << std::endl;
+		std::cout << "\n※ルートノードの取得に失敗" << std::endl;
 		return false;
 	}
 
@@ -245,6 +261,7 @@ void FbxConverter::ExtractMeshData()
 		ExtractVertexData(i, mesh);
 		ExtractNormalData(i, mesh);
 		ExtractUVSetData(i, mesh);
+		ExtractAnimationData(i, mesh);
 		
 		// マテリアルデータとの関連付け
 		AssociateWithMaterialData(i, mesh);
@@ -360,9 +377,16 @@ void FbxConverter::ExtractTransparentData(int material_index, FbxSurfaceMaterial
 	FbxProperty property = material->FindProperty(FbxSurfaceMaterial::sTransparencyFactor);
 	if (property.IsValid())
 	{
-		// Blenderで確認すると何故か透明値が逆になる為
 		FbxDouble transparent = property.Get<FbxDouble>();
-		*md_bin_data_container_.getpMaterial(material_index)->getpTransparent() = 1.0f - (float)transparent;
+		if (is_reverse_alpha_)
+		{
+			// Blenderで確認すると何故か透明値が逆になる為
+			*md_bin_data_container_.getpMaterial(material_index)->getpTransparent() = 1.0f - (float)transparent;
+		}
+		else
+		{
+			*md_bin_data_container_.getpMaterial(material_index)->getpTransparent() = (float)transparent;
+		}
 	}
 	else
 	{
@@ -444,6 +468,44 @@ void FbxConverter::ExtractTextureData(int material_index, FbxProperty property,
 		// テクスチャを追加
 		material_index = material_index;
 		md_bin_data_container_.getpMaterial(material_index)->AddTextureArray(texture);
+	}
+}
+
+
+
+void FbxConverter::ExtractFrameData(FbxImporter* importer)
+{
+	// 1フレームの時間を取得
+	FbxTime::EMode time_mode = scene_->GetGlobalSettings().GetTimeMode();
+	period_.SetTime(0, 0, 0, 1, 0, time_mode);
+
+	int animation_stack_count = importer->GetAnimStackCount();
+	std::cout << "\n★アニメーション数：" << animation_stack_count << std::endl;
+
+	bool is_animation = false;
+	for (int i = 0; i < animation_stack_count; i++)
+	{
+		FbxTakeInfo* take_info = importer->GetTakeInfo(i);
+		if (!take_info) continue;	// デフォルトテイクなら無視
+
+		// アニメーションフレーム数を取得
+		FbxTime animation_start_time = take_info->mLocalTimeSpan.GetStart();
+		FbxTime animation_stop_time = take_info->mLocalTimeSpan.GetStop();
+		animation_start_frame_ = (int)(animation_start_time.Get() / period_.Get());
+		animation_stop_frame_ = (int)(animation_stop_time.Get() / period_.Get());
+		std::cout << "⇒START_FRAME：" << animation_start_frame_ << std::endl;
+		std::cout << "⇒STOP_FRAME：" << animation_stop_frame_ << std::endl;
+
+		is_animation = true;
+		break;
+	}
+	if (is_animation)
+	{
+		std::cout << "⇒アニメーション情報：有" << std::endl;
+	}
+	else
+	{
+		std::cout << "⇒アニメーション情報：無" << std::endl;
 	}
 }
 
@@ -536,6 +598,14 @@ void FbxConverter::ExtractUVSetData(int mesh_index, FbxMesh* mesh)
 			}
 		}
 	}
+}
+
+
+
+void FbxConverter::ExtractAnimationData(int mesh_index, FbxMesh* mesh)
+{
+	mesh_index = mesh_index;
+	mesh = mesh;
 }
 
 
@@ -651,7 +721,7 @@ bool FbxConverter::ExportOfMdBinFile(std::string* file_path)
 	MdBinDataContainer::ExportData(&md_bin_data_container_, export_file_path);
 	ExportTextData(&export_txt_data_file_path);
 
-	std::cout << "\n下記のファイルを出力しました。" << std::endl;
+	std::cout << "\n下記のファイルを出力しました。\n" << std::endl;
 	std::cout << "『" << export_file_path << "』" << std::endl;
 	std::cout << "『" << export_txt_data_file_path << "』" << std::endl;
 	
@@ -881,9 +951,12 @@ void FbxConverter::ExportTextData(std::string* export_txt_data_file_path)
 		ofstream << "関連付けたマテリアル番号 : " << material_index_num << std::endl;
 		ofstream << std::endl;
 
-		for (int j = 0; j < md_bin_data_container_.getpMesh(i)->getpUVSet(0)->getTextureArraySize(); j++)
+		if (md_bin_data_container_.getpMesh(i)->getUVSetArraySize() > 0)
 		{
-			ofstream << "UVSetと関連付けたTexture名 : " << *md_bin_data_container_.getpMesh(i)->getpUVSet(0)->getpTexture(j)->getpFilePath() << std::endl;
+			for (int j = 0; j < md_bin_data_container_.getpMesh(i)->getpUVSet(0)->getTextureArraySize(); j++)
+			{
+				ofstream << "UVSetと関連付けたTexture名 : " << *md_bin_data_container_.getpMesh(i)->getpUVSet(0)->getpTexture(j)->getpFilePath() << std::endl;
+			}
 		}
 		ofstream << "==============================\n" << std::endl;
 	}

@@ -35,8 +35,12 @@ private:
 	FbxScene* scene_ = nullptr;					//!< シーン
 	FbxNode* root_node_ = nullptr;				//!< ルートノード
 	FbxAxisSystem axis_system_;					//!< 座標系の種類
+	bool is_reverse_alpha_ = false;				//!< α値の反転フラグ
 	std::string directory_path_;				//!< ディレクトリパス
 	MdBinDataContainer md_bin_data_container_;	//!< MdBinデータの入れ物
+	FbxTime period_;							//!< 1フレームの時間
+	int animation_start_frame_;					//!< アニメーション開始フレーム数
+	int animation_stop_frame_;					//!< アニメーション停止フレーム数
 
 
 //====================
@@ -77,7 +81,15 @@ private:
 	bool Load(std::string* file_path);
 
 	//----------------------------------------
-	//! @brief データの抽出関数
+	//! @brief フレーム情報抽出関数
+	//! @details
+	//! @param *importer インポーター
+	//! @retval void なし
+	//----------------------------------------
+	void ExtractFrameData(FbxImporter* importer);
+
+	//----------------------------------------
+	//! @brief データ抽出関数
 	//! @details
 	//! @param void なし
 	//! @retval bool データの抽出成功の有無
@@ -227,6 +239,15 @@ private:
 	//! @retval void なし
 	//----------------------------------------
 	void ExtractUVSetData(int mesh_index, FbxMesh* mesh);
+
+	//----------------------------------------
+	//! @brief アニメーションデータの抽出関数
+	//! @details
+	//! @param *mesh_index メッシュのインデックス
+	//! @param *mesh       メッシュ
+	//! @retval void なし
+	//----------------------------------------
+	void ExtractAnimationData(int mesh_index, FbxMesh* mesh);
 
 	//----------------------------------------
 	//! @brief マテリアルデータとの関連付け関数

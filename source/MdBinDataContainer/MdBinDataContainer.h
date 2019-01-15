@@ -808,9 +808,10 @@ public:
 	// 変数
 	//====================
 	private:
-		Matrix offset_matrix_;								//!< オフセット行列
-		std::vector<std::vector<Matrix>> animetion_matrix_;	//!< アニメーション行列
-
+		Matrix offset_matrix_;							//!< オフセット行列(初期姿勢の逆行列)
+		std::vector<Matrix> animetion_matrix_array_;	//!< アニメーション行列
+		std::vector<int> vertex_index_array_;			//!< 影響する頂点インデックス配列
+		std::vector<float> vertex_weight_array_;		//!< 頂点への重み配列
 
 	//====================
 	// プロパティ
