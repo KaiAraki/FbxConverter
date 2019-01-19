@@ -39,8 +39,9 @@ private:
 	std::string directory_path_;				//!< ディレクトリパス
 	MdBinDataContainer md_bin_data_container_;	//!< MdBinデータの入れ物
 	FbxTime period_;							//!< 1フレームの時間
-	int animation_start_frame_;					//!< アニメーション開始フレーム数
-	int animation_stop_frame_;					//!< アニメーション停止フレーム数
+	int animation_start_frame_num_ = 0;			//!< アニメーション開始フレーム数
+	int animation_stop_frame_num_ = 0;			//!< アニメーション停止フレーム数
+	int all_animation_frame_num_ = -1;			//!< アニメーションフレーム数
 
 
 //====================
@@ -248,6 +249,37 @@ private:
 	//! @retval void なし
 	//----------------------------------------
 	void ExtractAnimationData(int mesh_index, FbxMesh* mesh);
+
+	//----------------------------------------
+	//! @brief ボーンデータの抽出関数
+	//! @details
+	//! @param *mesh_index メッシュのインデックス
+	//! @param *cluster    クラスタ
+	//! @retval void なし
+	//----------------------------------------
+	void ExtractBoneData(int mesh_index, FbxCluster* cluster);
+
+	//----------------------------------------
+	//! @brief ボーンの重みデータの抽出関数
+	//! @details
+	//! @param *mesh_index             メッシュのインデックス
+	//! @param *save_bone_weight_array ボーンの重み保存用配列
+	//! @param *cluster                クラスタ
+	//! @retval void なし
+	//----------------------------------------
+	void ExtractBoneWeightData(int mesh_index,
+							   std::vector<MdBinDataContainer::Mesh::BoneWeight>* save_bone_weight_array,
+							   FbxCluster* cluster);
+
+	//----------------------------------------
+	//! @brief 行列変換関数
+	//! @details
+	//! @param *bone_matrix ボーン行列
+	//! @param *fbx_matrix  FBX行列
+	//! @retval void なし
+	//----------------------------------------
+	void ChangeMatrix(MdBinDataContainer::Matrix* bone_matrix,
+					  FbxAMatrix* fbx_matrix);
 
 	//----------------------------------------
 	//! @brief マテリアルデータとの関連付け関数

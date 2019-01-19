@@ -231,10 +231,17 @@ public:
 	class Matrix
 	{
 	//====================
+	// 定数
+	//====================
+	public:
+		static const unsigned ARRAY_WIDTH = 4;
+		static const unsigned ARRAY_HEIGHT = 4;
+
+	//====================
 	// 変数
 	//====================
 	private:
-		float array_[4][4];		//!< 4x4行列
+		float array_[ARRAY_HEIGHT][ARRAY_WIDTH];	//!< 4x4行列
 
 
 	//====================
@@ -305,7 +312,7 @@ public:
 		// 列挙型定義
 		//====================
 		public:
-			enum Type
+			enum class Type
 			{
 				NONE,
 				AMBIENT,
@@ -482,7 +489,7 @@ public:
 	//====================
 	public:
 		//----------------------------------------
-		//! @brief テクスチャ配列追加取得関数
+		//! @brief テクスチャ配列追加関数
 		//! @details
 		//! @param *texture テクスチャ
 		//! @retval void なし
@@ -612,7 +619,7 @@ public:
 		//====================
 		public:
 			//----------------------------------------
-			//! @brief テクスチャ配列追加取得関数
+			//! @brief テクスチャ配列追加関数
 			//! @details
 			//! @param *texture テクスチャ
 			//! @retval void なし
@@ -643,16 +650,190 @@ public:
 		};
 
 
+		//****************************************											   
+		//! @brief   ボーンClass
+		//!
+		//! @details ボーンのClass
+		//****************************************
+		class Bone
+		{
+		//====================
+		// 変数
+		//====================
+		private:
+			std::string name_;								//!< ボーン名
+			Matrix offset_matrix_;							//!< オフセット行列(初期姿勢の逆行列)
+			std::vector<Matrix> animetion_matrix_array_;	//!< アニメーション行列
+
+
+		//====================
+		// プロパティ
+		//====================
+		public:
+			//----------------------------------------
+			//! @brief ボーン名取得関数
+			//! @details
+			//! @param void なし
+			//! @retval std::string* ボーン名
+			//----------------------------------------
+			std::string* getpName();
+
+			//----------------------------------------
+			//! @brief オフセット行列取得関数
+			//! @details
+			//! @param void なし
+			//! @retval float* オフセット配列
+			//----------------------------------------
+			Matrix* getpOffsetMatrix();
+
+			//----------------------------------------
+			//! @brief アニメーション行列配列サイズ取得関数
+			//! @details
+			//! @param void なし
+			//! @retval int アニメーション行列配列サイズ
+			//----------------------------------------
+			int getAnimationMatrixArraySize();
+
+			//----------------------------------------
+			//! @brief アニメーション行列配列サイズ設定関数
+			//! @details
+			//! @param value アニメーション行列配列サイズ
+			//! @retval void なし
+			//----------------------------------------
+			void setAnimationMatrixArraySize(int value);
+
+			//----------------------------------------
+			//! @brief アニメーション行列取得関数
+			//! @details
+			//! @param index インデックス
+			//! @retval Matrix* アニメーション行列
+			//----------------------------------------
+			Matrix* getpAnimationMatrixArray(int index);
+
+
+		//====================
+		// シリアライズ
+		//====================
+		private:
+			//----------------------------------------
+			//! @brief シリアライズ(I/O)関数
+			//! @details
+			//! @param archive アーカイブ用クラス
+			//! @param version バージョン
+			//! @retval void なし
+			//----------------------------------------
+			friend class boost::serialization::access;
+			template <class Archive>
+			void serialize(Archive& archive, const unsigned version)
+			{
+				if (version) {}
+
+				archive & name_;
+				archive & offset_matrix_;
+				archive & animetion_matrix_array_;
+			}
+		};
+
+
+		//****************************************											   
+		//! @brief   ボーン重みClass
+		//!
+		//! @details ボーンの重みClass
+		//****************************************
+		class BoneWeight
+		{
+		//====================
+		// 定数
+		//====================
+		public:
+			static const unsigned MAX_BONE_NUM = 4;		//!< 最大ボーン数
+
+
+		//====================
+		// 変数
+		//====================
+		private:
+			int bone_index_[MAX_BONE_NUM];		//!< ボーンインデックス
+			float bone_weight_[MAX_BONE_NUM];	//!< ボーンの重み
+
+
+		//====================
+		// プロパティ
+		//====================
+		public:
+			//----------------------------------------
+			//! @brief ボーンインデックス取得関数
+			//! @details
+			//! @param index インデックス
+			//! @retval int ボーンインデックス
+			//----------------------------------------
+			int getBoneIndex(int index);
+
+			//----------------------------------------
+			//! @brief ボーンの重み取得関数
+			//! @details
+			//! @param index インデックス
+			//! @retval float ボーンの重み
+			//----------------------------------------
+			float getBoneWeight(int index);
+
+			//----------------------------------------
+			//! @brief ボーンインデックス&重み設定関数
+			//! @details
+			//! @param bone_index ボーンインデックス
+			//! @param bone_weight ボーンの重み
+			//! @retval int* ボーンインデックス
+			//----------------------------------------
+			void setBoneIndexAndWeight(int bone_index, float bone_weight);
+
+
+		//====================
+		// 関数
+		//====================
+		public:
+			//----------------------------------------
+			//! @brief 初期化関数
+			//! @details
+			//! @param void なし
+			//! @retval void なし
+			//----------------------------------------
+			void Init();
+
+
+		//====================
+		// シリアライズ
+		//====================
+		private:
+			//----------------------------------------
+			//! @brief シリアライズ(I/O)関数
+			//! @details
+			//! @param archive アーカイブ用クラス
+			//! @param version バージョン
+			//! @retval void なし
+			//----------------------------------------
+			friend class boost::serialization::access;
+			template <class Archive>
+			void serialize(Archive& archive, const unsigned version)
+			{
+				if (version) {}
+
+				archive & bone_index_;
+				archive & bone_weight_;
+			}
+		};
+
+
 	//====================
 	// 変数
 	//====================
 	private:
-		std::vector<Vector3> position_array_;	//!< 座標配列
-		std::vector<Vector3> normal_array_;		//!< 法線配列
-		std::vector<UVSet> uv_set_array_;		//!< UVセット配列
-		std::vector<int> index_array_;			//!< インデックス配列
-		int material_index_;					//!< マテリアルインデックス
-
+		std::vector<Vector3> position_array_;		//!< 座標配列
+		std::vector<Vector3> normal_array_;			//!< 法線配列
+		std::vector<UVSet> uv_set_array_;			//!< UVセット配列
+		std::vector<int> index_array_;				//!< インデックス配列
+		std::vector<Bone> bone_array_;				//!< ボーン配列
+		std::vector<BoneWeight> bone_weight_array_;	//!< ボーンの重み配列
+		int material_index_;						//!< マテリアルインデックス
 
 	//====================
 	// プロパティ
@@ -763,12 +944,80 @@ public:
 		int* getpIndex(int index);
 
 		//----------------------------------------
+		//! @brief ボーン配列サイズ取得関数
+		//! @details
+		//! @param void なし 
+		//! @retval int サイズ
+		//----------------------------------------
+		int getBoneArraySize();
+
+		//----------------------------------------
+		//! @brief ボーン配列サイズ設定関数
+		//! @details
+		//! @param value サイズ 
+		//! @retval void なし
+		//----------------------------------------
+		void setBoneArraySize(int value);
+
+		//----------------------------------------
+		//! @brief ボーン取得関数
+		//! @details
+		//! @param index インデックス
+		//! @retval Bone* ボーン
+		//----------------------------------------
+		Bone* getpBone(int index);
+
+		//----------------------------------------
+		//! @brief ボーン配列末尾インデックス取得関数
+		//! @details
+		//! @param void なし
+		//! @retval int ボーン配列末尾インデックス
+		//----------------------------------------
+		int getBoneArrayEndIndex();
+
+		//----------------------------------------
+		//! @brief ボーンの重み配列サイズ取得関数
+		//! @details
+		//! @param void なし 
+		//! @retval int サイズ
+		//----------------------------------------
+		int getBoneWeightArraySize();
+
+		//----------------------------------------
+		//! @brief ボーンの重み配列サイズ設定関数
+		//! @details
+		//! @param value サイズ 
+		//! @retval void なし
+		//----------------------------------------
+		void setBoneWeightArraySize(int value);
+
+		//----------------------------------------
+		//! @brief ボーンの重み取得関数
+		//! @details
+		//! @param index インデックス
+		//! @retval BoneWeight* ボーンの重み
+		//----------------------------------------
+		BoneWeight* getpBoneWeight(int index);
+
+		//----------------------------------------
 		//! @brief マテリアルインデックス取得関数
 		//! @details
 		//! @param void なし
 		//! @retval int* マテリアルインデックス
 		//----------------------------------------
 		int* getpMaterialIndex();
+
+	//====================
+	// 関数
+	//====================
+	public:
+		//----------------------------------------
+		//! @brief ボーン配列追加関数
+		//! @details
+		//! @param bone ボーン
+		//! @retval void なし
+		//----------------------------------------
+		void AddBoneArray(Bone* bone);
 
 
 	//====================
@@ -792,46 +1041,9 @@ public:
 			archive & normal_array_;
 			archive & uv_set_array_;
 			archive & index_array_;
+			archive & bone_weight_array_;
 			archive & material_index_;
 		}
-	};
-
-
-	//****************************************											   
-	//! @brief   ボーンClass
-	//!
-	//! @details ボーンのClass
-	//****************************************
-	class Bone
-	{
-	//====================
-	// 変数
-	//====================
-	private:
-		Matrix offset_matrix_;							//!< オフセット行列(初期姿勢の逆行列)
-		std::vector<Matrix> animetion_matrix_array_;	//!< アニメーション行列
-		std::vector<int> vertex_index_array_;			//!< 影響する頂点インデックス配列
-		std::vector<float> vertex_weight_array_;		//!< 頂点への重み配列
-
-	//====================
-	// プロパティ
-	//====================
-	public:
-		//----------------------------------------
-		//! @brief オフセット行列取得関数
-		//! @details
-		//! @param void なし
-		//! @retval float* オフセット配列
-		//----------------------------------------
-		Matrix* getpOffsetMatrix();
-
-		//----------------------------------------
-		//! @brief アニメーション行列取得関数
-		//! @details
-		//! @param void なし
-		//! @retval std::vector<std::vector<Matrix>>* アニメーション行列
-		//----------------------------------------
-		std::vector<std::vector<Matrix>>* getpAnimationMatrix();
 	};
 
 
@@ -864,7 +1076,6 @@ public:
 //====================
 private:
 	std::vector<Mesh>     mesh_array_;		//!< メッシュ配列
-	//std::vector<Bone>     bone_array_;		//!< ボーン配列
 	std::vector<Material> material_array_;	//!< マテリアル配列
 
 
@@ -951,7 +1162,6 @@ private:
 		if (version) {}
 
 		archive & mesh_array_;
-		//archive & bone_array_;
 		archive & material_array_;
 	}
 };

@@ -228,7 +228,7 @@ void FbxConverter::ExtractMaterialData()
 	{
 		// マテリアル取得
 		FbxSurfaceMaterial* material = scene_->GetMaterial(i);
-	
+
 		// 各種マテリアル情報抽出
 		ExtractMaterialName(i, material);
 		ExtractAmbientData(i, material);
@@ -251,6 +251,7 @@ void FbxConverter::ExtractMeshData()
 	md_bin_data_container_.setMeshArraySize(mesh_num);
 
 	// インデックスの並びで各データを抽出(複数UVの関係上インデックスの最適化は行わない)
+	//for (int i = 0; i < 1; i++)
 	for (int i = 0; i < mesh_num; i++)
 	{
 		// メッシュ取得
@@ -262,10 +263,10 @@ void FbxConverter::ExtractMeshData()
 		ExtractNormalData(i, mesh);
 		ExtractUVSetData(i, mesh);
 		ExtractAnimationData(i, mesh);
-		
+
 		// マテリアルデータとの関連付け
 		AssociateWithMaterialData(i, mesh);
-		
+
 		// UVセットデータとテクスチャの関連付け
 		AssociatingUVSetDataAndTexture(i);
 	}
@@ -480,7 +481,7 @@ void FbxConverter::ExtractFrameData(FbxImporter* importer)
 	period_.SetTime(0, 0, 0, 1, 0, time_mode);
 
 	int animation_stack_count = importer->GetAnimStackCount();
-	std::cout << "\n★アニメーション数：" << animation_stack_count << std::endl;
+	std::cout << "\n★テイク数：" << animation_stack_count << std::endl;
 
 	bool is_animation = false;
 	for (int i = 0; i < animation_stack_count; i++)
@@ -491,10 +492,9 @@ void FbxConverter::ExtractFrameData(FbxImporter* importer)
 		// アニメーションフレーム数を取得
 		FbxTime animation_start_time = take_info->mLocalTimeSpan.GetStart();
 		FbxTime animation_stop_time = take_info->mLocalTimeSpan.GetStop();
-		animation_start_frame_ = (int)(animation_start_time.Get() / period_.Get());
-		animation_stop_frame_ = (int)(animation_stop_time.Get() / period_.Get());
-		std::cout << "⇒START_FRAME：" << animation_start_frame_ << std::endl;
-		std::cout << "⇒STOP_FRAME：" << animation_stop_frame_ << std::endl;
+		animation_start_frame_num_ = (int)(animation_start_time.Get() / period_.Get());
+		animation_stop_frame_num_ = (int)(animation_stop_time.Get() / period_.Get());
+		all_animation_frame_num_ = animation_stop_frame_num_ - animation_start_frame_num_ + 1;
 
 		is_animation = true;
 		break;
@@ -502,6 +502,9 @@ void FbxConverter::ExtractFrameData(FbxImporter* importer)
 	if (is_animation)
 	{
 		std::cout << "⇒アニメーション情報：有" << std::endl;
+		std::cout << "⇒START_FRAME_NUM：" << animation_start_frame_num_ << std::endl;
+		std::cout << "⇒STOP_FRAME_NUM：" << animation_stop_frame_num_ << std::endl;
+		std::cout << "⇒ALL_FRAME_NUM：" << all_animation_frame_num_ << std::endl;
 	}
 	else
 	{
@@ -516,7 +519,7 @@ void FbxConverter::ExtractIndexData(int mesh_index, FbxMesh* mesh)
 	// インデックス数取得
 	int index_num = mesh->GetPolygonVertexCount();	// インデックス数
 	md_bin_data_container_.getpMesh(mesh_index)->setIndexArraySize(index_num);
-	
+
 	// インデックス取得
 	int* index_array = nullptr;
 	index_array = mesh->GetPolygonVertices();	// インデックス配列
@@ -604,8 +607,128 @@ void FbxConverter::ExtractUVSetData(int mesh_index, FbxMesh* mesh)
 
 void FbxConverter::ExtractAnimationData(int mesh_index, FbxMesh* mesh)
 {
-	mesh_index = mesh_index;
-	mesh = mesh;
+	// ボーンの重み保存用配列を頂点数分確保
+	std::vector<MdBinDataContainer::Mesh::BoneWeight> save_bone_weight_array;
+	int save_bone_weight_num = mesh->GetControlPointsCount();
+	save_bone_weight_array.resize(save_bone_weight_num);
+	for (int i = 0; i < save_bone_weight_num; i++)
+	{
+		save_bone_weight_array[i].Init();
+	}
+
+	// スキン情報の取得(スキン1つのみ取得)
+	int skin_num = mesh->GetDeformerCount(FbxDeformer::eSkin);
+	for (int i = 0; i < skin_num; i++)
+	{
+		FbxSkin* skin = (FbxSkin*)(mesh->GetDeformer(i, FbxDeformer::eSkin));
+
+		// クラスタ(ボーン1本分の情報の塊)からボーンデータを抽出
+		int cluster_num = skin->GetClusterCount();
+		for (int j = 0; j < cluster_num; j++)
+		{
+			FbxCluster* cluster = skin->GetCluster(j);
+
+			// 各種データ抽出
+			ExtractBoneData(mesh_index, cluster);
+			ExtractBoneWeightData(mesh_index, &save_bone_weight_array, cluster);
+		}
+		break;
+	}
+
+	// ボーンの重みを頂点へ代入
+	int bone_weight_num = md_bin_data_container_.getpMesh(mesh_index)->getIndexArraySize();
+	md_bin_data_container_.getpMesh(mesh_index)->setBoneWeightArraySize(bone_weight_num);
+	for (int i = 0; i < bone_weight_num; i++)
+	{
+		int index = *md_bin_data_container_.getpMesh(mesh_index)->getpIndex(i);
+		*md_bin_data_container_.getpMesh(mesh_index)->getpBoneWeight(i) = save_bone_weight_array[index];
+	}
+}
+
+
+
+void FbxConverter::ExtractBoneData(int mesh_index, FbxCluster* cluster)
+{
+
+	int affected_vertices_num = cluster->GetControlPointIndicesCount();
+	if (affected_vertices_num <= 0) return;
+
+	// ボーン名取得
+	MdBinDataContainer::Mesh::Bone bone;
+	*bone.getpName() = cluster->GetName();
+
+	// オフセット行列取得
+	FbxAMatrix init_matrix;
+	cluster->GetTransformLinkMatrix(init_matrix);
+	FbxAMatrix offset_matrix = init_matrix.Inverse();
+	ChangeMatrix(bone.getpOffsetMatrix(), &offset_matrix);
+
+	// アニメーション行列取得
+	if (all_animation_frame_num_ != -1)
+	{
+		bone.setAnimationMatrixArraySize(all_animation_frame_num_);
+		for (int i = 0; i < all_animation_frame_num_; i++)
+		{
+			FbxAMatrix animation_matrix;
+			FbxTime time = (animation_start_frame_num_ + i) * period_.Get();
+			animation_matrix = cluster->GetLink()->EvaluateGlobalTransform(time);
+			ChangeMatrix(bone.getpAnimationMatrixArray(i), &animation_matrix);
+		}
+	}
+	else
+	{
+		int default_array_num = 1;
+		bone.setAnimationMatrixArraySize(default_array_num);
+		FbxAMatrix default_matrix;
+		default_matrix.SetIdentity();
+		ChangeMatrix(bone.getpAnimationMatrixArray(0), &default_matrix);
+	}
+	
+	// メッシュのボーン配列へ追加
+	md_bin_data_container_.getpMesh(mesh_index)->AddBoneArray(&bone);
+}
+
+
+
+void FbxConverter::ExtractBoneWeightData(int mesh_index,
+										 std::vector<MdBinDataContainer::Mesh::BoneWeight>* save_bone_weight_array,
+										 FbxCluster* cluster)
+{
+	// メッシュのボーン配列の末尾のインデックス取得
+	int bone_index = md_bin_data_container_.getpMesh(mesh_index)->getBoneArrayEndIndex();
+
+	// 影響する頂点配列数取得
+	int affected_vertices_num = cluster->GetControlPointIndicesCount();
+
+	// 影響する頂点配列&重み配列取得
+	int* affected_vertices_array = cluster->GetControlPointIndices();
+	double* weight_array_ = cluster->GetControlPointWeights();
+
+	// ボーンの重みを取得
+	for (int i = 0; i < affected_vertices_num; i++)
+	{
+		int vertex_index = affected_vertices_array[i];
+		float bone_weight = (float)weight_array_[i];
+
+		save_bone_weight_array->at(vertex_index)
+			.setBoneIndexAndWeight(bone_index,
+								   bone_weight);
+	}
+}
+
+
+
+void FbxConverter::ChangeMatrix(MdBinDataContainer::Matrix* bone_matrix,
+								FbxAMatrix* fbx_matrix)
+{
+	for (int i = 0; i < MdBinDataContainer::Matrix::ARRAY_HEIGHT; i++)
+	{
+		for (int j = 0; j < MdBinDataContainer::Matrix::ARRAY_WIDTH; j++)
+		{
+			bone_matrix
+				->setMatrixElement((float)fbx_matrix->Get(i, j), i, j);
+		}
+	}
 }
 
 
@@ -724,7 +847,7 @@ bool FbxConverter::ExportOfMdBinFile(std::string* file_path)
 	std::cout << "\n下記のファイルを出力しました。\n" << std::endl;
 	std::cout << "『" << export_file_path << "』" << std::endl;
 	std::cout << "『" << export_txt_data_file_path << "』" << std::endl;
-	
+
 	return true;
 }
 
@@ -887,7 +1010,7 @@ void FbxConverter::ExportTextData(std::string* export_txt_data_file_path)
 		ofstream << "==============================" << std::endl;
 		ofstream << "★メッシュ番号 : " << i << "\n" << std::endl;
 
-		// インデックスデータの抽出
+		// インデックス
 		int index_num = md_bin_data_container_.getpMesh(i)->getIndexArraySize();
 		ofstream << "インデックス数 : " << index_num << std::endl;
 		for (int j = 0; j < index_num; j += 3)
@@ -900,6 +1023,7 @@ void FbxConverter::ExportTextData(std::string* export_txt_data_file_path)
 		}
 		ofstream << std::endl;
 
+		// 頂点
 		int vertex_num = md_bin_data_container_.getpMesh(i)->getVertexArraySize();
 		ofstream << "頂点数 : " << vertex_num << std::endl;
 		for (int j = 0; j < vertex_num; j++)
@@ -912,10 +1036,10 @@ void FbxConverter::ExportTextData(std::string* export_txt_data_file_path)
 		}
 		ofstream << std::endl;
 
+		// 法線
 		int normal_num = md_bin_data_container_.getpMesh(i)->getNormalArraySize();
 		ofstream << "法線数 : " << normal_num << std::endl;
 
-		// 法線取得
 		for (int j = 0; j < normal_num; j++)
 		{
 			ofstream << "法線番号" << j << " : "
@@ -926,17 +1050,15 @@ void FbxConverter::ExportTextData(std::string* export_txt_data_file_path)
 		}
 		ofstream << std::endl;
 
-		// UVセット名配列取得
+		// UVセット
 		int uv_set_num = md_bin_data_container_.getpMesh(i)->getUVSetArraySize();
 		ofstream << "UVセット数 : " << uv_set_num << std::endl;
-
 
 		for (int j = 0; j < uv_set_num; j++)
 		{
 			int uv_num = md_bin_data_container_.getpMesh(i)->getpUVSet(j)->getUVArraySize();
 			ofstream << "UV数 : " << uv_num << std::endl;
 
-			// UV取得
 			for (int k = 0; k < uv_num; k++)
 			{
 				ofstream << "UV番号" << k << " : "
@@ -947,10 +1069,73 @@ void FbxConverter::ExportTextData(std::string* export_txt_data_file_path)
 		}
 		ofstream << std::endl;
 
+		// ボーン
+		int bone_num = md_bin_data_container_.getpMesh(i)->getBoneArraySize();
+		ofstream << "ボーン数 : " << bone_num << std::endl;
+
+		for (int j = 0; j < bone_num; j++)
+		{
+			ofstream << "ボーン番号" << j << " : " << std::endl;
+			ofstream << "ボーン名 : "
+				<< "{ " << *md_bin_data_container_.getpMesh(i)->getpBone(j)->getpName()
+				<< " }" << std::endl;
+
+			ofstream << "オフセット行列 : " << std::endl;
+			for (int k = 0; k < MdBinDataContainer::Matrix::ARRAY_HEIGHT; k++)
+			{
+				ofstream << "{ ";
+				for (int l = 0; l < MdBinDataContainer::Matrix::ARRAY_WIDTH; l++)
+				{
+					ofstream << md_bin_data_container_.getpMesh(i)
+						->getpBone(j)->getpOffsetMatrix()->getMatrixElement(k, l)
+						<< " ";
+				}
+				ofstream << " }" << std::endl;
+			}
+
+			ofstream << "アニメーション行列 : " << std::endl;
+			for (int k = 0; k < md_bin_data_container_.getpMesh(i)->getpBone(j)->getAnimationMatrixArraySize(); k++)
+			{
+				ofstream << k << "フレーム目 : " << std::endl;
+				for (int l = 0; l < MdBinDataContainer::Matrix::ARRAY_HEIGHT; l++)
+				{
+					ofstream << "{ ";
+					for (int m = 0; m < MdBinDataContainer::Matrix::ARRAY_WIDTH; m++)
+					{
+						ofstream << md_bin_data_container_.getpMesh(i)
+							->getpBone(j)->getpOffsetMatrix()->getMatrixElement(l, m)
+							<< " ";
+					}
+					ofstream << " }" << std::endl;
+				}
+			}
+			
+		}
+		ofstream << std::endl;
+
+		// ボーンの重み
+		int bone_weight_num = md_bin_data_container_.getpMesh(i)->getBoneWeightArraySize();
+		ofstream << "ボーンの重み数 : " << bone_weight_num << std::endl;
+
+		for (int j = 0; j < bone_weight_num; j++)
+		{
+			ofstream << "ボーンの重み頂点番号" << j << " : ";
+			for (int k = 0; k < MdBinDataContainer::Mesh::BoneWeight::MAX_BONE_NUM; k++)
+			{
+				ofstream << "{ " << md_bin_data_container_.getpMesh(i)->getpBoneWeight(j)->getBoneIndex(k)
+					<< ", " << md_bin_data_container_.getpMesh(i)->getpBoneWeight(j)->getBoneWeight(k)
+					<< " } ";
+			}
+			ofstream << std::endl;
+		}
+		ofstream << std::endl;
+
+		// 関連付けたマテリアル番号
 		int material_index_num = *md_bin_data_container_.getpMesh(i)->getpMaterialIndex();
 		ofstream << "関連付けたマテリアル番号 : " << material_index_num << std::endl;
 		ofstream << std::endl;
 
+		// 関連付けたテクスチャ名
 		if (md_bin_data_container_.getpMesh(i)->getUVSetArraySize() > 0)
 		{
 			for (int j = 0; j < md_bin_data_container_.getpMesh(i)->getpUVSet(0)->getTextureArraySize(); j++)

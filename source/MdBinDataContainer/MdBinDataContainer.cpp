@@ -261,6 +261,69 @@ MdBinDataContainer::Material::Texture* MdBinDataContainer::Mesh::UVSet::getpText
 
 
 
+std::string* MdBinDataContainer::Mesh::Bone::getpName()
+{
+	return &name_;
+}
+
+
+
+MdBinDataContainer::Matrix* MdBinDataContainer::Mesh::Bone::getpOffsetMatrix()
+{
+	return &offset_matrix_;
+}
+
+
+
+int MdBinDataContainer::Mesh::Bone::getAnimationMatrixArraySize()
+{
+	return animetion_matrix_array_.size();
+}
+
+
+
+void MdBinDataContainer::Mesh::Bone::setAnimationMatrixArraySize(int value)
+{
+	animetion_matrix_array_.resize(value);
+}
+
+
+
+MdBinDataContainer::Matrix* MdBinDataContainer::Mesh::Bone::getpAnimationMatrixArray(int index)
+{
+	return &animetion_matrix_array_[index];
+}
+
+
+
+int MdBinDataContainer::Mesh::BoneWeight::getBoneIndex(int index)
+{
+	return bone_index_[index];
+}
+
+
+
+float MdBinDataContainer::Mesh::BoneWeight::getBoneWeight(int index)
+{
+	return bone_weight_[index];
+}
+
+
+
+void MdBinDataContainer::Mesh::BoneWeight::setBoneIndexAndWeight(int bone_index, 
+																 float bone_weight)
+{
+	for (int i = 0; i < MAX_BONE_NUM; i++)
+	{
+		if (bone_weight_[i] != 0.0f) continue;
+		bone_index_[i] = bone_index;
+		bone_weight_[i] = bone_weight;
+		break;
+	}
+}
+
+
+
 int MdBinDataContainer::Mesh::getVertexArraySize()
 {
 	return position_array_.size();
@@ -352,6 +415,55 @@ int* MdBinDataContainer::Mesh::getpIndex(int index)
 
 
 
+int MdBinDataContainer::Mesh::getBoneArraySize()
+{
+	return bone_array_.size();
+}
+
+
+
+void MdBinDataContainer::Mesh::setBoneArraySize(int value)
+{
+	bone_array_.resize(value);
+}
+
+
+
+MdBinDataContainer::Mesh::Bone* MdBinDataContainer::Mesh::getpBone(int index)
+{
+	return &bone_array_[index];
+}
+
+
+
+int MdBinDataContainer::Mesh::getBoneArrayEndIndex()
+{
+	return bone_array_.size() - 1;
+}
+
+
+
+int MdBinDataContainer::Mesh::getBoneWeightArraySize()
+{
+	return bone_weight_array_.size();
+}
+
+
+
+void MdBinDataContainer::Mesh::setBoneWeightArraySize(int value)
+{
+	bone_weight_array_.resize(value);
+}
+
+
+
+MdBinDataContainer::Mesh::BoneWeight* MdBinDataContainer::Mesh::getpBoneWeight(int index)
+{
+	return &bone_weight_array_[index];
+}
+
+
+
 int* MdBinDataContainer::Mesh::getpMaterialIndex()
 {
 	return &material_index_;
@@ -426,6 +538,24 @@ void MdBinDataContainer::Material::AddTextureArray(MdBinDataContainer::Material:
 void MdBinDataContainer::Mesh::UVSet::AddTextureArray(MdBinDataContainer::Material::Texture* texture)
 {
 	texture_.emplace_back(texture);
+}
+
+
+
+void MdBinDataContainer::Mesh::AddBoneArray(MdBinDataContainer::Mesh::Bone* bone)
+{
+	bone_array_.emplace_back(*bone);
+}
+
+
+
+void MdBinDataContainer::Mesh::BoneWeight::Init()
+{
+	for (int i = 0; i < MAX_BONE_NUM; i++)
+	{
+		bone_index_[i] = 0;
+		bone_weight_[i] = 0.0f;
+	}
 }
 
 

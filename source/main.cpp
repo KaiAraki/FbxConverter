@@ -26,8 +26,7 @@ int main(void)
 {
 	// メモリリーク検出
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF | _CRTDBG_CHECK_ALWAYS_DF);
-	//_CrtSetBreakAlloc(300218);
-
+	
 	// 初期化
 	FbxConverter fbx_converter;
 	if (!fbx_converter.Init())
@@ -40,12 +39,12 @@ int main(void)
 	}
 	
 	// 変換
-	std::string file_path = "BoxUnityChan.fbx";
+	//std::string file_path = "BoxUnityChan.fbx";
 	//std::string file_path = "unitychan.fbx";
 	//std::string file_path = "unitychan_tex.fbx";
 	//std::string file_path = "Yuko_animeVer.fbx";
 	//std::string file_path = "cube.fbx";
-	//std::string file_path = "unitychan_WAIT01.fbx";
+	std::string file_path = "unitychan_Jump.fbx";
 	//std::cout << "FBXファイルパスの入力(Drag&Dropも可)\n⇒";
 	//std::cin >> file_path;
 	if (!fbx_converter.ConvertToMdBin(&file_path))
