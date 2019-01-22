@@ -39,14 +39,9 @@ int main(void)
 	}
 	
 	// 変換
-	//std::string file_path = "BoxUnityChan.fbx";
-	//std::string file_path = "unitychan.fbx";
-	//std::string file_path = "unitychan_tex.fbx";
-	//std::string file_path = "Yuko_animeVer.fbx";
-	//std::string file_path = "cube.fbx";
-	std::string file_path = "unitychan_Jump.fbx";
-	//std::cout << "FBXファイルパスの入力(Drag&Dropも可)\n⇒";
-	//std::cin >> file_path;
+	std::string file_path;
+	std::cout << "FBXファイルパスの入力(Drag&Dropも可)\n⇒";
+	std::cin >> file_path;
 	if (!fbx_converter.ConvertToMdBin(&file_path))
 	{
 		std::cout << "※FBXの変換に失敗" << std::endl;

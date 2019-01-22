@@ -1,0 +1,24 @@
+
+[MaterialData]
+
+ƒ}ƒeƒŠƒAƒ‹”Ô† : 1
+
+Name          : face
+
+Ambient       : {0, 0, 0}
+
+Diffuse       : {1, 1, 1}
+
+Emissive      : {1, 1, 1}
+
+Bump          : {0, 0, 0}
+
+Transparent   : 1
+
+Specular      : {1, 1, 1}
+
+Power         : 9.41177
+
+Reflection    : 0
+
+TextureName   : face_00.tga

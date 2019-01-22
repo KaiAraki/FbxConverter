@@ -1,0 +1,4 @@
+
+[MeshData]
+
+UVSet‚ÆŠÖ˜A•t‚¯‚½Texture–¼ : hair_01.tga

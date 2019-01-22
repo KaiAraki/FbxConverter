@@ -15,7 +15,8 @@
 #include <fbxsdk.h>
 #include <string>
 
-#include "../MdBinDataContainer/MdBinDataContainer.h"
+#include "../MdBinData/MdBinData.h"
+#include "../ExportFile/ExportFile.h"
 
 
 
@@ -30,18 +31,18 @@ class FbxConverter
 // 変数
 //====================
 private:
-	FbxManager* manager_ = nullptr;				//!< FBXマネージャ
-	FbxIOSettings* io_settings_ = nullptr;		//!< IOセッティング
-	FbxScene* scene_ = nullptr;					//!< シーン
-	FbxNode* root_node_ = nullptr;				//!< ルートノード
-	FbxAxisSystem axis_system_;					//!< 座標系の種類
-	bool is_reverse_alpha_ = false;				//!< α値の反転フラグ
-	std::string directory_path_;				//!< ディレクトリパス
-	MdBinDataContainer md_bin_data_container_;	//!< MdBinデータの入れ物
-	FbxTime period_;							//!< 1フレームの時間
-	int animation_start_frame_num_ = 0;			//!< アニメーション開始フレーム数
-	int animation_stop_frame_num_ = 0;			//!< アニメーション停止フレーム数
-	int all_animation_frame_num_ = -1;			//!< アニメーションフレーム数
+	FbxManager* manager_ = nullptr;			//!< FBXマネージャ
+	FbxScene* scene_ = nullptr;				//!< シーン
+	FbxNode* root_node_ = nullptr;			//!< ルートノード
+	FbxAxisSystem axis_system_;				//!< 座標系の種類
+	bool is_reverse_alpha_ = false;			//!< α値の反転フラグ
+	std::string directory_path_;			//!< ディレクトリパス
+	FbxTime period_;						//!< 1フレームの時間
+	int animation_start_frame_num_ = 0;		//!< アニメーション開始フレーム数
+	int animation_stop_frame_num_ = 0;		//!< アニメーション停止フレーム数
+	int all_animation_frame_num_ = 0;		//!< アニメーションフレーム数
+	MdBinData md_bin_data_;					//!< MdBinデータ
+	ExportFile export_file_;				//!< ファイル出力
 
 
 //====================
@@ -203,7 +204,16 @@ private:
 	//! @retval void なし
 	//----------------------------------------
 	void ExtractTextureData(int material_index, FbxProperty property,
-							MdBinDataContainer::Material::Texture::Type texture_type);
+							MdBinData::Material::Texture::Type texture_type);
+
+	//----------------------------------------
+	//! @brief ファイル名抽出関数
+	//! @details
+	//! @param *file_name ファイル名
+	//! @param *file_path ファイルパス
+	//! @retval void なし
+	//----------------------------------------
+	void ExtractFileName(std::string* file_name, std::string* file_path);
 
 	//----------------------------------------
 	//! @brief インデックスデータの抽出関数
@@ -268,7 +278,7 @@ private:
 	//! @retval void なし
 	//----------------------------------------
 	void ExtractBoneWeightData(int mesh_index,
-							   std::vector<MdBinDataContainer::Mesh::BoneWeight>* save_bone_weight_array,
+							   std::vector<MdBinData::Mesh::BoneWeight>* save_bone_weight_array,
 							   FbxCluster* cluster);
 
 	//----------------------------------------
@@ -278,7 +288,7 @@ private:
 	//! @param *fbx_matrix  FBX行列
 	//! @retval void なし
 	//----------------------------------------
-	void ChangeMatrix(MdBinDataContainer::Matrix* bone_matrix,
+	void ChangeMatrix(MdBinData::Matrix* bone_matrix,
 					  FbxAMatrix* fbx_matrix);
 
 	//----------------------------------------
@@ -297,84 +307,6 @@ private:
 	//! @retval void なし
 	//----------------------------------------
 	void AssociatingUVSetDataAndTexture(int mesh_index);
-
-	//----------------------------------------
-	//! @brief MdBinファイルの出力関数
-	//! @details
-	//! @param *file_path ファイルパス
-	//! @retval void なし
-	//----------------------------------------
-	bool ExportOfMdBinFile(std::string* file_path);
-
-	//----------------------------------------
-	//! @brief 出力フォルダの作成関数
-	//! @details
-	//! @param *directory_path ディレクトリパス
-	//! @retval void なし
-	//----------------------------------------
-	void CreateExportDirectory(std::string* directory_path);
-
-	//----------------------------------------
-	//! @brief ファイル名抽出関数
-	//! @details
-	//! @param *export_file_name 出力ファイル名
-	//! @param *file_path        ファイルパス
-	//! @retval void なし
-	//----------------------------------------
-	void ExtractFileName(std::string* export_file_name, std::string* file_path);
-
-	//----------------------------------------
-	//! @brief 拡張子除去関数
-	//! @details
-	//! @param *file_name ファイル名
-	//! @retval void なし
-	//----------------------------------------
-	void ExtensionRemoval(std::string* file_name);
-
-	//----------------------------------------
-	//! @brief 出力ディレクトリ名作成関数
-	//! @details
-	//! @param *directory_path ディレクトリパス
-	//! @param *file_name      ファイル名
-	//! @retval void なし
-	//----------------------------------------
-	void CreateExportDirectoryPath(std::string* directory_path,
-								   std::string* file_name);
-
-	//----------------------------------------
-	//! @brief 出力ファイル名作成関数
-	//! @details
-	//! @param *file_name           ファイル名
-	//! @param *text_data_file_name テキストデータのファイル名
-	//! @retval void なし
-	//----------------------------------------
-	void CreateExportFileName(std::string* file_name,
-							  std::string* text_data_file_name);
-
-	//----------------------------------------
-	//! @brief 出力パス作成関数
-	//! @details
-	//! @param *export_file_path          出力パス
-	//! @param *export_txt_data_file_path テキストデータの出力パス
-	//! @param *file_name                 ファイル名
-	//! @param *text_data_file_name       テキストデータのファイル名
-	//! @param *directory_path            ディレクトリパス
-	//! @retval void なし
-	//----------------------------------------
-	void CreateExportPath(std::string* export_file_path,
-						  std::string* export_txt_data_file_path,
-						  std::string* file_name,
-						  std::string* text_data_file_name,
-						  std::string* directory_path);
-
-	//----------------------------------------
-	//! @brief テキストデータ出力関数
-	//! @details
-	//! @param *export_txt_data_file_path テキストデータの出力パス
-	//! @retval void なし
-	//----------------------------------------
-	void ExportTextData(std::string* export_txt_data_file_path);
-
 
 	//----------------------------------------
 	//! @brief UTF8のフルパスへ変換関数
