@@ -1,13 +1,14 @@
 var indexSectionsWithContent =
 {
-  0: "abcdefgilmnoprstuvxyz~",
+  0: "abcdefgilmnoprstuvxyz~ã",
   1: "bcefmtuv",
   2: "efm",
   3: "acegilmrsu~",
   4: "abdefgimnoprstuvxyz",
   5: "t",
   6: "ademns",
-  7: "b"
+  7: "b",
+  8: "ã"
 };
 
 var indexSectionNames =
@@ -19,7 +20,8 @@ var indexSectionNames =
   4: "variables",
   5: "enums",
   6: "enumvalues",
-  7: "related"
+  7: "related",
+  8: "pages"
 };
 
 var indexSectionLabels =
@@ -31,6 +33,7 @@ var indexSectionLabels =
   4: "変数",
   5: "列挙型",
   6: "列挙値",
-  7: "フレンド"
+  7: "フレンド",
+  8: "ページ"
 };
 

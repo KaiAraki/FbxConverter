@@ -21,9 +21,9 @@ Table of Contents
 
 Description
 --------------------
-FBXからDirectXとOpenGLそれぞれで使いたいデーターを抽出し、boost::serializationでシリアライズ化している。
+FBXからDirectXとOpenGLそれぞれで使いたいデーターを抽出し、boost::serializationでシリアライズ化します。
 
-![screen][url_screen]
+![screen][url_screen_image]
 
 Features
 --------------------
@@ -50,6 +50,8 @@ Document
 --------------------
 * [Document][url_document] by [Doxygen][url_doxygen].
 
+[![Document][url_document_image]][url_document]
+
 Author
 --------------------
 [Kai Araki][url_author]
@@ -64,10 +66,11 @@ Copyright &copy; 2019 Kai Araki
 [url_shields_build]: https://img.shields.io/badge/build-passing-brightgreen.svg
 [url_shields_coverage]: https://img.shields.io/badge/build-passing-brightgreen.svg
 [url_shields_license]: https://img.shields.io/badge/license-MIT-blue.svg
-[url_screen]: https://coron4444.github.io/FbxConverter/resource/image.png
+[url_screen_image]: https://coron4444.github.io/FbxConverter/resource/image.png
 [url_fbx_sdk]: https://www.autodesk.com/developer-network/platform-technologies/fbx-sdk-archives
 [url_boost]: https://www.boost.org/users/history/version_1_69_0.html
 [url_document]: https://coron4444.github.io/FbxConverter/Document/html/index.html
 [url_doxygen]: http://www.doxygen.jp/
+[url_document_image]:https://coron4444.github.io/FbxConverter/resource/document.png
 [url_author]: https://github.com/Coron4444
 [url_mit]: https://opensource.org/licenses/mit-license.php
