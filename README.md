@@ -8,8 +8,6 @@ FBXファイルから独自形式へ変換するコンバーター。
 [![coverage_status][url_shields_coverage]](#)
 [![coverage_license][url_shields_license]](#)
 
-![起動画面][url_screen]
-
 Table of Contents
 --------------------
 * [Description](#Description)
@@ -25,6 +23,7 @@ Description
 --------------------
 FBXからDirectXとOpenGLそれぞれで使いたいデーターを抽出し、boost::serializationでシリアライズ化している。
 
+![screen][url_screen]
 
 Features
 --------------------
