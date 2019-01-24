@@ -3,32 +3,55 @@ FBXConverter
 
 FBXファイルから独自形式へ変換するコンバーター。
 
-![Build status][Mark_build]
-[![Build status][Mark_build]](#)
+[![version_status][url_shields_version]](#)
+[![build_status][url_shields_build]](#)
+[![coverage_status][url_shields_coverage]](#)
+[![coverage_license][url_shields_license]](#)
 
-## Description
+Description
+--------------------
 FBXからDirectXとOpenGLそれぞれで使いたいデーターを抽出し、boost::serializationでシリアライズ化している。
 
+Table of Contents
+--------------------
+* [Requirements](#requirements)
+* [Usage](#usage)
+
 ## Features
-・スキン：1番目のスキンのみ対応。
-・UVSet：1番目のUVSetをディヒューズテクスチャ用と想定し実装。
-・テクスチャパス：変換後のバイナリーファイルと同じ階層でコンバート。
-・ログ：変換後のバイナリーデータのログも確認用に出力される。
+* スキン：1番目のスキンのみ対応。
+* UVSet：1番目のUVSetをディヒューズテクスチャ用と想定し実装。
+* テクスチャパス：変換後のバイナリーファイルと同じ階層でコンバート。
+* ログ：変換後のバイナリーデータのログも確認用に出力される。
 
-## Requirement
+Requirement
+--------------------
 コンパイルする場合は以下をインストールすること。
-・[FBXSDK2018.1.1](https://www.autodesk.com/developer-network/platform-technologies/fbx-sdk-archives)
-･[boost1.69.0](https://www.boost.org/users/history/version_1_69_0.html)
+* [FBXSDK2018.1.1][url_fbx_sdk]
+* [boost1.69.0][url_boost]
 
-## Usage
+Usage
+--------------------
 画面の指示に従い入力していくと、MdBinフォルダを生成しその中に変換済みデータが保存される。
 
-## Install
+Install
+--------------------
 ダウンロードしたファイルを展開するだけで使用可能。
 
-## Author
-[Coron4444][author]
+Author
+--------------------
+[Kai Araki][author]
+
+License
+--------------------
+Paddington is licensed under the [MIT][url_mit] license.  
+Copyright &copy; 2019, Kai Araki
 
 
-[author]: https://github.com/Coron4444
-[Mark_build]: https://img.shields.io/badge/build-passing-brightgreen.svg
+[url_shields_version]: https://img.shields.io/badge/version-v1.0-blue.svg
+[url_shields_build]: https://img.shields.io/badge/build-passing-brightgreen.svg
+[url_shields_coverage]: https://img.shields.io/badge/build-passing-brightgreen.svg
+[url_shields_license]: https://img.shields.io/badge/license-MIT-blue.svg
+[url_fbx_sdk]: https://www.autodesk.com/developer-network/platform-technologies/fbx-sdk-archives
+[url_boost]: https://www.boost.org/users/history/version_1_69_0.html
+[url_author]: https://github.com/Coron4444
+[url_mit]: https://opensource.org/licenses/mit-license.php
