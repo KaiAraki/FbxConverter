@@ -17,6 +17,7 @@ Table of Contents
 * [Requirements](#Requirement)
 * [Install](#Install)
 * [Usage](#Usage)
+* [Document](#Document)
 * [Author](#Author)
 * [License](#License)
 
