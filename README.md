@@ -64,7 +64,7 @@ Copyright &copy; 2019 Kai Araki
 
 [url_shields_version]: https://img.shields.io/badge/version-v1.0-blue.svg
 [url_shields_build]: https://img.shields.io/badge/build-passing-brightgreen.svg
-[url_shields_coverage]: https://img.shields.io/badge/build-passing-brightgreen.svg
+[url_shields_coverage]: https://img.shields.io/badge/coverage-passing-brightgreen.svg
 [url_shields_license]: https://img.shields.io/badge/license-MIT-blue.svg
 [url_screen_image]: https://coron4444.github.io/FbxConverter/resource/image.png
 [url_fbx_sdk]: https://www.autodesk.com/developer-network/platform-technologies/fbx-sdk-archives
