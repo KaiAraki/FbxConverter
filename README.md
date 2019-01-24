@@ -1,50 +1,60 @@
 FBXConverter
 ====================
 
-FBXƒtƒ@ƒCƒ‹‚©‚ç“Æ©Œ`®‚Ö•ÏŠ·‚·‚éƒRƒ“ƒo[ƒ^[B
+FBXãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ç‹¬è‡ªå½¢å¼ã¸å¤‰æ›ã™ã‚‹ã‚³ãƒ³ãƒãƒ¼ã‚¿ãƒ¼ã€‚
 
 [![version_status][url_shields_version]](#)
 [![build_status][url_shields_build]](#)
 [![coverage_status][url_shields_coverage]](#)
 [![coverage_license][url_shields_license]](#)
 
-Description
---------------------
-FBX‚©‚çDirectX‚ÆOpenGL‚»‚ê‚¼‚ê‚Åg‚¢‚½‚¢ƒf[ƒ^[‚ğ’Šo‚µAboost::serialization‚ÅƒVƒŠƒAƒ‰ƒCƒY‰»‚µ‚Ä‚¢‚éB
-
 Table of Contents
 --------------------
-* [Requirements](#requirements)
-* [Usage](#usage)
+* [Description](#Description)
+* [Description](#Description)
+* [Requirements](#Requirement)
+* [Install](#Install)
+* [Usage](#Usage)
+* [Author](#Author)
+* [License](#License)
 
-## Features
-* ƒXƒLƒ“F1”Ô–Ú‚ÌƒXƒLƒ“‚Ì‚İ‘Î‰B
-* UVSetF1”Ô–Ú‚ÌUVSet‚ğƒfƒBƒqƒ…[ƒYƒeƒNƒXƒ`ƒƒ—p‚Æ‘z’è‚µÀ‘•B
-* ƒeƒNƒXƒ`ƒƒƒpƒXF•ÏŠ·Œã‚ÌƒoƒCƒiƒŠ[ƒtƒ@ƒCƒ‹‚Æ“¯‚¶ŠK‘w‚ÅƒRƒ“ƒo[ƒgB
-* ƒƒOF•ÏŠ·Œã‚ÌƒoƒCƒiƒŠ[ƒf[ƒ^‚ÌƒƒO‚àŠm”F—p‚Éo—Í‚³‚ê‚éB
+Description
+--------------------
+FBXã‹ã‚‰DirectXã¨OpenGLãã‚Œãã‚Œã§ä½¿ã„ãŸã„ãƒ‡ãƒ¼ã‚¿ãƒ¼ã‚’æŠ½å‡ºã—ã€boost::serializationã§ã‚·ãƒªã‚¢ãƒ©ã‚¤ã‚ºåŒ–ã—ã¦ã„ã‚‹ã€‚
+
+Features
+--------------------
+* ã‚¹ã‚­ãƒ³ï¼š1ç•ªç›®ã®ã‚¹ã‚­ãƒ³ã®ã¿å¯¾å¿œã€‚
+* UVSetï¼š1ç•ªç›®ã®UVSetã‚’ãƒ‡ã‚£ãƒ’ãƒ¥ãƒ¼ã‚ºãƒ†ã‚¯ã‚¹ãƒãƒ£ç”¨ã¨æƒ³å®šã—å®Ÿè£…ã€‚
+* ãƒ†ã‚¯ã‚¹ãƒãƒ£ãƒ‘ã‚¹ï¼šå¤‰æ›å¾Œã®ãƒã‚¤ãƒŠãƒªãƒ¼ãƒ•ã‚¡ã‚¤ãƒ«ã¨åŒã˜éšå±¤ã§ã‚³ãƒ³ãƒãƒ¼ãƒˆã€‚
+* ãƒ­ã‚°ï¼šå¤‰æ›å¾Œã®ãƒã‚¤ãƒŠãƒªãƒ¼ãƒ‡ãƒ¼ã‚¿ã®ãƒ­ã‚°ã‚‚ç¢ºèªç”¨ã«å‡ºåŠ›ã•ã‚Œã‚‹ã€‚
 
 Requirement
 --------------------
-ƒRƒ“ƒpƒCƒ‹‚·‚éê‡‚ÍˆÈ‰º‚ğƒCƒ“ƒXƒg[ƒ‹‚·‚é‚±‚ÆB
+ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã™ã‚‹å ´åˆã¯ä»¥ä¸‹ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã“ã¨ã€‚
 * [FBXSDK2018.1.1][url_fbx_sdk]
 * [boost1.69.0][url_boost]
 
-Usage
---------------------
-‰æ–Ê‚Ìw¦‚É]‚¢“ü—Í‚µ‚Ä‚¢‚­‚ÆAMdBinƒtƒHƒ‹ƒ_‚ğ¶¬‚µ‚»‚Ì’†‚É•ÏŠ·Ï‚İƒf[ƒ^‚ª•Û‘¶‚³‚ê‚éB
-
 Install
 --------------------
-ƒ_ƒEƒ“ƒ[ƒh‚µ‚½ƒtƒ@ƒCƒ‹‚ğ“WŠJ‚·‚é‚¾‚¯‚Åg—p‰Â”\B
+ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ãŸãƒ•ã‚¡ã‚¤ãƒ«ã‚’å±•é–‹ã™ã‚‹ã ã‘ã§ä½¿ç”¨å¯èƒ½ã€‚
+
+Usage
+--------------------
+ç”»é¢ã®æŒ‡ç¤ºã«å¾“ã„å…¥åŠ›ã—ã¦ã„ãã¨ã€MdBinãƒ•ã‚©ãƒ«ãƒ€ã‚’ç”Ÿæˆã—ãã®ä¸­ã«å¤‰æ›æ¸ˆã¿ãƒ‡ãƒ¼ã‚¿ãŒä¿å­˜ã•ã‚Œã‚‹ã€‚
+
+Document
+--------------------
+* Document by Doxygen.
 
 Author
 --------------------
-[Kai Araki][author]
+[Kai Araki][url_author]
 
 License
 --------------------
 Paddington is licensed under the [MIT][url_mit] license.  
-Copyright &copy; 2019, Kai Araki
+Copyright &copy; 2019 Kai Araki
 
 
 [url_shields_version]: https://img.shields.io/badge/version-v1.0-blue.svg
