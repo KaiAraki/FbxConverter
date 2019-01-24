@@ -1,5 +1,5 @@
 FBXConverter
-====
+====================
 
 FBXファイルから独自形式へ変換するコンバーター。
 
@@ -24,4 +24,8 @@ FBXからDirectXとOpenGLそれぞれで使いたいデーターを抽出し、boost::serializationで
 ダウンロードしたファイルを展開するだけで使用可能。
 
 ## Author
-[Coron4444](https://github.com/Coron4444)
+[Coron4444][author]
+
+
+[author]: https://github.com/Coron4444
+[Mark_build]: https://img.shields.io/appveyor/ci/:user/:repo.svg
