@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FbxConverter: MdBinData::Mesh::Bone クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FbxConverter
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">FBXから独自ファイルへのコンバーター</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_md_bin_data_1_1_mesh_1_1_bone.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="class_md_bin_data_1_1_mesh_1_1_bone-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">MdBinData::Mesh::Bone クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>ボーンClass  
+ <a href="class_md_bin_data_1_1_mesh_1_1_bone.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a>&gt;</code></p>
+<div class="dynheader">
+MdBinData::Mesh::Bone 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_md_bin_data_1_1_mesh_1_1_bone__coll__graph.png" border="0" usemap="#_md_bin_data_1_1_mesh_1_1_bone_coll__map" alt="Collaboration graph"/></div>
+<map name="_md_bin_data_1_1_mesh_1_1_bone_coll__map" id="_md_bin_data_1_1_mesh_1_1_bone_coll__map">
+<area shape="rect" id="node2" href="class_md_bin_data_1_1_matrix.html" title="行列Class " alt="" coords="22,5,153,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a7a132ac01755ee4a6bca3c25ad3da42c"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_mesh_1_1_bone.html#a7a132ac01755ee4a6bca3c25ad3da42c">getpName</a> ()</td></tr>
+<tr class="memdesc:a7a132ac01755ee4a6bca3c25ad3da42c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボーン名取得関数  <a href="#a7a132ac01755ee4a6bca3c25ad3da42c">[詳解]</a><br /></td></tr>
+<tr class="separator:a7a132ac01755ee4a6bca3c25ad3da42c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e5d6012c7efa481bbb40cc86b8a0856"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_md_bin_data_1_1_matrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_mesh_1_1_bone.html#a0e5d6012c7efa481bbb40cc86b8a0856">getpOffsetMatrix</a> ()</td></tr>
+<tr class="memdesc:a0e5d6012c7efa481bbb40cc86b8a0856"><td class="mdescLeft">&#160;</td><td class="mdescRight">オフセット行列取得関数  <a href="#a0e5d6012c7efa481bbb40cc86b8a0856">[詳解]</a><br /></td></tr>
+<tr class="separator:a0e5d6012c7efa481bbb40cc86b8a0856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad59efa7e03e444dabbdfef7848091ab9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_mesh_1_1_bone.html#ad59efa7e03e444dabbdfef7848091ab9">getAnimationMatrixArraySize</a> ()</td></tr>
+<tr class="memdesc:ad59efa7e03e444dabbdfef7848091ab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーション行列配列サイズ取得関数  <a href="#ad59efa7e03e444dabbdfef7848091ab9">[詳解]</a><br /></td></tr>
+<tr class="separator:ad59efa7e03e444dabbdfef7848091ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7edfd3047be8f110d4ab995738c6af3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_mesh_1_1_bone.html#af7edfd3047be8f110d4ab995738c6af3">setAnimationMatrixArraySize</a> (int value)</td></tr>
+<tr class="memdesc:af7edfd3047be8f110d4ab995738c6af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーション行列配列サイズ設定関数  <a href="#af7edfd3047be8f110d4ab995738c6af3">[詳解]</a><br /></td></tr>
+<tr class="separator:af7edfd3047be8f110d4ab995738c6af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac185537ff78d9e8e78c7d6845425f615"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_md_bin_data_1_1_matrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_mesh_1_1_bone.html#ac185537ff78d9e8e78c7d6845425f615">getpAnimationMatrix</a> (int index)</td></tr>
+<tr class="memdesc:ac185537ff78d9e8e78c7d6845425f615"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーション行列取得関数  <a href="#ac185537ff78d9e8e78c7d6845425f615">[詳解]</a><br /></td></tr>
+<tr class="separator:ac185537ff78d9e8e78c7d6845425f615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa28ecffb26fc5ae631664ae97c099a25"><td class="memTemplParams" colspan="2">template&lt;class Archive &gt; </td></tr>
+<tr class="memitem:aa28ecffb26fc5ae631664ae97c099a25"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_mesh_1_1_bone.html#aa28ecffb26fc5ae631664ae97c099a25">serialize</a> (Archive &amp;archive, const unsigned version)</td></tr>
+<tr class="separator:aa28ecffb26fc5ae631664ae97c099a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a3ed12325ffa278847429e758ec08a373"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_mesh_1_1_bone.html#a3ed12325ffa278847429e758ec08a373">name_</a></td></tr>
+<tr class="memdesc:a3ed12325ffa278847429e758ec08a373"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボーン名  <a href="#a3ed12325ffa278847429e758ec08a373">[詳解]</a><br /></td></tr>
+<tr class="separator:a3ed12325ffa278847429e758ec08a373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2119901317e2beb384a36d40f31c385"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_md_bin_data_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_mesh_1_1_bone.html#ab2119901317e2beb384a36d40f31c385">offset_matrix_</a></td></tr>
+<tr class="memdesc:ab2119901317e2beb384a36d40f31c385"><td class="mdescLeft">&#160;</td><td class="mdescRight">オフセット行列(初期姿勢の逆行列)  <a href="#ab2119901317e2beb384a36d40f31c385">[詳解]</a><br /></td></tr>
+<tr class="separator:ab2119901317e2beb384a36d40f31c385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a434b2abeb02434b44881e07a0eb7002e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_md_bin_data_1_1_matrix.html">Matrix</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_mesh_1_1_bone.html#a434b2abeb02434b44881e07a0eb7002e">animation_matrix_array_</a></td></tr>
+<tr class="memdesc:a434b2abeb02434b44881e07a0eb7002e"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーション行列  <a href="#a434b2abeb02434b44881e07a0eb7002e">[詳解]</a><br /></td></tr>
+<tr class="separator:a434b2abeb02434b44881e07a0eb7002e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:ac98d07dd8f7b70e16ccb9a01abf56b9c"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_mesh_1_1_bone.html#ac98d07dd8f7b70e16ccb9a01abf56b9c">boost::serialization::access</a></td></tr>
+<tr class="memdesc:ac98d07dd8f7b70e16ccb9a01abf56b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">シリアライズ(I/O)関数  <a href="#ac98d07dd8f7b70e16ccb9a01abf56b9c">[詳解]</a><br /></td></tr>
+<tr class="separator:ac98d07dd8f7b70e16ccb9a01abf56b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ボーンClass </p>
+<p>ボーンのClass </p>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00664">664</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="ad59efa7e03e444dabbdfef7848091ab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad59efa7e03e444dabbdfef7848091ab9">&#9670;&nbsp;</a></span>getAnimationMatrixArraySize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MdBinData::Mesh::Bone::getAnimationMatrixArraySize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アニメーション行列配列サイズ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">int</td><td>アニメーション行列配列サイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00278">278</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac185537ff78d9e8e78c7d6845425f615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac185537ff78d9e8e78c7d6845425f615">&#9670;&nbsp;</a></span>getpAnimationMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_md_bin_data_1_1_matrix.html">MdBinData::Matrix</a> * MdBinData::Mesh::Bone::getpAnimationMatrix </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アニメーション行列取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>インデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Matrix*</td><td>アニメーション行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00292">292</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7a132ac01755ee4a6bca3c25ad3da42c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a132ac01755ee4a6bca3c25ad3da42c">&#9670;&nbsp;</a></span>getpName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * MdBinData::Mesh::Bone::getpName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ボーン名取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">std::string*</td><td>ボーン名 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00264">264</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0e5d6012c7efa481bbb40cc86b8a0856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e5d6012c7efa481bbb40cc86b8a0856">&#9670;&nbsp;</a></span>getpOffsetMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_md_bin_data_1_1_matrix.html">MdBinData::Matrix</a> * MdBinData::Mesh::Bone::getpOffsetMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>オフセット行列取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Matirx*</td><td>オフセット配列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00271">271</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa28ecffb26fc5ae631664ae97c099a25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa28ecffb26fc5ae631664ae97c099a25">&#9670;&nbsp;</a></span>serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Archive &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MdBinData::Mesh::Bone::serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive &amp;&#160;</td>
+          <td class="paramname"><em>archive</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned&#160;</td>
+          <td class="paramname"><em>version</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00733">733</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af7edfd3047be8f110d4ab995738c6af3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7edfd3047be8f110d4ab995738c6af3">&#9670;&nbsp;</a></span>setAnimationMatrixArraySize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MdBinData::Mesh::Bone::setAnimationMatrixArraySize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アニメーション行列配列サイズ設定関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>アニメーション行列配列サイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00285">285</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">フレンドと関連関数の詳解</h2>
+<a id="ac98d07dd8f7b70e16ccb9a01abf56b9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac98d07dd8f7b70e16ccb9a01abf56b9c">&#9670;&nbsp;</a></span>boost::serialization::access</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class boost::serialization::access</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>シリアライズ(I/O)関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">archive</td><td>アーカイブ用クラス </td></tr>
+    <tr><td class="paramname">version</td><td>バージョン </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00731">731</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a434b2abeb02434b44881e07a0eb7002e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a434b2abeb02434b44881e07a0eb7002e">&#9670;&nbsp;</a></span>animation_matrix_array_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_md_bin_data_1_1_matrix.html">Matrix</a>&gt; MdBinData::Mesh::Bone::animation_matrix_array_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アニメーション行列 </p>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00672">672</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3ed12325ffa278847429e758ec08a373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ed12325ffa278847429e758ec08a373">&#9670;&nbsp;</a></span>name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MdBinData::Mesh::Bone::name_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ボーン名 </p>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00670">670</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab2119901317e2beb384a36d40f31c385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2119901317e2beb384a36d40f31c385">&#9670;&nbsp;</a></span>offset_matrix_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_md_bin_data_1_1_matrix.html">Matrix</a> MdBinData::Mesh::Bone::offset_matrix_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>オフセット行列(初期姿勢の逆行列) </p>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00671">671</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/FbxConverter/source/MdBinData/<a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/FbxConverter/source/MdBinData/<a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_md_bin_data.html">MdBinData</a></li><li class="navelem"><a class="el" href="class_md_bin_data_1_1_mesh.html">Mesh</a></li><li class="navelem"><a class="el" href="class_md_bin_data_1_1_mesh_1_1_bone.html">Bone</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

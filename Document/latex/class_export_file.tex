@@ -1,0 +1,517 @@
+\hypertarget{class_export_file}{}\section{Export\+File クラス}
+\label{class_export_file}\index{Export\+File@{Export\+File}}
+
+
+ファイル出力\+Class  
+
+
+
+
+{\ttfamily \#include $<$Export\+File.\+h$>$}
+
+
+
+Export\+File 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{class_export_file__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_export_file_a8b1ef14ae42180a8bf491d4d7a4ceb63}{set\+Md\+Bin\+Data}} (\mbox{\hyperlink{class_md_bin_data}{Md\+Bin\+Data}} $\ast$md\+\_\+bin\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Md\+Binデータ設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_export_file_a9dd6b27de162bee08b51eb2ae62d8e17}{set\+Axis}} (Fbx\+Axis\+System axis)
+\begin{DoxyCompactList}\small\item\em 軸設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_export_file_aadb97e06e12bbe978e5527b4b540ece8}{Export}} (std\+::string $\ast$file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em 出力関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_export_file_a16e769db1683d63e0e4dbf809bd8704e}{Export\+Of\+Md\+Bin\+File}} ()
+\begin{DoxyCompactList}\small\item\em Md\+Binファイルの出力関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_export_file_ab8a6f3c0bf115e400beb188bc95b3d5c}{Export\+Of\+Log\+File}} ()
+\begin{DoxyCompactList}\small\item\em ログファイルの出力関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_export_file_a1a5927dcc9f77a33c3cde8e0f15161f3}{Export\+Of\+Material\+Log\+File}} (std\+::string $\ast$directory\+\_\+path)
+\begin{DoxyCompactList}\small\item\em マテリアルログファイルの出力関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_export_file_a4469089d40e6b28e1468f100cb2edb9d}{Export\+Of\+Mesh\+Log\+File}} (std\+::string $\ast$directory\+\_\+path)
+\begin{DoxyCompactList}\small\item\em メッシュログファイルの出力関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_export_file_a183be4cce0cdd02ac41f5d02dc4499ee}{Create\+File\+Name}} (std\+::string $\ast$file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em ファイル名作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_export_file_af2c0b760712fc2806e030e4d30fc9599}{Create\+Export\+Directory\+Path}} ()
+\begin{DoxyCompactList}\small\item\em 出力ディレクトリ名作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_export_file_aab917dac60913d7aa73d458a82c4e29d}{Create\+Log\+Directory\+Path}} (std\+::string $\ast$material\+\_\+directory\+\_\+path, std\+::string $\ast$mesh\+\_\+directory\+\_\+path)
+\begin{DoxyCompactList}\small\item\em ログディレクトリ名作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_export_file_abf4344f171c496296579d9ad6d974afe}{Create\+Index\+Directory\+Path}} (std\+::string $\ast$index\+\_\+directory\+\_\+path, std\+::string $\ast$directory\+\_\+path, int index)
+\begin{DoxyCompactList}\small\item\em インデックスディレクトリ名作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_export_file_ad171b58b3ee1f84ed22a60afe55f4096}{Create\+Export\+Directory}} (std\+::string $\ast$directory\+\_\+path)
+\begin{DoxyCompactList}\small\item\em 出力ディレクトリの作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_export_file_a28a889812b0d24741f0466ff21ea4f82}{Create\+Export\+File\+Name}} (std\+::string $\ast$file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em 出力ファイル名作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_export_file_a7c23d58ec17d273f55da9110745ef66b}{Create\+Index\+Log\+File\+Name}} (std\+::string $\ast$file\+\_\+name, int index)
+\begin{DoxyCompactList}\small\item\em インデックスログファイル名作成関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_export_file_afff4247767f7ad05091d60cba9279816}{Create\+Export\+Path}} (std\+::string $\ast$export\+\_\+file\+\_\+path, std\+::string $\ast$directory\+\_\+path, std\+::string $\ast$export\+\_\+file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em 出力パス作成関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_md_bin_data}{Md\+Bin\+Data}} $\ast$ \mbox{\hyperlink{class_export_file_a21c28c8b20e7c7592c9b31e4f316e446}{md\+\_\+bin\+\_\+data\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Md\+Binデータ \end{DoxyCompactList}\item 
+Fbx\+Axis\+System \mbox{\hyperlink{class_export_file_aa07d09fbe2283f5b69a3d001ce6bcc4c}{axis\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 軸 \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_export_file_a7b71765d0ac88a9e284a79e8fbbe4d4e}{file\+\_\+name\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 出力ディレクトリパス \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_export_file_ad61be755d6178b9f7f452f0e45343e02}{export\+\_\+directory\+\_\+path\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 出力ディレクトリパス \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+ファイル出力\+Class 
+
+ファイル出力用\+Class 
+
+ Export\+File.\+h の 27 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_export_file_ad171b58b3ee1f84ed22a60afe55f4096}\label{class_export_file_ad171b58b3ee1f84ed22a60afe55f4096}} 
+\index{Export\+File@{Export\+File}!Create\+Export\+Directory@{Create\+Export\+Directory}}
+\index{Create\+Export\+Directory@{Create\+Export\+Directory}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{Create\+Export\+Directory()}{CreateExportDirectory()}}
+{\footnotesize\ttfamily void Export\+File\+::\+Create\+Export\+Directory (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{directory\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+出力ディレクトリの作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$directory\+\_\+path} & ディレクトリパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Export\+File.\+cpp の 450 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_af2c0b760712fc2806e030e4d30fc9599}\label{class_export_file_af2c0b760712fc2806e030e4d30fc9599}} 
+\index{Export\+File@{Export\+File}!Create\+Export\+Directory\+Path@{Create\+Export\+Directory\+Path}}
+\index{Create\+Export\+Directory\+Path@{Create\+Export\+Directory\+Path}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{Create\+Export\+Directory\+Path()}{CreateExportDirectoryPath()}}
+{\footnotesize\ttfamily void Export\+File\+::\+Create\+Export\+Directory\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+出力ディレクトリ名作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Export\+File.\+cpp の 423 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_a28a889812b0d24741f0466ff21ea4f82}\label{class_export_file_a28a889812b0d24741f0466ff21ea4f82}} 
+\index{Export\+File@{Export\+File}!Create\+Export\+File\+Name@{Create\+Export\+File\+Name}}
+\index{Create\+Export\+File\+Name@{Create\+Export\+File\+Name}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{Create\+Export\+File\+Name()}{CreateExportFileName()}}
+{\footnotesize\ttfamily void Export\+File\+::\+Create\+Export\+File\+Name (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+出力ファイル名作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+name} & ファイル名 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Export\+File.\+cpp の 459 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_afff4247767f7ad05091d60cba9279816}\label{class_export_file_afff4247767f7ad05091d60cba9279816}} 
+\index{Export\+File@{Export\+File}!Create\+Export\+Path@{Create\+Export\+Path}}
+\index{Create\+Export\+Path@{Create\+Export\+Path}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{Create\+Export\+Path()}{CreateExportPath()}}
+{\footnotesize\ttfamily void Export\+File\+::\+Create\+Export\+Path (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{export\+\_\+file\+\_\+path,  }\item[{std\+::string $\ast$}]{directory\+\_\+path,  }\item[{std\+::string $\ast$}]{export\+\_\+file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+出力パス作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$export\+\_\+file\+\_\+path} & 出力パス \\
+\hline
+{\em $\ast$directory\+\_\+path} & ディレクトリパス \\
+\hline
+{\em $\ast$export\+\_\+file\+\_\+name} & 出力ファイル名 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Export\+File.\+cpp の 475 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_a183be4cce0cdd02ac41f5d02dc4499ee}\label{class_export_file_a183be4cce0cdd02ac41f5d02dc4499ee}} 
+\index{Export\+File@{Export\+File}!Create\+File\+Name@{Create\+File\+Name}}
+\index{Create\+File\+Name@{Create\+File\+Name}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{Create\+File\+Name()}{CreateFileName()}}
+{\footnotesize\ttfamily void Export\+File\+::\+Create\+File\+Name (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ファイル名作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Export\+File.\+cpp の 389 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_abf4344f171c496296579d9ad6d974afe}\label{class_export_file_abf4344f171c496296579d9ad6d974afe}} 
+\index{Export\+File@{Export\+File}!Create\+Index\+Directory\+Path@{Create\+Index\+Directory\+Path}}
+\index{Create\+Index\+Directory\+Path@{Create\+Index\+Directory\+Path}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{Create\+Index\+Directory\+Path()}{CreateIndexDirectoryPath()}}
+{\footnotesize\ttfamily void Export\+File\+::\+Create\+Index\+Directory\+Path (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{index\+\_\+directory\+\_\+path,  }\item[{std\+::string $\ast$}]{directory\+\_\+path,  }\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+インデックスディレクトリ名作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$index\+\_\+directory\+\_\+path} & インデックスディレクトリパス \\
+\hline
+{\em $\ast$directory\+\_\+path} & ディレクトリパス \\
+\hline
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Export\+File.\+cpp の 441 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_a7c23d58ec17d273f55da9110745ef66b}\label{class_export_file_a7c23d58ec17d273f55da9110745ef66b}} 
+\index{Export\+File@{Export\+File}!Create\+Index\+Log\+File\+Name@{Create\+Index\+Log\+File\+Name}}
+\index{Create\+Index\+Log\+File\+Name@{Create\+Index\+Log\+File\+Name}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{Create\+Index\+Log\+File\+Name()}{CreateIndexLogFileName()}}
+{\footnotesize\ttfamily void Export\+File\+::\+Create\+Index\+Log\+File\+Name (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{file\+\_\+name,  }\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+インデックスログファイル名作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+name} & ファイル名 \\
+\hline
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Export\+File.\+cpp の 467 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_aab917dac60913d7aa73d458a82c4e29d}\label{class_export_file_aab917dac60913d7aa73d458a82c4e29d}} 
+\index{Export\+File@{Export\+File}!Create\+Log\+Directory\+Path@{Create\+Log\+Directory\+Path}}
+\index{Create\+Log\+Directory\+Path@{Create\+Log\+Directory\+Path}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{Create\+Log\+Directory\+Path()}{CreateLogDirectoryPath()}}
+{\footnotesize\ttfamily void Export\+File\+::\+Create\+Log\+Directory\+Path (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{material\+\_\+directory\+\_\+path,  }\item[{std\+::string $\ast$}]{mesh\+\_\+directory\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ログディレクトリ名作成関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$material\+\_\+directory\+\_\+path} & マテリアルディレクトリパス \\
+\hline
+{\em $\ast$mesh\+\_\+directory\+\_\+path} & メッシュディレクトリパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Export\+File.\+cpp の 432 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_aadb97e06e12bbe978e5527b4b540ece8}\label{class_export_file_aadb97e06e12bbe978e5527b4b540ece8}} 
+\index{Export\+File@{Export\+File}!Export@{Export}}
+\index{Export@{Export}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{Export()}{Export()}}
+{\footnotesize\ttfamily void Export\+File\+::\+Export (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+出力関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Export\+File.\+cpp の 44 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_ab8a6f3c0bf115e400beb188bc95b3d5c}\label{class_export_file_ab8a6f3c0bf115e400beb188bc95b3d5c}} 
+\index{Export\+File@{Export\+File}!Export\+Of\+Log\+File@{Export\+Of\+Log\+File}}
+\index{Export\+Of\+Log\+File@{Export\+Of\+Log\+File}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{Export\+Of\+Log\+File()}{ExportOfLogFile()}}
+{\footnotesize\ttfamily void Export\+File\+::\+Export\+Of\+Log\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ログファイルの出力関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Export\+File.\+cpp の 101 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_a1a5927dcc9f77a33c3cde8e0f15161f3}\label{class_export_file_a1a5927dcc9f77a33c3cde8e0f15161f3}} 
+\index{Export\+File@{Export\+File}!Export\+Of\+Material\+Log\+File@{Export\+Of\+Material\+Log\+File}}
+\index{Export\+Of\+Material\+Log\+File@{Export\+Of\+Material\+Log\+File}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{Export\+Of\+Material\+Log\+File()}{ExportOfMaterialLogFile()}}
+{\footnotesize\ttfamily void Export\+File\+::\+Export\+Of\+Material\+Log\+File (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{directory\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+マテリアルログファイルの出力関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$directory\+\_\+path} & ディレクトリパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Export\+File.\+cpp の 119 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_a16e769db1683d63e0e4dbf809bd8704e}\label{class_export_file_a16e769db1683d63e0e4dbf809bd8704e}} 
+\index{Export\+File@{Export\+File}!Export\+Of\+Md\+Bin\+File@{Export\+Of\+Md\+Bin\+File}}
+\index{Export\+Of\+Md\+Bin\+File@{Export\+Of\+Md\+Bin\+File}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{Export\+Of\+Md\+Bin\+File()}{ExportOfMdBinFile()}}
+{\footnotesize\ttfamily bool Export\+File\+::\+Export\+Of\+Md\+Bin\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Md\+Binファイルの出力関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 上書きの有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Export\+File.\+cpp の 63 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_a4469089d40e6b28e1468f100cb2edb9d}\label{class_export_file_a4469089d40e6b28e1468f100cb2edb9d}} 
+\index{Export\+File@{Export\+File}!Export\+Of\+Mesh\+Log\+File@{Export\+Of\+Mesh\+Log\+File}}
+\index{Export\+Of\+Mesh\+Log\+File@{Export\+Of\+Mesh\+Log\+File}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{Export\+Of\+Mesh\+Log\+File()}{ExportOfMeshLogFile()}}
+{\footnotesize\ttfamily void Export\+File\+::\+Export\+Of\+Mesh\+Log\+File (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{directory\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+メッシュログファイルの出力関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$directory\+\_\+path} & ディレクトリパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Export\+File.\+cpp の 186 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_a9dd6b27de162bee08b51eb2ae62d8e17}\label{class_export_file_a9dd6b27de162bee08b51eb2ae62d8e17}} 
+\index{Export\+File@{Export\+File}!set\+Axis@{set\+Axis}}
+\index{set\+Axis@{set\+Axis}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{set\+Axis()}{setAxis()}}
+{\footnotesize\ttfamily void Export\+File\+::set\+Axis (\begin{DoxyParamCaption}\item[{Fbx\+Axis\+System}]{axis }\end{DoxyParamCaption})}
+
+
+
+軸設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em axis} & 軸 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Export\+File.\+cpp の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_a8b1ef14ae42180a8bf491d4d7a4ceb63}\label{class_export_file_a8b1ef14ae42180a8bf491d4d7a4ceb63}} 
+\index{Export\+File@{Export\+File}!set\+Md\+Bin\+Data@{set\+Md\+Bin\+Data}}
+\index{set\+Md\+Bin\+Data@{set\+Md\+Bin\+Data}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{set\+Md\+Bin\+Data()}{setMdBinData()}}
+{\footnotesize\ttfamily void Export\+File\+::set\+Md\+Bin\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_md_bin_data}{Md\+Bin\+Data}} $\ast$}]{md\+\_\+bin\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Md\+Binデータ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$md\+\_\+bin\+\_\+data} & Md\+Binデータ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Export\+File.\+cpp の 27 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_export_file_aa07d09fbe2283f5b69a3d001ce6bcc4c}\label{class_export_file_aa07d09fbe2283f5b69a3d001ce6bcc4c}} 
+\index{Export\+File@{Export\+File}!axis\+\_\+@{axis\+\_\+}}
+\index{axis\+\_\+@{axis\+\_\+}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{axis\+\_\+}{axis\_}}
+{\footnotesize\ttfamily Fbx\+Axis\+System Export\+File\+::axis\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+軸 
+
+
+
+ Export\+File.\+h の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_ad61be755d6178b9f7f452f0e45343e02}\label{class_export_file_ad61be755d6178b9f7f452f0e45343e02}} 
+\index{Export\+File@{Export\+File}!export\+\_\+directory\+\_\+path\+\_\+@{export\+\_\+directory\+\_\+path\+\_\+}}
+\index{export\+\_\+directory\+\_\+path\+\_\+@{export\+\_\+directory\+\_\+path\+\_\+}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{export\+\_\+directory\+\_\+path\+\_\+}{export\_directory\_path\_}}
+{\footnotesize\ttfamily std\+::string Export\+File\+::export\+\_\+directory\+\_\+path\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+出力ディレクトリパス 
+
+
+
+ Export\+File.\+h の 36 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_a7b71765d0ac88a9e284a79e8fbbe4d4e}\label{class_export_file_a7b71765d0ac88a9e284a79e8fbbe4d4e}} 
+\index{Export\+File@{Export\+File}!file\+\_\+name\+\_\+@{file\+\_\+name\+\_\+}}
+\index{file\+\_\+name\+\_\+@{file\+\_\+name\+\_\+}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{file\+\_\+name\+\_\+}{file\_name\_}}
+{\footnotesize\ttfamily std\+::string Export\+File\+::file\+\_\+name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+出力ディレクトリパス 
+
+
+
+ Export\+File.\+h の 35 行目に定義があります。
+
+\mbox{\Hypertarget{class_export_file_a21c28c8b20e7c7592c9b31e4f316e446}\label{class_export_file_a21c28c8b20e7c7592c9b31e4f316e446}} 
+\index{Export\+File@{Export\+File}!md\+\_\+bin\+\_\+data\+\_\+@{md\+\_\+bin\+\_\+data\+\_\+}}
+\index{md\+\_\+bin\+\_\+data\+\_\+@{md\+\_\+bin\+\_\+data\+\_\+}!Export\+File@{Export\+File}}
+\subsubsection{\texorpdfstring{md\+\_\+bin\+\_\+data\+\_\+}{md\_bin\_data\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_data}{Md\+Bin\+Data}}$\ast$ Export\+File\+::md\+\_\+bin\+\_\+data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Md\+Binデータ 
+
+
+
+ Export\+File.\+h の 33 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Fbx\+Converter/source/\+Export\+File/\mbox{\hyperlink{_export_file_8h}{Export\+File.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Fbx\+Converter/source/\+Export\+File/\mbox{\hyperlink{_export_file_8cpp}{Export\+File.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,2049 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FbxConverter: FbxConverter クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FbxConverter
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">FBXから独自ファイルへのコンバーター</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_fbx_converter.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="class_fbx_converter-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">FbxConverter クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>FBX変換器Class  
+ <a href="class_fbx_converter.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_fbx_converter_8h_source.html">FbxConverter.h</a>&gt;</code></p>
+<div class="dynheader">
+FbxConverter 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fbx_converter__coll__graph.png" border="0" usemap="#_fbx_converter_coll__map" alt="Collaboration graph"/></div>
+<map name="_fbx_converter_coll__map" id="_fbx_converter_coll__map">
+<area shape="rect" id="node2" href="class_md_bin_data.html" title="バイナリーモデルデータClass " alt="" coords="38,5,125,32"/>
+<area shape="rect" id="node3" href="class_export_file.html" title="ファイル出力Class " alt="" coords="143,95,225,121"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ad42745849ed5fbd2a6b332004a21a667"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#ad42745849ed5fbd2a6b332004a21a667">Init</a> ()</td></tr>
+<tr class="memdesc:ad42745849ed5fbd2a6b332004a21a667"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化関数  <a href="#ad42745849ed5fbd2a6b332004a21a667">[詳解]</a><br /></td></tr>
+<tr class="separator:ad42745849ed5fbd2a6b332004a21a667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab41f9b165cb34a294bb2c5da778f542b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#ab41f9b165cb34a294bb2c5da778f542b">Uninit</a> ()</td></tr>
+<tr class="memdesc:ab41f9b165cb34a294bb2c5da778f542b"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了関数  <a href="#ab41f9b165cb34a294bb2c5da778f542b">[詳解]</a><br /></td></tr>
+<tr class="separator:ab41f9b165cb34a294bb2c5da778f542b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecd6ebf6aec9616bd609f6ebfc3a557e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#aecd6ebf6aec9616bd609f6ebfc3a557e">ConvertToMdBin</a> (std::string *file_path)</td></tr>
+<tr class="memdesc:aecd6ebf6aec9616bd609f6ebfc3a557e"><td class="mdescLeft">&#160;</td><td class="mdescRight">MdBinへ変換関数  <a href="#aecd6ebf6aec9616bd609f6ebfc3a557e">[詳解]</a><br /></td></tr>
+<tr class="separator:aecd6ebf6aec9616bd609f6ebfc3a557e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:a5259c5ec8f57b412455d75ccebb27524"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a5259c5ec8f57b412455d75ccebb27524">Load</a> (std::string *file_path)</td></tr>
+<tr class="memdesc:a5259c5ec8f57b412455d75ccebb27524"><td class="mdescLeft">&#160;</td><td class="mdescRight">読み込み関数  <a href="#a5259c5ec8f57b412455d75ccebb27524">[詳解]</a><br /></td></tr>
+<tr class="separator:a5259c5ec8f57b412455d75ccebb27524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f6070933510e57b4a781d97d46f7406"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a0f6070933510e57b4a781d97d46f7406">ExtractFrameData</a> (FbxImporter *importer)</td></tr>
+<tr class="memdesc:a0f6070933510e57b4a781d97d46f7406"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム情報抽出関数  <a href="#a0f6070933510e57b4a781d97d46f7406">[詳解]</a><br /></td></tr>
+<tr class="separator:a0f6070933510e57b4a781d97d46f7406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0e56fde4c4e0f5bc846e7a6cd7f8a19"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#ab0e56fde4c4e0f5bc846e7a6cd7f8a19">ExtractData</a> ()</td></tr>
+<tr class="memdesc:ab0e56fde4c4e0f5bc846e7a6cd7f8a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">データ抽出関数  <a href="#ab0e56fde4c4e0f5bc846e7a6cd7f8a19">[詳解]</a><br /></td></tr>
+<tr class="separator:ab0e56fde4c4e0f5bc846e7a6cd7f8a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf269065c211ffb8fc77634bf8dbee9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#accf269065c211ffb8fc77634bf8dbee9">ExtractMaterialData</a> ()</td></tr>
+<tr class="memdesc:accf269065c211ffb8fc77634bf8dbee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルデータの抽出関数  <a href="#accf269065c211ffb8fc77634bf8dbee9">[詳解]</a><br /></td></tr>
+<tr class="separator:accf269065c211ffb8fc77634bf8dbee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1c69b9948c7aa9659a80ba3ba85f9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a4e1c69b9948c7aa9659a80ba3ba85f9f">ExtractMeshData</a> ()</td></tr>
+<tr class="memdesc:a4e1c69b9948c7aa9659a80ba3ba85f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュデータの抽出関数  <a href="#a4e1c69b9948c7aa9659a80ba3ba85f9f">[詳解]</a><br /></td></tr>
+<tr class="separator:a4e1c69b9948c7aa9659a80ba3ba85f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0180e652e003309edeb721f6d88e378"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#ae0180e652e003309edeb721f6d88e378">ExtractMaterialName</a> (int material_index, FbxSurfaceMaterial *material)</td></tr>
+<tr class="memdesc:ae0180e652e003309edeb721f6d88e378"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアル名の抽出関数  <a href="#ae0180e652e003309edeb721f6d88e378">[詳解]</a><br /></td></tr>
+<tr class="separator:ae0180e652e003309edeb721f6d88e378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95cb085115d7832311264e9d27b5fb72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a95cb085115d7832311264e9d27b5fb72">ExtractAmbientData</a> (int material_index, FbxSurfaceMaterial *material)</td></tr>
+<tr class="memdesc:a95cb085115d7832311264e9d27b5fb72"><td class="mdescLeft">&#160;</td><td class="mdescRight">アンビエントデータの抽出関数  <a href="#a95cb085115d7832311264e9d27b5fb72">[詳解]</a><br /></td></tr>
+<tr class="separator:a95cb085115d7832311264e9d27b5fb72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60e517313041e75f081effceb74e7c56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a60e517313041e75f081effceb74e7c56">ExtractDiffuseData</a> (int material_index, FbxSurfaceMaterial *material)</td></tr>
+<tr class="memdesc:a60e517313041e75f081effceb74e7c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディフューズデータの抽出関数  <a href="#a60e517313041e75f081effceb74e7c56">[詳解]</a><br /></td></tr>
+<tr class="separator:a60e517313041e75f081effceb74e7c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae43f5f7858379aa57f1dbc1373c66b77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#ae43f5f7858379aa57f1dbc1373c66b77">ExtractEmissiveData</a> (int material_index, FbxSurfaceMaterial *material)</td></tr>
+<tr class="memdesc:ae43f5f7858379aa57f1dbc1373c66b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">エミッシブデータの抽出関数  <a href="#ae43f5f7858379aa57f1dbc1373c66b77">[詳解]</a><br /></td></tr>
+<tr class="separator:ae43f5f7858379aa57f1dbc1373c66b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1470186342a7aabb60818cd4813a1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#abc1470186342a7aabb60818cd4813a1a">ExtractBumpData</a> (int material_index, FbxSurfaceMaterial *material)</td></tr>
+<tr class="memdesc:abc1470186342a7aabb60818cd4813a1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">バンプデータの抽出関数  <a href="#abc1470186342a7aabb60818cd4813a1a">[詳解]</a><br /></td></tr>
+<tr class="separator:abc1470186342a7aabb60818cd4813a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a888c4e3d638aa79fa524b85a67f01f5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a888c4e3d638aa79fa524b85a67f01f5d">ExtractTransparentData</a> (int material_index, FbxSurfaceMaterial *material)</td></tr>
+<tr class="memdesc:a888c4e3d638aa79fa524b85a67f01f5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">トランスペアレントデータの抽出関数  <a href="#a888c4e3d638aa79fa524b85a67f01f5d">[詳解]</a><br /></td></tr>
+<tr class="separator:a888c4e3d638aa79fa524b85a67f01f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ff36051144ed83860d0287a953778b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a2ff36051144ed83860d0287a953778b4">ExtractSpecularData</a> (int material_index, FbxSurfaceMaterial *material)</td></tr>
+<tr class="memdesc:a2ff36051144ed83860d0287a953778b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">スペキュラデータの抽出関数  <a href="#a2ff36051144ed83860d0287a953778b4">[詳解]</a><br /></td></tr>
+<tr class="separator:a2ff36051144ed83860d0287a953778b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d0d302ad6691934164dfdf1f5f6590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#aa2d0d302ad6691934164dfdf1f5f6590">ExtractPowerData</a> (int material_index, FbxSurfaceMaterial *material)</td></tr>
+<tr class="memdesc:aa2d0d302ad6691934164dfdf1f5f6590"><td class="mdescLeft">&#160;</td><td class="mdescRight">パワー(シャイネス)データの抽出関数  <a href="#aa2d0d302ad6691934164dfdf1f5f6590">[詳解]</a><br /></td></tr>
+<tr class="separator:aa2d0d302ad6691934164dfdf1f5f6590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25d2148fb64c484684c7eb856e9ae255"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a25d2148fb64c484684c7eb856e9ae255">ExtractReflectionData</a> (int material_index, FbxSurfaceMaterial *material)</td></tr>
+<tr class="memdesc:a25d2148fb64c484684c7eb856e9ae255"><td class="mdescLeft">&#160;</td><td class="mdescRight">リフレクションデータの抽出関数  <a href="#a25d2148fb64c484684c7eb856e9ae255">[詳解]</a><br /></td></tr>
+<tr class="separator:a25d2148fb64c484684c7eb856e9ae255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59039fa4ffde0cbe8fa269e71878b0da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a59039fa4ffde0cbe8fa269e71878b0da">ExtractTextureData</a> (int material_index, FbxProperty property, <a class="el" href="class_md_bin_data_1_1_material_1_1_texture.html#a30fadb7216d0650de284e2fd875868ae">MdBinData::Material::Texture::Type</a> texture_type)</td></tr>
+<tr class="memdesc:a59039fa4ffde0cbe8fa269e71878b0da"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャデータの抽出関数  <a href="#a59039fa4ffde0cbe8fa269e71878b0da">[詳解]</a><br /></td></tr>
+<tr class="separator:a59039fa4ffde0cbe8fa269e71878b0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7d26c94b5926ab4477f93926f6d345d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#ae7d26c94b5926ab4477f93926f6d345d">ExtractFileName</a> (std::string *file_name, std::string *file_path)</td></tr>
+<tr class="memdesc:ae7d26c94b5926ab4477f93926f6d345d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル名抽出関数  <a href="#ae7d26c94b5926ab4477f93926f6d345d">[詳解]</a><br /></td></tr>
+<tr class="separator:ae7d26c94b5926ab4477f93926f6d345d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a476feb886d898a64f88a0b23cf10651a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a476feb886d898a64f88a0b23cf10651a">ExtractIndexData</a> (int mesh_index, FbxMesh *mesh)</td></tr>
+<tr class="memdesc:a476feb886d898a64f88a0b23cf10651a"><td class="mdescLeft">&#160;</td><td class="mdescRight">インデックスデータの抽出関数  <a href="#a476feb886d898a64f88a0b23cf10651a">[詳解]</a><br /></td></tr>
+<tr class="separator:a476feb886d898a64f88a0b23cf10651a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaa3676e36092b4a28a1748ac01dfa75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#adaa3676e36092b4a28a1748ac01dfa75">ExtractVertexData</a> (int mesh_index, FbxMesh *mesh)</td></tr>
+<tr class="memdesc:adaa3676e36092b4a28a1748ac01dfa75"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点データの抽出関数  <a href="#adaa3676e36092b4a28a1748ac01dfa75">[詳解]</a><br /></td></tr>
+<tr class="separator:adaa3676e36092b4a28a1748ac01dfa75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1333d3fe7a3ab69f7121265117e56b7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a1333d3fe7a3ab69f7121265117e56b7f">ExtractNormalData</a> (int mesh_index, FbxMesh *mesh)</td></tr>
+<tr class="memdesc:a1333d3fe7a3ab69f7121265117e56b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">法線データの抽出関数  <a href="#a1333d3fe7a3ab69f7121265117e56b7f">[詳解]</a><br /></td></tr>
+<tr class="separator:a1333d3fe7a3ab69f7121265117e56b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06cbfb7a211fc212e74de160e809ef35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a06cbfb7a211fc212e74de160e809ef35">ExtractUVSetData</a> (int mesh_index, FbxMesh *mesh)</td></tr>
+<tr class="memdesc:a06cbfb7a211fc212e74de160e809ef35"><td class="mdescLeft">&#160;</td><td class="mdescRight">UVセットデータの抽出関数  <a href="#a06cbfb7a211fc212e74de160e809ef35">[詳解]</a><br /></td></tr>
+<tr class="separator:a06cbfb7a211fc212e74de160e809ef35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f07e7dae9ba8bcb83dca611aeb5b3a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a3f07e7dae9ba8bcb83dca611aeb5b3a0">ExtractAnimationData</a> (int mesh_index, FbxMesh *mesh)</td></tr>
+<tr class="memdesc:a3f07e7dae9ba8bcb83dca611aeb5b3a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーションデータの抽出関数  <a href="#a3f07e7dae9ba8bcb83dca611aeb5b3a0">[詳解]</a><br /></td></tr>
+<tr class="separator:a3f07e7dae9ba8bcb83dca611aeb5b3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0df95f11a3cd66ba0ecf06244efe52e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a0df95f11a3cd66ba0ecf06244efe52e7">ExtractBoneData</a> (int mesh_index, FbxCluster *cluster)</td></tr>
+<tr class="memdesc:a0df95f11a3cd66ba0ecf06244efe52e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボーンデータの抽出関数  <a href="#a0df95f11a3cd66ba0ecf06244efe52e7">[詳解]</a><br /></td></tr>
+<tr class="separator:a0df95f11a3cd66ba0ecf06244efe52e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a744068ceddd573d1add39a484e25bdc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a744068ceddd573d1add39a484e25bdc6">ExtractBoneWeightData</a> (int mesh_index, std::vector&lt; <a class="el" href="class_md_bin_data_1_1_mesh_1_1_bone_weight.html">MdBinData::Mesh::BoneWeight</a> &gt; *save_bone_weight_array, FbxCluster *cluster)</td></tr>
+<tr class="memdesc:a744068ceddd573d1add39a484e25bdc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボーンの重みデータの抽出関数  <a href="#a744068ceddd573d1add39a484e25bdc6">[詳解]</a><br /></td></tr>
+<tr class="separator:a744068ceddd573d1add39a484e25bdc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4587ba56496d6aa8cdfdd9ea92300c46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a4587ba56496d6aa8cdfdd9ea92300c46">ChangeMatrix</a> (<a class="el" href="class_md_bin_data_1_1_matrix.html">MdBinData::Matrix</a> *bone_matrix, FbxAMatrix *fbx_matrix)</td></tr>
+<tr class="memdesc:a4587ba56496d6aa8cdfdd9ea92300c46"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列変換関数  <a href="#a4587ba56496d6aa8cdfdd9ea92300c46">[詳解]</a><br /></td></tr>
+<tr class="separator:a4587ba56496d6aa8cdfdd9ea92300c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5a81e3afe4ea2bdc101863f6c1f0326"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#aa5a81e3afe4ea2bdc101863f6c1f0326">AssociateWithMaterialData</a> (int mesh_index, FbxMesh *mesh)</td></tr>
+<tr class="memdesc:aa5a81e3afe4ea2bdc101863f6c1f0326"><td class="mdescLeft">&#160;</td><td class="mdescRight">マテリアルデータとの関連付け関数  <a href="#aa5a81e3afe4ea2bdc101863f6c1f0326">[詳解]</a><br /></td></tr>
+<tr class="separator:aa5a81e3afe4ea2bdc101863f6c1f0326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d669f32bb338dffeb5d1989a0b374d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a0d669f32bb338dffeb5d1989a0b374d7">AssociatingUVSetDataAndTexture</a> (int mesh_index)</td></tr>
+<tr class="memdesc:a0d669f32bb338dffeb5d1989a0b374d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">UVセットデータとテクスチャの関連付け関数  <a href="#a0d669f32bb338dffeb5d1989a0b374d7">[詳解]</a><br /></td></tr>
+<tr class="separator:a0d669f32bb338dffeb5d1989a0b374d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a471d98b3d59a3f32dd2403577deebad7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a471d98b3d59a3f32dd2403577deebad7">ConvertToFullPathOfUTF8</a> (std::string *file_path)</td></tr>
+<tr class="memdesc:a471d98b3d59a3f32dd2403577deebad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF8のフルパスへ変換関数  <a href="#a471d98b3d59a3f32dd2403577deebad7">[詳解]</a><br /></td></tr>
+<tr class="separator:a471d98b3d59a3f32dd2403577deebad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a5c236830d34901e79030647478d3ef1b"><td class="memItemLeft" align="right" valign="top">FbxManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a5c236830d34901e79030647478d3ef1b">manager_</a> = nullptr</td></tr>
+<tr class="memdesc:a5c236830d34901e79030647478d3ef1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">FBXマネージャ  <a href="#a5c236830d34901e79030647478d3ef1b">[詳解]</a><br /></td></tr>
+<tr class="separator:a5c236830d34901e79030647478d3ef1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64600b8f5225b7147c72105558386d78"><td class="memItemLeft" align="right" valign="top">FbxScene *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a64600b8f5225b7147c72105558386d78">scene_</a> = nullptr</td></tr>
+<tr class="memdesc:a64600b8f5225b7147c72105558386d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン  <a href="#a64600b8f5225b7147c72105558386d78">[詳解]</a><br /></td></tr>
+<tr class="separator:a64600b8f5225b7147c72105558386d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a43f9ee7bcf730c5f95e0ec63a4b8e"><td class="memItemLeft" align="right" valign="top">FbxNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#ad5a43f9ee7bcf730c5f95e0ec63a4b8e">root_node_</a> = nullptr</td></tr>
+<tr class="memdesc:ad5a43f9ee7bcf730c5f95e0ec63a4b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ルートノード  <a href="#ad5a43f9ee7bcf730c5f95e0ec63a4b8e">[詳解]</a><br /></td></tr>
+<tr class="separator:ad5a43f9ee7bcf730c5f95e0ec63a4b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36b80ea020d572dfff02125724af4c53"><td class="memItemLeft" align="right" valign="top">FbxAxisSystem&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a36b80ea020d572dfff02125724af4c53">axis_system_</a></td></tr>
+<tr class="memdesc:a36b80ea020d572dfff02125724af4c53"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標系の種類  <a href="#a36b80ea020d572dfff02125724af4c53">[詳解]</a><br /></td></tr>
+<tr class="separator:a36b80ea020d572dfff02125724af4c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad88043ffdcbe995d3f1f8649395e58c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#ad88043ffdcbe995d3f1f8649395e58c9">is_reverse_alpha_</a> = false</td></tr>
+<tr class="memdesc:ad88043ffdcbe995d3f1f8649395e58c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">α値の反転フラグ  <a href="#ad88043ffdcbe995d3f1f8649395e58c9">[詳解]</a><br /></td></tr>
+<tr class="separator:ad88043ffdcbe995d3f1f8649395e58c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542178c31548a51cd28726e2154c0f70"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a542178c31548a51cd28726e2154c0f70">directory_path_</a></td></tr>
+<tr class="memdesc:a542178c31548a51cd28726e2154c0f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディレクトリパス  <a href="#a542178c31548a51cd28726e2154c0f70">[詳解]</a><br /></td></tr>
+<tr class="separator:a542178c31548a51cd28726e2154c0f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d72d42a71572369aa2fed2f8710e696"><td class="memItemLeft" align="right" valign="top">FbxTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a6d72d42a71572369aa2fed2f8710e696">period_</a></td></tr>
+<tr class="memdesc:a6d72d42a71572369aa2fed2f8710e696"><td class="mdescLeft">&#160;</td><td class="mdescRight">1フレームの時間  <a href="#a6d72d42a71572369aa2fed2f8710e696">[詳解]</a><br /></td></tr>
+<tr class="separator:a6d72d42a71572369aa2fed2f8710e696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ce2f08e1d77044d628949d3ad7572ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a5ce2f08e1d77044d628949d3ad7572ca">animation_start_frame_num_</a> = 0</td></tr>
+<tr class="memdesc:a5ce2f08e1d77044d628949d3ad7572ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーション開始フレーム数  <a href="#a5ce2f08e1d77044d628949d3ad7572ca">[詳解]</a><br /></td></tr>
+<tr class="separator:a5ce2f08e1d77044d628949d3ad7572ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7d116416b9d843c79ca282841e398c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#ad7d116416b9d843c79ca282841e398c7">animation_stop_frame_num_</a> = 0</td></tr>
+<tr class="memdesc:ad7d116416b9d843c79ca282841e398c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーション停止フレーム数  <a href="#ad7d116416b9d843c79ca282841e398c7">[詳解]</a><br /></td></tr>
+<tr class="separator:ad7d116416b9d843c79ca282841e398c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcb0b8e16e923953c16d1a171df50190"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#adcb0b8e16e923953c16d1a171df50190">all_animation_frame_num_</a> = 0</td></tr>
+<tr class="memdesc:adcb0b8e16e923953c16d1a171df50190"><td class="mdescLeft">&#160;</td><td class="mdescRight">アニメーションフレーム数  <a href="#adcb0b8e16e923953c16d1a171df50190">[詳解]</a><br /></td></tr>
+<tr class="separator:adcb0b8e16e923953c16d1a171df50190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a637b9f53af4fbc31a961e9e2204dfaf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_md_bin_data.html">MdBinData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#a637b9f53af4fbc31a961e9e2204dfaf5">md_bin_data_</a></td></tr>
+<tr class="memdesc:a637b9f53af4fbc31a961e9e2204dfaf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">MdBinデータ  <a href="#a637b9f53af4fbc31a961e9e2204dfaf5">[詳解]</a><br /></td></tr>
+<tr class="separator:a637b9f53af4fbc31a961e9e2204dfaf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac840641172dc753b399902ea928b4ff6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_export_file.html">ExportFile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_converter.html#ac840641172dc753b399902ea928b4ff6">export_file_</a></td></tr>
+<tr class="memdesc:ac840641172dc753b399902ea928b4ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイル出力  <a href="#ac840641172dc753b399902ea928b4ff6">[詳解]</a><br /></td></tr>
+<tr class="separator:ac840641172dc753b399902ea928b4ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>FBX変換器Class </p>
+<p>FBX変換器Class </p>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8h_source.html">FbxConverter.h</a> の <a class="el" href="_fbx_converter_8h_source.html#l00028">28</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="aa5a81e3afe4ea2bdc101863f6c1f0326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5a81e3afe4ea2bdc101863f6c1f0326">&#9670;&nbsp;</a></span>AssociateWithMaterialData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::AssociateWithMaterialData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesh_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxMesh *&#160;</td>
+          <td class="paramname"><em>mesh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マテリアルデータとの関連付け関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*mesh_index</td><td>メッシュのインデックス </td></tr>
+    <tr><td class="paramname">*mesh</td><td>メッシュ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00744">744</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0d669f32bb338dffeb5d1989a0b374d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d669f32bb338dffeb5d1989a0b374d7">&#9670;&nbsp;</a></span>AssociatingUVSetDataAndTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::AssociatingUVSetDataAndTexture </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesh_index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>UVセットデータとテクスチャの関連付け関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*mesh_index</td><td>メッシュのインデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00786">786</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4587ba56496d6aa8cdfdd9ea92300c46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4587ba56496d6aa8cdfdd9ea92300c46">&#9670;&nbsp;</a></span>ChangeMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ChangeMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_md_bin_data_1_1_matrix.html">MdBinData::Matrix</a> *&#160;</td>
+          <td class="paramname"><em>bone_matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxAMatrix *&#160;</td>
+          <td class="paramname"><em>fbx_matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行列変換関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*bone_matrix</td><td>ボーン行列 </td></tr>
+    <tr><td class="paramname">*fbx_matrix</td><td>FBX行列 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00730">730</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a471d98b3d59a3f32dd2403577deebad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a471d98b3d59a3f32dd2403577deebad7">&#9670;&nbsp;</a></span>ConvertToFullPathOfUTF8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ConvertToFullPathOfUTF8 </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>file_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>UTF8のフルパスへ変換関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*file_path</td><td>ファイルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00808">808</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aecd6ebf6aec9616bd609f6ebfc3a557e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecd6ebf6aec9616bd609f6ebfc3a557e">&#9670;&nbsp;</a></span>ConvertToMdBin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxConverter::ConvertToMdBin </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>file_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>MdBinへ変換関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*file_path</td><td>ファイルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>変換成功の有無 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00070">70</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a95cb085115d7832311264e9d27b5fb72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95cb085115d7832311264e9d27b5fb72">&#9670;&nbsp;</a></span>ExtractAmbientData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractAmbientData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>material_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxSurfaceMaterial *&#160;</td>
+          <td class="paramname"><em>material</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アンビエントデータの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*material_index</td><td>マテリアルのインデックス </td></tr>
+    <tr><td class="paramname">*material</td><td>マテリアル </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00311">311</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3f07e7dae9ba8bcb83dca611aeb5b3a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f07e7dae9ba8bcb83dca611aeb5b3a0">&#9670;&nbsp;</a></span>ExtractAnimationData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractAnimationData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesh_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxMesh *&#160;</td>
+          <td class="paramname"><em>mesh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アニメーションデータの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*mesh_index</td><td>メッシュのインデックス </td></tr>
+    <tr><td class="paramname">*mesh</td><td>メッシュ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00621">621</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0df95f11a3cd66ba0ecf06244efe52e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0df95f11a3cd66ba0ecf06244efe52e7">&#9670;&nbsp;</a></span>ExtractBoneData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractBoneData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesh_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxCluster *&#160;</td>
+          <td class="paramname"><em>cluster</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ボーンデータの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*mesh_index</td><td>メッシュのインデックス </td></tr>
+    <tr><td class="paramname">*cluster</td><td>クラスタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00663">663</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a744068ceddd573d1add39a484e25bdc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744068ceddd573d1add39a484e25bdc6">&#9670;&nbsp;</a></span>ExtractBoneWeightData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractBoneWeightData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesh_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_md_bin_data_1_1_mesh_1_1_bone_weight.html">MdBinData::Mesh::BoneWeight</a> &gt; *&#160;</td>
+          <td class="paramname"><em>save_bone_weight_array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxCluster *&#160;</td>
+          <td class="paramname"><em>cluster</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ボーンの重みデータの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*mesh_index</td><td>メッシュのインデックス </td></tr>
+    <tr><td class="paramname">*save_bone_weight_array</td><td>ボーンの重み保存用配列 </td></tr>
+    <tr><td class="paramname">*cluster</td><td>クラスタ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00703">703</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abc1470186342a7aabb60818cd4813a1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1470186342a7aabb60818cd4813a1a">&#9670;&nbsp;</a></span>ExtractBumpData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractBumpData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>material_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxSurfaceMaterial *&#160;</td>
+          <td class="paramname"><em>material</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>バンプデータの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*material_index</td><td>マテリアルのインデックス </td></tr>
+    <tr><td class="paramname">*material</td><td>マテリアル </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00380">380</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab0e56fde4c4e0f5bc846e7a6cd7f8a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0e56fde4c4e0f5bc846e7a6cd7f8a19">&#9670;&nbsp;</a></span>ExtractData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxConverter::ExtractData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>データ抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>データの抽出成功の有無 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00232">232</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a60e517313041e75f081effceb74e7c56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60e517313041e75f081effceb74e7c56">&#9670;&nbsp;</a></span>ExtractDiffuseData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractDiffuseData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>material_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxSurfaceMaterial *&#160;</td>
+          <td class="paramname"><em>material</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ディフューズデータの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*material_index</td><td>マテリアルのインデックス </td></tr>
+    <tr><td class="paramname">*material</td><td>マテリアル </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00334">334</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae43f5f7858379aa57f1dbc1373c66b77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae43f5f7858379aa57f1dbc1373c66b77">&#9670;&nbsp;</a></span>ExtractEmissiveData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractEmissiveData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>material_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxSurfaceMaterial *&#160;</td>
+          <td class="paramname"><em>material</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>エミッシブデータの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*material_index</td><td>マテリアルのインデックス </td></tr>
+    <tr><td class="paramname">*material</td><td>マテリアル </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00357">357</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae7d26c94b5926ab4477f93926f6d345d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7d26c94b5926ab4477f93926f6d345d">&#9670;&nbsp;</a></span>ExtractFileName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractFileName </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>file_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイル名抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*file_name</td><td>ファイル名 </td></tr>
+    <tr><td class="paramname">*file_path</td><td>ファイルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00504">504</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0f6070933510e57b4a781d97d46f7406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f6070933510e57b4a781d97d46f7406">&#9670;&nbsp;</a></span>ExtractFrameData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractFrameData </td>
+          <td>(</td>
+          <td class="paramtype">FbxImporter *&#160;</td>
+          <td class="paramname"><em>importer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>フレーム情報抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*importer</td><td>インポーター </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00194">194</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a476feb886d898a64f88a0b23cf10651a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a476feb886d898a64f88a0b23cf10651a">&#9670;&nbsp;</a></span>ExtractIndexData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractIndexData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesh_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxMesh *&#160;</td>
+          <td class="paramname"><em>mesh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>インデックスデータの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*mesh_index</td><td>メッシュのインデックス </td></tr>
+    <tr><td class="paramname">*mesh</td><td>メッシュ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00531">531</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="accf269065c211ffb8fc77634bf8dbee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accf269065c211ffb8fc77634bf8dbee9">&#9670;&nbsp;</a></span>ExtractMaterialData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractMaterialData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マテリアルデータの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00248">248</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae0180e652e003309edeb721f6d88e378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0180e652e003309edeb721f6d88e378">&#9670;&nbsp;</a></span>ExtractMaterialName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractMaterialName </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>material_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxSurfaceMaterial *&#160;</td>
+          <td class="paramname"><em>material</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マテリアル名の抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*material_index</td><td>マテリアルのインデックス </td></tr>
+    <tr><td class="paramname">*material</td><td>マテリアル </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00304">304</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4e1c69b9948c7aa9659a80ba3ba85f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e1c69b9948c7aa9659a80ba3ba85f9f">&#9670;&nbsp;</a></span>ExtractMeshData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractMeshData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>メッシュデータの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00275">275</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1333d3fe7a3ab69f7121265117e56b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1333d3fe7a3ab69f7121265117e56b7f">&#9670;&nbsp;</a></span>ExtractNormalData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractNormalData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesh_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxMesh *&#160;</td>
+          <td class="paramname"><em>mesh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>法線データの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*mesh_index</td><td>メッシュのインデックス </td></tr>
+    <tr><td class="paramname">*mesh</td><td>メッシュ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00567">567</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa2d0d302ad6691934164dfdf1f5f6590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2d0d302ad6691934164dfdf1f5f6590">&#9670;&nbsp;</a></span>ExtractPowerData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractPowerData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>material_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxSurfaceMaterial *&#160;</td>
+          <td class="paramname"><em>material</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>パワー(シャイネス)データの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*material_index</td><td>マテリアルのインデックス </td></tr>
+    <tr><td class="paramname">*material</td><td>マテリアル </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00450">450</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a25d2148fb64c484684c7eb856e9ae255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25d2148fb64c484684c7eb856e9ae255">&#9670;&nbsp;</a></span>ExtractReflectionData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractReflectionData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>material_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxSurfaceMaterial *&#160;</td>
+          <td class="paramname"><em>material</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>リフレクションデータの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*material_index</td><td>マテリアルのインデックス </td></tr>
+    <tr><td class="paramname">*material</td><td>マテリアル </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00466">466</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2ff36051144ed83860d0287a953778b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ff36051144ed83860d0287a953778b4">&#9670;&nbsp;</a></span>ExtractSpecularData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractSpecularData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>material_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxSurfaceMaterial *&#160;</td>
+          <td class="paramname"><em>material</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>スペキュラデータの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*material_index</td><td>マテリアルのインデックス </td></tr>
+    <tr><td class="paramname">*material</td><td>マテリアル </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00427">427</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a59039fa4ffde0cbe8fa269e71878b0da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59039fa4ffde0cbe8fa269e71878b0da">&#9670;&nbsp;</a></span>ExtractTextureData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractTextureData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>material_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxProperty&#160;</td>
+          <td class="paramname"><em>property</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_md_bin_data_1_1_material_1_1_texture.html#a30fadb7216d0650de284e2fd875868ae">MdBinData::Material::Texture::Type</a>&#160;</td>
+          <td class="paramname"><em>texture_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テクスチャデータの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*material_index</td><td>マテリアルのインデックス </td></tr>
+    <tr><td class="paramname">*property</td><td>FBXプロパティ </td></tr>
+    <tr><td class="paramname">texture_type</td><td>テクスチャタイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00482">482</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a888c4e3d638aa79fa524b85a67f01f5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a888c4e3d638aa79fa524b85a67f01f5d">&#9670;&nbsp;</a></span>ExtractTransparentData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractTransparentData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>material_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxSurfaceMaterial *&#160;</td>
+          <td class="paramname"><em>material</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>トランスペアレントデータの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*material_index</td><td>マテリアルのインデックス </td></tr>
+    <tr><td class="paramname">*material</td><td>マテリアル </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00403">403</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a06cbfb7a211fc212e74de160e809ef35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06cbfb7a211fc212e74de160e809ef35">&#9670;&nbsp;</a></span>ExtractUVSetData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractUVSetData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesh_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxMesh *&#160;</td>
+          <td class="paramname"><em>mesh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>UVセットデータの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*mesh_index</td><td>メッシュのインデックス </td></tr>
+    <tr><td class="paramname">*mesh</td><td>メッシュ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00587">587</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="adaa3676e36092b4a28a1748ac01dfa75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaa3676e36092b4a28a1748ac01dfa75">&#9670;&nbsp;</a></span>ExtractVertexData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::ExtractVertexData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mesh_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FbxMesh *&#160;</td>
+          <td class="paramname"><em>mesh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>頂点データの抽出関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*mesh_index</td><td>メッシュのインデックス </td></tr>
+    <tr><td class="paramname">*mesh</td><td>メッシュ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00548">548</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad42745849ed5fbd2a6b332004a21a667"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad42745849ed5fbd2a6b332004a21a667">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxConverter::Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初期化関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>初期化成功の有無 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00022">22</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5259c5ec8f57b412455d75ccebb27524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5259c5ec8f57b412455d75ccebb27524">&#9670;&nbsp;</a></span>Load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxConverter::Load </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>file_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>読み込み関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*file_path</td><td>ファイルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">bool</td><td>読み込み成功の有無 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00094">94</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab41f9b165cb34a294bb2c5da778f542b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab41f9b165cb34a294bb2c5da778f542b">&#9670;&nbsp;</a></span>Uninit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxConverter::Uninit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>終了関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a> の <a class="el" href="_fbx_converter_8cpp_source.html#l00060">60</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="adcb0b8e16e923953c16d1a171df50190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcb0b8e16e923953c16d1a171df50190">&#9670;&nbsp;</a></span>all_animation_frame_num_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FbxConverter::all_animation_frame_num_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アニメーションフレーム数 </p>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8h_source.html">FbxConverter.h</a> の <a class="el" href="_fbx_converter_8h_source.html#l00043">43</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5ce2f08e1d77044d628949d3ad7572ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ce2f08e1d77044d628949d3ad7572ca">&#9670;&nbsp;</a></span>animation_start_frame_num_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FbxConverter::animation_start_frame_num_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アニメーション開始フレーム数 </p>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8h_source.html">FbxConverter.h</a> の <a class="el" href="_fbx_converter_8h_source.html#l00041">41</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad7d116416b9d843c79ca282841e398c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7d116416b9d843c79ca282841e398c7">&#9670;&nbsp;</a></span>animation_stop_frame_num_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FbxConverter::animation_stop_frame_num_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アニメーション停止フレーム数 </p>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8h_source.html">FbxConverter.h</a> の <a class="el" href="_fbx_converter_8h_source.html#l00042">42</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a36b80ea020d572dfff02125724af4c53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36b80ea020d572dfff02125724af4c53">&#9670;&nbsp;</a></span>axis_system_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FbxAxisSystem FbxConverter::axis_system_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>座標系の種類 </p>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8h_source.html">FbxConverter.h</a> の <a class="el" href="_fbx_converter_8h_source.html#l00037">37</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a542178c31548a51cd28726e2154c0f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a542178c31548a51cd28726e2154c0f70">&#9670;&nbsp;</a></span>directory_path_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string FbxConverter::directory_path_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ディレクトリパス </p>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8h_source.html">FbxConverter.h</a> の <a class="el" href="_fbx_converter_8h_source.html#l00039">39</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac840641172dc753b399902ea928b4ff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac840641172dc753b399902ea928b4ff6">&#9670;&nbsp;</a></span>export_file_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_export_file.html">ExportFile</a> FbxConverter::export_file_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ファイル出力 </p>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8h_source.html">FbxConverter.h</a> の <a class="el" href="_fbx_converter_8h_source.html#l00045">45</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad88043ffdcbe995d3f1f8649395e58c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad88043ffdcbe995d3f1f8649395e58c9">&#9670;&nbsp;</a></span>is_reverse_alpha_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxConverter::is_reverse_alpha_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>α値の反転フラグ </p>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8h_source.html">FbxConverter.h</a> の <a class="el" href="_fbx_converter_8h_source.html#l00038">38</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5c236830d34901e79030647478d3ef1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c236830d34901e79030647478d3ef1b">&#9670;&nbsp;</a></span>manager_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FbxManager* FbxConverter::manager_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>FBXマネージャ </p>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8h_source.html">FbxConverter.h</a> の <a class="el" href="_fbx_converter_8h_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a637b9f53af4fbc31a961e9e2204dfaf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a637b9f53af4fbc31a961e9e2204dfaf5">&#9670;&nbsp;</a></span>md_bin_data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_md_bin_data.html">MdBinData</a> FbxConverter::md_bin_data_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>MdBinデータ </p>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8h_source.html">FbxConverter.h</a> の <a class="el" href="_fbx_converter_8h_source.html#l00044">44</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6d72d42a71572369aa2fed2f8710e696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d72d42a71572369aa2fed2f8710e696">&#9670;&nbsp;</a></span>period_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FbxTime FbxConverter::period_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>1フレームの時間 </p>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8h_source.html">FbxConverter.h</a> の <a class="el" href="_fbx_converter_8h_source.html#l00040">40</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad5a43f9ee7bcf730c5f95e0ec63a4b8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a43f9ee7bcf730c5f95e0ec63a4b8e">&#9670;&nbsp;</a></span>root_node_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FbxNode* FbxConverter::root_node_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ルートノード </p>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8h_source.html">FbxConverter.h</a> の <a class="el" href="_fbx_converter_8h_source.html#l00036">36</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a64600b8f5225b7147c72105558386d78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64600b8f5225b7147c72105558386d78">&#9670;&nbsp;</a></span>scene_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FbxScene* FbxConverter::scene_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>シーン </p>
+
+<p class="definition"> <a class="el" href="_fbx_converter_8h_source.html">FbxConverter.h</a> の <a class="el" href="_fbx_converter_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/FbxConverter/source/FbxConverter/<a class="el" href="_fbx_converter_8h_source.html">FbxConverter.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/FbxConverter/source/FbxConverter/<a class="el" href="_fbx_converter_8cpp_source.html">FbxConverter.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_fbx_converter.html">FbxConverter</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

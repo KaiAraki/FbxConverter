@@ -1,0 +1,302 @@
+\hypertarget{class_md_bin_data_1_1_mesh_1_1_u_v_set}{}\section{Md\+Bin\+Data\+:\+:Mesh\+:\+:U\+V\+Set クラス}
+\label{class_md_bin_data_1_1_mesh_1_1_u_v_set}\index{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}}
+
+
+U\+Vセット\+Class  
+
+
+
+
+{\ttfamily \#include $<$Md\+Bin\+Data.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_u_v_set_a048625e24071483a7a64c9baa7dbccc0}{get\+U\+V\+Array\+Size}} ()
+\begin{DoxyCompactList}\small\item\em U\+V配列サイズ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_u_v_set_a0f5b0eb698b41db7b798e66082f862ef}{set\+U\+V\+Array\+Size}} (int value)
+\begin{DoxyCompactList}\small\item\em U\+V配列サイズ設定関数 \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_u_v_set_accaf305a5e973a2538f25f5f95c56e91}{getpU}} (int index)
+\begin{DoxyCompactList}\small\item\em U成分取得関数 \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_u_v_set_aff2ba32a6da478023d50902b9f40e8cd}{getpV}} (int index)
+\begin{DoxyCompactList}\small\item\em V成分取得関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_u_v_set_a37134fc2d95dc610c985235d75405f3e}{get\+Texture\+Array\+Size}} ()
+\begin{DoxyCompactList}\small\item\em テクスチャ配列サイズ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture}{Material\+::\+Texture}} $\ast$ \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_u_v_set_aa082e3b5e2b3fb9d5a408b0b00ce9d2c}{getp\+Texture}} (int index)
+\begin{DoxyCompactList}\small\item\em テクスチャ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_u_v_set_a6b9333784f0a6b52dafebadd610da2cf}{Add\+Texture\+Array}} (\mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture}{Material\+::\+Texture}} $\ast$texture)
+\begin{DoxyCompactList}\small\item\em テクスチャ配列追加関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_u_v_set_aedd68d9b613f0f0b6513feb187ac4035}{serialize}} (Archive \&archive, const unsigned version)
+\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_md_bin_data_1_1_vector2}{Vector2}} $>$ \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_u_v_set_a536dede8f5757658f374d561473cb935}{uv\+\_\+array\+\_\+}}
+\begin{DoxyCompactList}\small\item\em U\+V配列 \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture}{Material\+::\+Texture}} $\ast$ $>$ \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_u_v_set_aee466b9ce749640ba6f3d547767148ba}{texture\+\_\+}}
+\begin{DoxyCompactList}\small\item\em テクスチャ配列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_u_v_set_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\begin{DoxyCompactList}\small\item\em シリアライズ(I/O)関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+U\+Vセット\+Class 
+
+テクスチャの種類ごとの\+U\+Vの\+Class 
+
+ Md\+Bin\+Data.\+h の 560 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_u_v_set_a6b9333784f0a6b52dafebadd610da2cf}\label{class_md_bin_data_1_1_mesh_1_1_u_v_set_a6b9333784f0a6b52dafebadd610da2cf}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}!Add\+Texture\+Array@{Add\+Texture\+Array}}
+\index{Add\+Texture\+Array@{Add\+Texture\+Array}!Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}}
+\subsubsection{\texorpdfstring{Add\+Texture\+Array()}{AddTextureArray()}}
+{\footnotesize\ttfamily void Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set\+::\+Add\+Texture\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture}{Material\+::\+Texture}} $\ast$}]{texture }\end{DoxyParamCaption})}
+
+
+
+テクスチャ配列追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$texture} & テクスチャ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 552 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_u_v_set_aa082e3b5e2b3fb9d5a408b0b00ce9d2c}\label{class_md_bin_data_1_1_mesh_1_1_u_v_set_aa082e3b5e2b3fb9d5a408b0b00ce9d2c}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}!getp\+Texture@{getp\+Texture}}
+\index{getp\+Texture@{getp\+Texture}!Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}}
+\subsubsection{\texorpdfstring{getp\+Texture()}{getpTexture()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture}{Md\+Bin\+Data\+::\+Material\+::\+Texture}} $\ast$ Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set\+::getp\+Texture (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+テクスチャ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Texture} & テクスチャ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 257 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_u_v_set_accaf305a5e973a2538f25f5f95c56e91}\label{class_md_bin_data_1_1_mesh_1_1_u_v_set_accaf305a5e973a2538f25f5f95c56e91}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}!getpU@{getpU}}
+\index{getpU@{getpU}!Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}}
+\subsubsection{\texorpdfstring{getp\+U()}{getpU()}}
+{\footnotesize\ttfamily float $\ast$ Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set\+::getpU (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+U成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float$\ast$} & U成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 236 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_u_v_set_aff2ba32a6da478023d50902b9f40e8cd}\label{class_md_bin_data_1_1_mesh_1_1_u_v_set_aff2ba32a6da478023d50902b9f40e8cd}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}!getpV@{getpV}}
+\index{getpV@{getpV}!Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}}
+\subsubsection{\texorpdfstring{getp\+V()}{getpV()}}
+{\footnotesize\ttfamily float $\ast$ Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set\+::getpV (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+V成分取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float$\ast$} & V成分 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 243 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_u_v_set_a37134fc2d95dc610c985235d75405f3e}\label{class_md_bin_data_1_1_mesh_1_1_u_v_set_a37134fc2d95dc610c985235d75405f3e}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}!get\+Texture\+Array\+Size@{get\+Texture\+Array\+Size}}
+\index{get\+Texture\+Array\+Size@{get\+Texture\+Array\+Size}!Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}}
+\subsubsection{\texorpdfstring{get\+Texture\+Array\+Size()}{getTextureArraySize()}}
+{\footnotesize\ttfamily int Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set\+::get\+Texture\+Array\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+テクスチャ配列サイズ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & サイズ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 250 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_u_v_set_a048625e24071483a7a64c9baa7dbccc0}\label{class_md_bin_data_1_1_mesh_1_1_u_v_set_a048625e24071483a7a64c9baa7dbccc0}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}!get\+U\+V\+Array\+Size@{get\+U\+V\+Array\+Size}}
+\index{get\+U\+V\+Array\+Size@{get\+U\+V\+Array\+Size}!Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}}
+\subsubsection{\texorpdfstring{get\+U\+V\+Array\+Size()}{getUVArraySize()}}
+{\footnotesize\ttfamily int Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set\+::get\+U\+V\+Array\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+U\+V配列サイズ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & サイズ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 222 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_u_v_set_aedd68d9b613f0f0b6513feb187ac4035}\label{class_md_bin_data_1_1_mesh_1_1_u_v_set_aedd68d9b613f0f0b6513feb187ac4035}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}!serialize@{serialize}}
+\index{serialize@{serialize}!Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{archive,  }\item[{const unsigned}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+ Md\+Bin\+Data.\+h の 649 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_u_v_set_a0f5b0eb698b41db7b798e66082f862ef}\label{class_md_bin_data_1_1_mesh_1_1_u_v_set_a0f5b0eb698b41db7b798e66082f862ef}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}!set\+U\+V\+Array\+Size@{set\+U\+V\+Array\+Size}}
+\index{set\+U\+V\+Array\+Size@{set\+U\+V\+Array\+Size}!Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}}
+\subsubsection{\texorpdfstring{set\+U\+V\+Array\+Size()}{setUVArraySize()}}
+{\footnotesize\ttfamily void Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set\+::set\+U\+V\+Array\+Size (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+U\+V配列サイズ設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & サイズ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 229 行目に定義があります。
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_u_v_set_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{class_md_bin_data_1_1_mesh_1_1_u_v_set_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}}
+\subsubsection{\texorpdfstring{boost\+::serialization\+::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+シリアライズ(I/O)関数 
+
+
+\begin{DoxyParams}{引数}
+{\em archive} & アーカイブ用クラス \\
+\hline
+{\em version} & バージョン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+h の 647 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_u_v_set_aee466b9ce749640ba6f3d547767148ba}\label{class_md_bin_data_1_1_mesh_1_1_u_v_set_aee466b9ce749640ba6f3d547767148ba}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}!texture\+\_\+@{texture\+\_\+}}
+\index{texture\+\_\+@{texture\+\_\+}!Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}}
+\subsubsection{\texorpdfstring{texture\+\_\+}{texture\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture}{Material\+::\+Texture}}$\ast$$>$ Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set\+::texture\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+テクスチャ配列 
+
+
+
+ Md\+Bin\+Data.\+h の 567 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_u_v_set_a536dede8f5757658f374d561473cb935}\label{class_md_bin_data_1_1_mesh_1_1_u_v_set_a536dede8f5757658f374d561473cb935}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}!uv\+\_\+array\+\_\+@{uv\+\_\+array\+\_\+}}
+\index{uv\+\_\+array\+\_\+@{uv\+\_\+array\+\_\+}!Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set@{Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set}}
+\subsubsection{\texorpdfstring{uv\+\_\+array\+\_\+}{uv\_array\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_md_bin_data_1_1_vector2}{Vector2}}$>$ Md\+Bin\+Data\+::\+Mesh\+::\+U\+V\+Set\+::uv\+\_\+array\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+U\+V配列 
+
+
+
+ Md\+Bin\+Data.\+h の 566 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Fbx\+Converter/source/\+Md\+Bin\+Data/\mbox{\hyperlink{_md_bin_data_8h}{Md\+Bin\+Data.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Fbx\+Converter/source/\+Md\+Bin\+Data/\mbox{\hyperlink{_md_bin_data_8cpp}{Md\+Bin\+Data.\+cpp}}\end{DoxyCompactItemize}

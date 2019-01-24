@@ -1,0 +1,189 @@
+\hypertarget{class_md_bin_data_1_1_matrix}{}\section{Md\+Bin\+Data\+:\+:Matrix クラス}
+\label{class_md_bin_data_1_1_matrix}\index{Md\+Bin\+Data\+::\+Matrix@{Md\+Bin\+Data\+::\+Matrix}}
+
+
+行列\+Class  
+
+
+
+
+{\ttfamily \#include $<$Md\+Bin\+Data.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_md_bin_data_1_1_matrix_a18fdeb0e8152f5f8a8ba8e8d64c925bf}{get\+Matrix\+Element}} (unsigned index0, unsigned index1)
+\begin{DoxyCompactList}\small\item\em 配列要素取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_data_1_1_matrix_a0e5ff333aec5c3c27fb5b0d14e085b91}{set\+Matrix\+Element}} (float value, unsigned index0, unsigned index1)
+\begin{DoxyCompactList}\small\item\em 配列要素設定関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned \mbox{\hyperlink{class_md_bin_data_1_1_matrix_adbf2f2e21df64ab4559b9c98b88a6c59}{A\+R\+R\+A\+Y\+\_\+\+W\+I\+D\+TH}} = 4
+\item 
+static const unsigned \mbox{\hyperlink{class_md_bin_data_1_1_matrix_a69ea4171a8c2fbf1728396463bfd9bc8}{A\+R\+R\+A\+Y\+\_\+\+H\+E\+I\+G\+HT}} = 4
+\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{class_md_bin_data_1_1_matrix_a8494155c326062f5a4c7e2352b7c577d}{serialize}} (Archive \&archive, const unsigned version)
+\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_md_bin_data_1_1_matrix_a9b13d72966bb7b35e1c5acbfef92095f}{array\+\_\+}} \mbox{[}\mbox{\hyperlink{class_md_bin_data_1_1_matrix_a69ea4171a8c2fbf1728396463bfd9bc8}{A\+R\+R\+A\+Y\+\_\+\+H\+E\+I\+G\+HT}}\mbox{]}\mbox{[}\mbox{\hyperlink{class_md_bin_data_1_1_matrix_adbf2f2e21df64ab4559b9c98b88a6c59}{A\+R\+R\+A\+Y\+\_\+\+W\+I\+D\+TH}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em 4x4行列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_md_bin_data_1_1_matrix_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\begin{DoxyCompactList}\small\item\em シリアライズ(I/O)関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+行列\+Class 
+
+行列の\+Class 
+
+ Md\+Bin\+Data.\+h の 234 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_md_bin_data_1_1_matrix_a18fdeb0e8152f5f8a8ba8e8d64c925bf}\label{class_md_bin_data_1_1_matrix_a18fdeb0e8152f5f8a8ba8e8d64c925bf}} 
+\index{Md\+Bin\+Data\+::\+Matrix@{Md\+Bin\+Data\+::\+Matrix}!get\+Matrix\+Element@{get\+Matrix\+Element}}
+\index{get\+Matrix\+Element@{get\+Matrix\+Element}!Md\+Bin\+Data\+::\+Matrix@{Md\+Bin\+Data\+::\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Matrix\+Element()}{getMatrixElement()}}
+{\footnotesize\ttfamily float Md\+Bin\+Data\+::\+Matrix\+::get\+Matrix\+Element (\begin{DoxyParamCaption}\item[{unsigned}]{index0,  }\item[{unsigned}]{index1 }\end{DoxyParamCaption})}
+
+
+
+配列要素取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index0} & 0番目のインデックス \\
+\hline
+{\em index1} & 1番目のインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & 配列要素 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 117 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_matrix_a8494155c326062f5a4c7e2352b7c577d}\label{class_md_bin_data_1_1_matrix_a8494155c326062f5a4c7e2352b7c577d}} 
+\index{Md\+Bin\+Data\+::\+Matrix@{Md\+Bin\+Data\+::\+Matrix}!serialize@{serialize}}
+\index{serialize@{serialize}!Md\+Bin\+Data\+::\+Matrix@{Md\+Bin\+Data\+::\+Matrix}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void Md\+Bin\+Data\+::\+Matrix\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{archive,  }\item[{const unsigned}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+ Md\+Bin\+Data.\+h の 288 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_matrix_a0e5ff333aec5c3c27fb5b0d14e085b91}\label{class_md_bin_data_1_1_matrix_a0e5ff333aec5c3c27fb5b0d14e085b91}} 
+\index{Md\+Bin\+Data\+::\+Matrix@{Md\+Bin\+Data\+::\+Matrix}!set\+Matrix\+Element@{set\+Matrix\+Element}}
+\index{set\+Matrix\+Element@{set\+Matrix\+Element}!Md\+Bin\+Data\+::\+Matrix@{Md\+Bin\+Data\+::\+Matrix}}
+\subsubsection{\texorpdfstring{set\+Matrix\+Element()}{setMatrixElement()}}
+{\footnotesize\ttfamily void Md\+Bin\+Data\+::\+Matrix\+::set\+Matrix\+Element (\begin{DoxyParamCaption}\item[{float}]{value,  }\item[{unsigned}]{index0,  }\item[{unsigned}]{index1 }\end{DoxyParamCaption})}
+
+
+
+配列要素設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em value} & 値 \\
+\hline
+{\em index0} & 0番目のインデックス \\
+\hline
+{\em index1} & 1番目のインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 124 行目に定義があります。
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_md_bin_data_1_1_matrix_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{class_md_bin_data_1_1_matrix_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{Md\+Bin\+Data\+::\+Matrix@{Md\+Bin\+Data\+::\+Matrix}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Md\+Bin\+Data\+::\+Matrix@{Md\+Bin\+Data\+::\+Matrix}}
+\subsubsection{\texorpdfstring{boost\+::serialization\+::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+シリアライズ(I/O)関数 
+
+
+\begin{DoxyParams}{引数}
+{\em archive} & アーカイブ用クラス \\
+\hline
+{\em version} & バージョン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+h の 286 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_md_bin_data_1_1_matrix_a9b13d72966bb7b35e1c5acbfef92095f}\label{class_md_bin_data_1_1_matrix_a9b13d72966bb7b35e1c5acbfef92095f}} 
+\index{Md\+Bin\+Data\+::\+Matrix@{Md\+Bin\+Data\+::\+Matrix}!array\+\_\+@{array\+\_\+}}
+\index{array\+\_\+@{array\+\_\+}!Md\+Bin\+Data\+::\+Matrix@{Md\+Bin\+Data\+::\+Matrix}}
+\subsubsection{\texorpdfstring{array\+\_\+}{array\_}}
+{\footnotesize\ttfamily float Md\+Bin\+Data\+::\+Matrix\+::array\+\_\+\mbox{[}\mbox{\hyperlink{class_md_bin_data_1_1_matrix_a69ea4171a8c2fbf1728396463bfd9bc8}{A\+R\+R\+A\+Y\+\_\+\+H\+E\+I\+G\+HT}}\mbox{]}\mbox{[}\mbox{\hyperlink{class_md_bin_data_1_1_matrix_adbf2f2e21df64ab4559b9c98b88a6c59}{A\+R\+R\+A\+Y\+\_\+\+W\+I\+D\+TH}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+4x4行列 
+
+
+
+ Md\+Bin\+Data.\+h の 248 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_matrix_a69ea4171a8c2fbf1728396463bfd9bc8}\label{class_md_bin_data_1_1_matrix_a69ea4171a8c2fbf1728396463bfd9bc8}} 
+\index{Md\+Bin\+Data\+::\+Matrix@{Md\+Bin\+Data\+::\+Matrix}!A\+R\+R\+A\+Y\+\_\+\+H\+E\+I\+G\+HT@{A\+R\+R\+A\+Y\+\_\+\+H\+E\+I\+G\+HT}}
+\index{A\+R\+R\+A\+Y\+\_\+\+H\+E\+I\+G\+HT@{A\+R\+R\+A\+Y\+\_\+\+H\+E\+I\+G\+HT}!Md\+Bin\+Data\+::\+Matrix@{Md\+Bin\+Data\+::\+Matrix}}
+\subsubsection{\texorpdfstring{A\+R\+R\+A\+Y\+\_\+\+H\+E\+I\+G\+HT}{ARRAY\_HEIGHT}}
+{\footnotesize\ttfamily const unsigned Md\+Bin\+Data\+::\+Matrix\+::\+A\+R\+R\+A\+Y\+\_\+\+H\+E\+I\+G\+HT = 4\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ Md\+Bin\+Data.\+h の 241 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_matrix_adbf2f2e21df64ab4559b9c98b88a6c59}\label{class_md_bin_data_1_1_matrix_adbf2f2e21df64ab4559b9c98b88a6c59}} 
+\index{Md\+Bin\+Data\+::\+Matrix@{Md\+Bin\+Data\+::\+Matrix}!A\+R\+R\+A\+Y\+\_\+\+W\+I\+D\+TH@{A\+R\+R\+A\+Y\+\_\+\+W\+I\+D\+TH}}
+\index{A\+R\+R\+A\+Y\+\_\+\+W\+I\+D\+TH@{A\+R\+R\+A\+Y\+\_\+\+W\+I\+D\+TH}!Md\+Bin\+Data\+::\+Matrix@{Md\+Bin\+Data\+::\+Matrix}}
+\subsubsection{\texorpdfstring{A\+R\+R\+A\+Y\+\_\+\+W\+I\+D\+TH}{ARRAY\_WIDTH}}
+{\footnotesize\ttfamily const unsigned Md\+Bin\+Data\+::\+Matrix\+::\+A\+R\+R\+A\+Y\+\_\+\+W\+I\+D\+TH = 4\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ Md\+Bin\+Data.\+h の 240 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Fbx\+Converter/source/\+Md\+Bin\+Data/\mbox{\hyperlink{_md_bin_data_8h}{Md\+Bin\+Data.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Fbx\+Converter/source/\+Md\+Bin\+Data/\mbox{\hyperlink{_md_bin_data_8cpp}{Md\+Bin\+Data.\+cpp}}\end{DoxyCompactItemize}

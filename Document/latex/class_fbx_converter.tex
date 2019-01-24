@@ -1,0 +1,1067 @@
+\hypertarget{class_fbx_converter}{}\section{Fbx\+Converter クラス}
+\label{class_fbx_converter}\index{Fbx\+Converter@{Fbx\+Converter}}
+
+
+F\+B\+X変換器\+Class  
+
+
+
+
+{\ttfamily \#include $<$Fbx\+Converter.\+h$>$}
+
+
+
+Fbx\+Converter 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{class_fbx_converter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_fbx_converter_ad42745849ed5fbd2a6b332004a21a667}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_ab41f9b165cb34a294bb2c5da778f542b}{Uninit}} ()
+\begin{DoxyCompactList}\small\item\em 終了関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_fbx_converter_aecd6ebf6aec9616bd609f6ebfc3a557e}{Convert\+To\+Md\+Bin}} (std\+::string $\ast$file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Md\+Binへ変換関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_fbx_converter_a5259c5ec8f57b412455d75ccebb27524}{Load}} (std\+::string $\ast$file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em 読み込み関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a0f6070933510e57b4a781d97d46f7406}{Extract\+Frame\+Data}} (Fbx\+Importer $\ast$importer)
+\begin{DoxyCompactList}\small\item\em フレーム情報抽出関数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_fbx_converter_ab0e56fde4c4e0f5bc846e7a6cd7f8a19}{Extract\+Data}} ()
+\begin{DoxyCompactList}\small\item\em データ抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_accf269065c211ffb8fc77634bf8dbee9}{Extract\+Material\+Data}} ()
+\begin{DoxyCompactList}\small\item\em マテリアルデータの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a4e1c69b9948c7aa9659a80ba3ba85f9f}{Extract\+Mesh\+Data}} ()
+\begin{DoxyCompactList}\small\item\em メッシュデータの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_ae0180e652e003309edeb721f6d88e378}{Extract\+Material\+Name}} (int material\+\_\+index, Fbx\+Surface\+Material $\ast$material)
+\begin{DoxyCompactList}\small\item\em マテリアル名の抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a95cb085115d7832311264e9d27b5fb72}{Extract\+Ambient\+Data}} (int material\+\_\+index, Fbx\+Surface\+Material $\ast$material)
+\begin{DoxyCompactList}\small\item\em アンビエントデータの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a60e517313041e75f081effceb74e7c56}{Extract\+Diffuse\+Data}} (int material\+\_\+index, Fbx\+Surface\+Material $\ast$material)
+\begin{DoxyCompactList}\small\item\em ディフューズデータの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_ae43f5f7858379aa57f1dbc1373c66b77}{Extract\+Emissive\+Data}} (int material\+\_\+index, Fbx\+Surface\+Material $\ast$material)
+\begin{DoxyCompactList}\small\item\em エミッシブデータの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_abc1470186342a7aabb60818cd4813a1a}{Extract\+Bump\+Data}} (int material\+\_\+index, Fbx\+Surface\+Material $\ast$material)
+\begin{DoxyCompactList}\small\item\em バンプデータの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a888c4e3d638aa79fa524b85a67f01f5d}{Extract\+Transparent\+Data}} (int material\+\_\+index, Fbx\+Surface\+Material $\ast$material)
+\begin{DoxyCompactList}\small\item\em トランスペアレントデータの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a2ff36051144ed83860d0287a953778b4}{Extract\+Specular\+Data}} (int material\+\_\+index, Fbx\+Surface\+Material $\ast$material)
+\begin{DoxyCompactList}\small\item\em スペキュラデータの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_aa2d0d302ad6691934164dfdf1f5f6590}{Extract\+Power\+Data}} (int material\+\_\+index, Fbx\+Surface\+Material $\ast$material)
+\begin{DoxyCompactList}\small\item\em パワー(シャイネス)データの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a25d2148fb64c484684c7eb856e9ae255}{Extract\+Reflection\+Data}} (int material\+\_\+index, Fbx\+Surface\+Material $\ast$material)
+\begin{DoxyCompactList}\small\item\em リフレクションデータの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a59039fa4ffde0cbe8fa269e71878b0da}{Extract\+Texture\+Data}} (int material\+\_\+index, Fbx\+Property property, \mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture_a30fadb7216d0650de284e2fd875868ae}{Md\+Bin\+Data\+::\+Material\+::\+Texture\+::\+Type}} texture\+\_\+type)
+\begin{DoxyCompactList}\small\item\em テクスチャデータの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_ae7d26c94b5926ab4477f93926f6d345d}{Extract\+File\+Name}} (std\+::string $\ast$file\+\_\+name, std\+::string $\ast$file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em ファイル名抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a476feb886d898a64f88a0b23cf10651a}{Extract\+Index\+Data}} (int mesh\+\_\+index, Fbx\+Mesh $\ast$mesh)
+\begin{DoxyCompactList}\small\item\em インデックスデータの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_adaa3676e36092b4a28a1748ac01dfa75}{Extract\+Vertex\+Data}} (int mesh\+\_\+index, Fbx\+Mesh $\ast$mesh)
+\begin{DoxyCompactList}\small\item\em 頂点データの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a1333d3fe7a3ab69f7121265117e56b7f}{Extract\+Normal\+Data}} (int mesh\+\_\+index, Fbx\+Mesh $\ast$mesh)
+\begin{DoxyCompactList}\small\item\em 法線データの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a06cbfb7a211fc212e74de160e809ef35}{Extract\+U\+V\+Set\+Data}} (int mesh\+\_\+index, Fbx\+Mesh $\ast$mesh)
+\begin{DoxyCompactList}\small\item\em U\+Vセットデータの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a3f07e7dae9ba8bcb83dca611aeb5b3a0}{Extract\+Animation\+Data}} (int mesh\+\_\+index, Fbx\+Mesh $\ast$mesh)
+\begin{DoxyCompactList}\small\item\em アニメーションデータの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a0df95f11a3cd66ba0ecf06244efe52e7}{Extract\+Bone\+Data}} (int mesh\+\_\+index, Fbx\+Cluster $\ast$cluster)
+\begin{DoxyCompactList}\small\item\em ボーンデータの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a744068ceddd573d1add39a484e25bdc6}{Extract\+Bone\+Weight\+Data}} (int mesh\+\_\+index, std\+::vector$<$ \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_bone_weight}{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}} $>$ $\ast$save\+\_\+bone\+\_\+weight\+\_\+array, Fbx\+Cluster $\ast$cluster)
+\begin{DoxyCompactList}\small\item\em ボーンの重みデータの抽出関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a4587ba56496d6aa8cdfdd9ea92300c46}{Change\+Matrix}} (\mbox{\hyperlink{class_md_bin_data_1_1_matrix}{Md\+Bin\+Data\+::\+Matrix}} $\ast$bone\+\_\+matrix, Fbx\+A\+Matrix $\ast$fbx\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em 行列変換関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_aa5a81e3afe4ea2bdc101863f6c1f0326}{Associate\+With\+Material\+Data}} (int mesh\+\_\+index, Fbx\+Mesh $\ast$mesh)
+\begin{DoxyCompactList}\small\item\em マテリアルデータとの関連付け関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a0d669f32bb338dffeb5d1989a0b374d7}{Associating\+U\+V\+Set\+Data\+And\+Texture}} (int mesh\+\_\+index)
+\begin{DoxyCompactList}\small\item\em U\+Vセットデータとテクスチャの関連付け関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fbx_converter_a471d98b3d59a3f32dd2403577deebad7}{Convert\+To\+Full\+Path\+Of\+U\+T\+F8}} (std\+::string $\ast$file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em U\+T\+F8のフルパスへ変換関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+Fbx\+Manager $\ast$ \mbox{\hyperlink{class_fbx_converter_a5c236830d34901e79030647478d3ef1b}{manager\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em F\+B\+Xマネージャ \end{DoxyCompactList}\item 
+Fbx\+Scene $\ast$ \mbox{\hyperlink{class_fbx_converter_a64600b8f5225b7147c72105558386d78}{scene\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em シーン \end{DoxyCompactList}\item 
+Fbx\+Node $\ast$ \mbox{\hyperlink{class_fbx_converter_ad5a43f9ee7bcf730c5f95e0ec63a4b8e}{root\+\_\+node\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em ルートノード \end{DoxyCompactList}\item 
+Fbx\+Axis\+System \mbox{\hyperlink{class_fbx_converter_a36b80ea020d572dfff02125724af4c53}{axis\+\_\+system\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 座標系の種類 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_fbx_converter_ad88043ffdcbe995d3f1f8649395e58c9}{is\+\_\+reverse\+\_\+alpha\+\_\+}} = false
+\begin{DoxyCompactList}\small\item\em α値の反転フラグ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_fbx_converter_a542178c31548a51cd28726e2154c0f70}{directory\+\_\+path\+\_\+}}
+\begin{DoxyCompactList}\small\item\em ディレクトリパス \end{DoxyCompactList}\item 
+Fbx\+Time \mbox{\hyperlink{class_fbx_converter_a6d72d42a71572369aa2fed2f8710e696}{period\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 1フレームの時間 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_fbx_converter_a5ce2f08e1d77044d628949d3ad7572ca}{animation\+\_\+start\+\_\+frame\+\_\+num\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em アニメーション開始フレーム数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_fbx_converter_ad7d116416b9d843c79ca282841e398c7}{animation\+\_\+stop\+\_\+frame\+\_\+num\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em アニメーション停止フレーム数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_fbx_converter_adcb0b8e16e923953c16d1a171df50190}{all\+\_\+animation\+\_\+frame\+\_\+num\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em アニメーションフレーム数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_data}{Md\+Bin\+Data}} \mbox{\hyperlink{class_fbx_converter_a637b9f53af4fbc31a961e9e2204dfaf5}{md\+\_\+bin\+\_\+data\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Md\+Binデータ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_export_file}{Export\+File}} \mbox{\hyperlink{class_fbx_converter_ac840641172dc753b399902ea928b4ff6}{export\+\_\+file\+\_\+}}
+\begin{DoxyCompactList}\small\item\em ファイル出力 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+F\+B\+X変換器\+Class 
+
+F\+B\+X変換器\+Class 
+
+ Fbx\+Converter.\+h の 28 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_converter_aa5a81e3afe4ea2bdc101863f6c1f0326}\label{class_fbx_converter_aa5a81e3afe4ea2bdc101863f6c1f0326}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Associate\+With\+Material\+Data@{Associate\+With\+Material\+Data}}
+\index{Associate\+With\+Material\+Data@{Associate\+With\+Material\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Associate\+With\+Material\+Data()}{AssociateWithMaterialData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Associate\+With\+Material\+Data (\begin{DoxyParamCaption}\item[{int}]{mesh\+\_\+index,  }\item[{Fbx\+Mesh $\ast$}]{mesh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+マテリアルデータとの関連付け関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$mesh\+\_\+index} & メッシュのインデックス \\
+\hline
+{\em $\ast$mesh} & メッシュ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 744 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a0d669f32bb338dffeb5d1989a0b374d7}\label{class_fbx_converter_a0d669f32bb338dffeb5d1989a0b374d7}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Associating\+U\+V\+Set\+Data\+And\+Texture@{Associating\+U\+V\+Set\+Data\+And\+Texture}}
+\index{Associating\+U\+V\+Set\+Data\+And\+Texture@{Associating\+U\+V\+Set\+Data\+And\+Texture}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Associating\+U\+V\+Set\+Data\+And\+Texture()}{AssociatingUVSetDataAndTexture()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Associating\+U\+V\+Set\+Data\+And\+Texture (\begin{DoxyParamCaption}\item[{int}]{mesh\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+U\+Vセットデータとテクスチャの関連付け関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$mesh\+\_\+index} & メッシュのインデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 786 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a4587ba56496d6aa8cdfdd9ea92300c46}\label{class_fbx_converter_a4587ba56496d6aa8cdfdd9ea92300c46}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Change\+Matrix@{Change\+Matrix}}
+\index{Change\+Matrix@{Change\+Matrix}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Change\+Matrix()}{ChangeMatrix()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Change\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_md_bin_data_1_1_matrix}{Md\+Bin\+Data\+::\+Matrix}} $\ast$}]{bone\+\_\+matrix,  }\item[{Fbx\+A\+Matrix $\ast$}]{fbx\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+行列変換関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$bone\+\_\+matrix} & ボーン行列 \\
+\hline
+{\em $\ast$fbx\+\_\+matrix} & F\+B\+X行列 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 730 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a471d98b3d59a3f32dd2403577deebad7}\label{class_fbx_converter_a471d98b3d59a3f32dd2403577deebad7}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Convert\+To\+Full\+Path\+Of\+U\+T\+F8@{Convert\+To\+Full\+Path\+Of\+U\+T\+F8}}
+\index{Convert\+To\+Full\+Path\+Of\+U\+T\+F8@{Convert\+To\+Full\+Path\+Of\+U\+T\+F8}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Convert\+To\+Full\+Path\+Of\+U\+T\+F8()}{ConvertToFullPathOfUTF8()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Convert\+To\+Full\+Path\+Of\+U\+T\+F8 (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+U\+T\+F8のフルパスへ変換関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 808 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_aecd6ebf6aec9616bd609f6ebfc3a557e}\label{class_fbx_converter_aecd6ebf6aec9616bd609f6ebfc3a557e}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Convert\+To\+Md\+Bin@{Convert\+To\+Md\+Bin}}
+\index{Convert\+To\+Md\+Bin@{Convert\+To\+Md\+Bin}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Convert\+To\+Md\+Bin()}{ConvertToMdBin()}}
+{\footnotesize\ttfamily bool Fbx\+Converter\+::\+Convert\+To\+Md\+Bin (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Md\+Binへ変換関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 変換成功の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 70 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a95cb085115d7832311264e9d27b5fb72}\label{class_fbx_converter_a95cb085115d7832311264e9d27b5fb72}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Ambient\+Data@{Extract\+Ambient\+Data}}
+\index{Extract\+Ambient\+Data@{Extract\+Ambient\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Ambient\+Data()}{ExtractAmbientData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Ambient\+Data (\begin{DoxyParamCaption}\item[{int}]{material\+\_\+index,  }\item[{Fbx\+Surface\+Material $\ast$}]{material }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+アンビエントデータの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$material\+\_\+index} & マテリアルのインデックス \\
+\hline
+{\em $\ast$material} & マテリアル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 311 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a3f07e7dae9ba8bcb83dca611aeb5b3a0}\label{class_fbx_converter_a3f07e7dae9ba8bcb83dca611aeb5b3a0}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Animation\+Data@{Extract\+Animation\+Data}}
+\index{Extract\+Animation\+Data@{Extract\+Animation\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Animation\+Data()}{ExtractAnimationData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Animation\+Data (\begin{DoxyParamCaption}\item[{int}]{mesh\+\_\+index,  }\item[{Fbx\+Mesh $\ast$}]{mesh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+アニメーションデータの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$mesh\+\_\+index} & メッシュのインデックス \\
+\hline
+{\em $\ast$mesh} & メッシュ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 621 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a0df95f11a3cd66ba0ecf06244efe52e7}\label{class_fbx_converter_a0df95f11a3cd66ba0ecf06244efe52e7}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Bone\+Data@{Extract\+Bone\+Data}}
+\index{Extract\+Bone\+Data@{Extract\+Bone\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Bone\+Data()}{ExtractBoneData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Bone\+Data (\begin{DoxyParamCaption}\item[{int}]{mesh\+\_\+index,  }\item[{Fbx\+Cluster $\ast$}]{cluster }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ボーンデータの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$mesh\+\_\+index} & メッシュのインデックス \\
+\hline
+{\em $\ast$cluster} & クラスタ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 663 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a744068ceddd573d1add39a484e25bdc6}\label{class_fbx_converter_a744068ceddd573d1add39a484e25bdc6}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Bone\+Weight\+Data@{Extract\+Bone\+Weight\+Data}}
+\index{Extract\+Bone\+Weight\+Data@{Extract\+Bone\+Weight\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Bone\+Weight\+Data()}{ExtractBoneWeightData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Bone\+Weight\+Data (\begin{DoxyParamCaption}\item[{int}]{mesh\+\_\+index,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_bone_weight}{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}} $>$ $\ast$}]{save\+\_\+bone\+\_\+weight\+\_\+array,  }\item[{Fbx\+Cluster $\ast$}]{cluster }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ボーンの重みデータの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$mesh\+\_\+index} & メッシュのインデックス \\
+\hline
+{\em $\ast$save\+\_\+bone\+\_\+weight\+\_\+array} & ボーンの重み保存用配列 \\
+\hline
+{\em $\ast$cluster} & クラスタ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 703 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_abc1470186342a7aabb60818cd4813a1a}\label{class_fbx_converter_abc1470186342a7aabb60818cd4813a1a}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Bump\+Data@{Extract\+Bump\+Data}}
+\index{Extract\+Bump\+Data@{Extract\+Bump\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Bump\+Data()}{ExtractBumpData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Bump\+Data (\begin{DoxyParamCaption}\item[{int}]{material\+\_\+index,  }\item[{Fbx\+Surface\+Material $\ast$}]{material }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+バンプデータの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$material\+\_\+index} & マテリアルのインデックス \\
+\hline
+{\em $\ast$material} & マテリアル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 380 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_ab0e56fde4c4e0f5bc846e7a6cd7f8a19}\label{class_fbx_converter_ab0e56fde4c4e0f5bc846e7a6cd7f8a19}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Data@{Extract\+Data}}
+\index{Extract\+Data@{Extract\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Data()}{ExtractData()}}
+{\footnotesize\ttfamily bool Fbx\+Converter\+::\+Extract\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+データ抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & データの抽出成功の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 232 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a60e517313041e75f081effceb74e7c56}\label{class_fbx_converter_a60e517313041e75f081effceb74e7c56}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Diffuse\+Data@{Extract\+Diffuse\+Data}}
+\index{Extract\+Diffuse\+Data@{Extract\+Diffuse\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Diffuse\+Data()}{ExtractDiffuseData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Diffuse\+Data (\begin{DoxyParamCaption}\item[{int}]{material\+\_\+index,  }\item[{Fbx\+Surface\+Material $\ast$}]{material }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ディフューズデータの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$material\+\_\+index} & マテリアルのインデックス \\
+\hline
+{\em $\ast$material} & マテリアル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 334 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_ae43f5f7858379aa57f1dbc1373c66b77}\label{class_fbx_converter_ae43f5f7858379aa57f1dbc1373c66b77}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Emissive\+Data@{Extract\+Emissive\+Data}}
+\index{Extract\+Emissive\+Data@{Extract\+Emissive\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Emissive\+Data()}{ExtractEmissiveData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Emissive\+Data (\begin{DoxyParamCaption}\item[{int}]{material\+\_\+index,  }\item[{Fbx\+Surface\+Material $\ast$}]{material }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+エミッシブデータの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$material\+\_\+index} & マテリアルのインデックス \\
+\hline
+{\em $\ast$material} & マテリアル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 357 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_ae7d26c94b5926ab4477f93926f6d345d}\label{class_fbx_converter_ae7d26c94b5926ab4477f93926f6d345d}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+File\+Name@{Extract\+File\+Name}}
+\index{Extract\+File\+Name@{Extract\+File\+Name}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+File\+Name()}{ExtractFileName()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+File\+Name (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{file\+\_\+name,  }\item[{std\+::string $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ファイル名抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+name} & ファイル名 \\
+\hline
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 504 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a0f6070933510e57b4a781d97d46f7406}\label{class_fbx_converter_a0f6070933510e57b4a781d97d46f7406}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Frame\+Data@{Extract\+Frame\+Data}}
+\index{Extract\+Frame\+Data@{Extract\+Frame\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Frame\+Data()}{ExtractFrameData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Frame\+Data (\begin{DoxyParamCaption}\item[{Fbx\+Importer $\ast$}]{importer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+フレーム情報抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$importer} & インポーター \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 194 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a476feb886d898a64f88a0b23cf10651a}\label{class_fbx_converter_a476feb886d898a64f88a0b23cf10651a}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Index\+Data@{Extract\+Index\+Data}}
+\index{Extract\+Index\+Data@{Extract\+Index\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Index\+Data()}{ExtractIndexData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Index\+Data (\begin{DoxyParamCaption}\item[{int}]{mesh\+\_\+index,  }\item[{Fbx\+Mesh $\ast$}]{mesh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+インデックスデータの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$mesh\+\_\+index} & メッシュのインデックス \\
+\hline
+{\em $\ast$mesh} & メッシュ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 531 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_accf269065c211ffb8fc77634bf8dbee9}\label{class_fbx_converter_accf269065c211ffb8fc77634bf8dbee9}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Material\+Data@{Extract\+Material\+Data}}
+\index{Extract\+Material\+Data@{Extract\+Material\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Material\+Data()}{ExtractMaterialData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Material\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+マテリアルデータの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 248 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_ae0180e652e003309edeb721f6d88e378}\label{class_fbx_converter_ae0180e652e003309edeb721f6d88e378}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Material\+Name@{Extract\+Material\+Name}}
+\index{Extract\+Material\+Name@{Extract\+Material\+Name}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Material\+Name()}{ExtractMaterialName()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Material\+Name (\begin{DoxyParamCaption}\item[{int}]{material\+\_\+index,  }\item[{Fbx\+Surface\+Material $\ast$}]{material }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+マテリアル名の抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$material\+\_\+index} & マテリアルのインデックス \\
+\hline
+{\em $\ast$material} & マテリアル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 304 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a4e1c69b9948c7aa9659a80ba3ba85f9f}\label{class_fbx_converter_a4e1c69b9948c7aa9659a80ba3ba85f9f}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Mesh\+Data@{Extract\+Mesh\+Data}}
+\index{Extract\+Mesh\+Data@{Extract\+Mesh\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Mesh\+Data()}{ExtractMeshData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Mesh\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+メッシュデータの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 275 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a1333d3fe7a3ab69f7121265117e56b7f}\label{class_fbx_converter_a1333d3fe7a3ab69f7121265117e56b7f}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Normal\+Data@{Extract\+Normal\+Data}}
+\index{Extract\+Normal\+Data@{Extract\+Normal\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Normal\+Data()}{ExtractNormalData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Normal\+Data (\begin{DoxyParamCaption}\item[{int}]{mesh\+\_\+index,  }\item[{Fbx\+Mesh $\ast$}]{mesh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+法線データの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$mesh\+\_\+index} & メッシュのインデックス \\
+\hline
+{\em $\ast$mesh} & メッシュ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 567 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_aa2d0d302ad6691934164dfdf1f5f6590}\label{class_fbx_converter_aa2d0d302ad6691934164dfdf1f5f6590}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Power\+Data@{Extract\+Power\+Data}}
+\index{Extract\+Power\+Data@{Extract\+Power\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Power\+Data()}{ExtractPowerData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Power\+Data (\begin{DoxyParamCaption}\item[{int}]{material\+\_\+index,  }\item[{Fbx\+Surface\+Material $\ast$}]{material }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+パワー(シャイネス)データの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$material\+\_\+index} & マテリアルのインデックス \\
+\hline
+{\em $\ast$material} & マテリアル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 450 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a25d2148fb64c484684c7eb856e9ae255}\label{class_fbx_converter_a25d2148fb64c484684c7eb856e9ae255}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Reflection\+Data@{Extract\+Reflection\+Data}}
+\index{Extract\+Reflection\+Data@{Extract\+Reflection\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Reflection\+Data()}{ExtractReflectionData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Reflection\+Data (\begin{DoxyParamCaption}\item[{int}]{material\+\_\+index,  }\item[{Fbx\+Surface\+Material $\ast$}]{material }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+リフレクションデータの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$material\+\_\+index} & マテリアルのインデックス \\
+\hline
+{\em $\ast$material} & マテリアル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 466 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a2ff36051144ed83860d0287a953778b4}\label{class_fbx_converter_a2ff36051144ed83860d0287a953778b4}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Specular\+Data@{Extract\+Specular\+Data}}
+\index{Extract\+Specular\+Data@{Extract\+Specular\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Specular\+Data()}{ExtractSpecularData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Specular\+Data (\begin{DoxyParamCaption}\item[{int}]{material\+\_\+index,  }\item[{Fbx\+Surface\+Material $\ast$}]{material }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+スペキュラデータの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$material\+\_\+index} & マテリアルのインデックス \\
+\hline
+{\em $\ast$material} & マテリアル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 427 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a59039fa4ffde0cbe8fa269e71878b0da}\label{class_fbx_converter_a59039fa4ffde0cbe8fa269e71878b0da}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Texture\+Data@{Extract\+Texture\+Data}}
+\index{Extract\+Texture\+Data@{Extract\+Texture\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Texture\+Data()}{ExtractTextureData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Texture\+Data (\begin{DoxyParamCaption}\item[{int}]{material\+\_\+index,  }\item[{Fbx\+Property}]{property,  }\item[{\mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture_a30fadb7216d0650de284e2fd875868ae}{Md\+Bin\+Data\+::\+Material\+::\+Texture\+::\+Type}}}]{texture\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+テクスチャデータの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$material\+\_\+index} & マテリアルのインデックス \\
+\hline
+{\em $\ast$property} & F\+B\+Xプロパティ \\
+\hline
+{\em texture\+\_\+type} & テクスチャタイプ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 482 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a888c4e3d638aa79fa524b85a67f01f5d}\label{class_fbx_converter_a888c4e3d638aa79fa524b85a67f01f5d}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Transparent\+Data@{Extract\+Transparent\+Data}}
+\index{Extract\+Transparent\+Data@{Extract\+Transparent\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Transparent\+Data()}{ExtractTransparentData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Transparent\+Data (\begin{DoxyParamCaption}\item[{int}]{material\+\_\+index,  }\item[{Fbx\+Surface\+Material $\ast$}]{material }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+トランスペアレントデータの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$material\+\_\+index} & マテリアルのインデックス \\
+\hline
+{\em $\ast$material} & マテリアル \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 403 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a06cbfb7a211fc212e74de160e809ef35}\label{class_fbx_converter_a06cbfb7a211fc212e74de160e809ef35}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+U\+V\+Set\+Data@{Extract\+U\+V\+Set\+Data}}
+\index{Extract\+U\+V\+Set\+Data@{Extract\+U\+V\+Set\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+U\+V\+Set\+Data()}{ExtractUVSetData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+U\+V\+Set\+Data (\begin{DoxyParamCaption}\item[{int}]{mesh\+\_\+index,  }\item[{Fbx\+Mesh $\ast$}]{mesh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+U\+Vセットデータの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$mesh\+\_\+index} & メッシュのインデックス \\
+\hline
+{\em $\ast$mesh} & メッシュ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 587 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_adaa3676e36092b4a28a1748ac01dfa75}\label{class_fbx_converter_adaa3676e36092b4a28a1748ac01dfa75}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Extract\+Vertex\+Data@{Extract\+Vertex\+Data}}
+\index{Extract\+Vertex\+Data@{Extract\+Vertex\+Data}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Extract\+Vertex\+Data()}{ExtractVertexData()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Extract\+Vertex\+Data (\begin{DoxyParamCaption}\item[{int}]{mesh\+\_\+index,  }\item[{Fbx\+Mesh $\ast$}]{mesh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+頂点データの抽出関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$mesh\+\_\+index} & メッシュのインデックス \\
+\hline
+{\em $\ast$mesh} & メッシュ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 548 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_ad42745849ed5fbd2a6b332004a21a667}\label{class_fbx_converter_ad42745849ed5fbd2a6b332004a21a667}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Init@{Init}}
+\index{Init@{Init}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool Fbx\+Converter\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 初期化成功の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 22 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a5259c5ec8f57b412455d75ccebb27524}\label{class_fbx_converter_a5259c5ec8f57b412455d75ccebb27524}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Load@{Load}}
+\index{Load@{Load}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily bool Fbx\+Converter\+::\+Load (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+読み込み関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$file\+\_\+path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em bool} & 読み込み成功の有無 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 94 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_ab41f9b165cb34a294bb2c5da778f542b}\label{class_fbx_converter_ab41f9b165cb34a294bb2c5da778f542b}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!Uninit@{Uninit}}
+\index{Uninit@{Uninit}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{Uninit()}{Uninit()}}
+{\footnotesize\ttfamily void Fbx\+Converter\+::\+Uninit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+終了関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Fbx\+Converter.\+cpp の 60 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_converter_adcb0b8e16e923953c16d1a171df50190}\label{class_fbx_converter_adcb0b8e16e923953c16d1a171df50190}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!all\+\_\+animation\+\_\+frame\+\_\+num\+\_\+@{all\+\_\+animation\+\_\+frame\+\_\+num\+\_\+}}
+\index{all\+\_\+animation\+\_\+frame\+\_\+num\+\_\+@{all\+\_\+animation\+\_\+frame\+\_\+num\+\_\+}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{all\+\_\+animation\+\_\+frame\+\_\+num\+\_\+}{all\_animation\_frame\_num\_}}
+{\footnotesize\ttfamily int Fbx\+Converter\+::all\+\_\+animation\+\_\+frame\+\_\+num\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+アニメーションフレーム数 
+
+
+
+ Fbx\+Converter.\+h の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a5ce2f08e1d77044d628949d3ad7572ca}\label{class_fbx_converter_a5ce2f08e1d77044d628949d3ad7572ca}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!animation\+\_\+start\+\_\+frame\+\_\+num\+\_\+@{animation\+\_\+start\+\_\+frame\+\_\+num\+\_\+}}
+\index{animation\+\_\+start\+\_\+frame\+\_\+num\+\_\+@{animation\+\_\+start\+\_\+frame\+\_\+num\+\_\+}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{animation\+\_\+start\+\_\+frame\+\_\+num\+\_\+}{animation\_start\_frame\_num\_}}
+{\footnotesize\ttfamily int Fbx\+Converter\+::animation\+\_\+start\+\_\+frame\+\_\+num\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+アニメーション開始フレーム数 
+
+
+
+ Fbx\+Converter.\+h の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_ad7d116416b9d843c79ca282841e398c7}\label{class_fbx_converter_ad7d116416b9d843c79ca282841e398c7}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!animation\+\_\+stop\+\_\+frame\+\_\+num\+\_\+@{animation\+\_\+stop\+\_\+frame\+\_\+num\+\_\+}}
+\index{animation\+\_\+stop\+\_\+frame\+\_\+num\+\_\+@{animation\+\_\+stop\+\_\+frame\+\_\+num\+\_\+}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{animation\+\_\+stop\+\_\+frame\+\_\+num\+\_\+}{animation\_stop\_frame\_num\_}}
+{\footnotesize\ttfamily int Fbx\+Converter\+::animation\+\_\+stop\+\_\+frame\+\_\+num\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+アニメーション停止フレーム数 
+
+
+
+ Fbx\+Converter.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a36b80ea020d572dfff02125724af4c53}\label{class_fbx_converter_a36b80ea020d572dfff02125724af4c53}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!axis\+\_\+system\+\_\+@{axis\+\_\+system\+\_\+}}
+\index{axis\+\_\+system\+\_\+@{axis\+\_\+system\+\_\+}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{axis\+\_\+system\+\_\+}{axis\_system\_}}
+{\footnotesize\ttfamily Fbx\+Axis\+System Fbx\+Converter\+::axis\+\_\+system\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+座標系の種類 
+
+
+
+ Fbx\+Converter.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a542178c31548a51cd28726e2154c0f70}\label{class_fbx_converter_a542178c31548a51cd28726e2154c0f70}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!directory\+\_\+path\+\_\+@{directory\+\_\+path\+\_\+}}
+\index{directory\+\_\+path\+\_\+@{directory\+\_\+path\+\_\+}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{directory\+\_\+path\+\_\+}{directory\_path\_}}
+{\footnotesize\ttfamily std\+::string Fbx\+Converter\+::directory\+\_\+path\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ディレクトリパス 
+
+
+
+ Fbx\+Converter.\+h の 39 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_ac840641172dc753b399902ea928b4ff6}\label{class_fbx_converter_ac840641172dc753b399902ea928b4ff6}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!export\+\_\+file\+\_\+@{export\+\_\+file\+\_\+}}
+\index{export\+\_\+file\+\_\+@{export\+\_\+file\+\_\+}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{export\+\_\+file\+\_\+}{export\_file\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_export_file}{Export\+File}} Fbx\+Converter\+::export\+\_\+file\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ファイル出力 
+
+
+
+ Fbx\+Converter.\+h の 45 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_ad88043ffdcbe995d3f1f8649395e58c9}\label{class_fbx_converter_ad88043ffdcbe995d3f1f8649395e58c9}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!is\+\_\+reverse\+\_\+alpha\+\_\+@{is\+\_\+reverse\+\_\+alpha\+\_\+}}
+\index{is\+\_\+reverse\+\_\+alpha\+\_\+@{is\+\_\+reverse\+\_\+alpha\+\_\+}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{is\+\_\+reverse\+\_\+alpha\+\_\+}{is\_reverse\_alpha\_}}
+{\footnotesize\ttfamily bool Fbx\+Converter\+::is\+\_\+reverse\+\_\+alpha\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+α値の反転フラグ 
+
+
+
+ Fbx\+Converter.\+h の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a5c236830d34901e79030647478d3ef1b}\label{class_fbx_converter_a5c236830d34901e79030647478d3ef1b}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!manager\+\_\+@{manager\+\_\+}}
+\index{manager\+\_\+@{manager\+\_\+}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{manager\+\_\+}{manager\_}}
+{\footnotesize\ttfamily Fbx\+Manager$\ast$ Fbx\+Converter\+::manager\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+F\+B\+Xマネージャ 
+
+
+
+ Fbx\+Converter.\+h の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a637b9f53af4fbc31a961e9e2204dfaf5}\label{class_fbx_converter_a637b9f53af4fbc31a961e9e2204dfaf5}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!md\+\_\+bin\+\_\+data\+\_\+@{md\+\_\+bin\+\_\+data\+\_\+}}
+\index{md\+\_\+bin\+\_\+data\+\_\+@{md\+\_\+bin\+\_\+data\+\_\+}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{md\+\_\+bin\+\_\+data\+\_\+}{md\_bin\_data\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_data}{Md\+Bin\+Data}} Fbx\+Converter\+::md\+\_\+bin\+\_\+data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Md\+Binデータ 
+
+
+
+ Fbx\+Converter.\+h の 44 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a6d72d42a71572369aa2fed2f8710e696}\label{class_fbx_converter_a6d72d42a71572369aa2fed2f8710e696}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!period\+\_\+@{period\+\_\+}}
+\index{period\+\_\+@{period\+\_\+}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{period\+\_\+}{period\_}}
+{\footnotesize\ttfamily Fbx\+Time Fbx\+Converter\+::period\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+1フレームの時間 
+
+
+
+ Fbx\+Converter.\+h の 40 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_ad5a43f9ee7bcf730c5f95e0ec63a4b8e}\label{class_fbx_converter_ad5a43f9ee7bcf730c5f95e0ec63a4b8e}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!root\+\_\+node\+\_\+@{root\+\_\+node\+\_\+}}
+\index{root\+\_\+node\+\_\+@{root\+\_\+node\+\_\+}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{root\+\_\+node\+\_\+}{root\_node\_}}
+{\footnotesize\ttfamily Fbx\+Node$\ast$ Fbx\+Converter\+::root\+\_\+node\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ルートノード 
+
+
+
+ Fbx\+Converter.\+h の 36 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_converter_a64600b8f5225b7147c72105558386d78}\label{class_fbx_converter_a64600b8f5225b7147c72105558386d78}} 
+\index{Fbx\+Converter@{Fbx\+Converter}!scene\+\_\+@{scene\+\_\+}}
+\index{scene\+\_\+@{scene\+\_\+}!Fbx\+Converter@{Fbx\+Converter}}
+\subsubsection{\texorpdfstring{scene\+\_\+}{scene\_}}
+{\footnotesize\ttfamily Fbx\+Scene$\ast$ Fbx\+Converter\+::scene\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+シーン 
+
+
+
+ Fbx\+Converter.\+h の 35 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Fbx\+Converter/source/\+Fbx\+Converter/\mbox{\hyperlink{_fbx_converter_8h}{Fbx\+Converter.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Fbx\+Converter/source/\+Fbx\+Converter/\mbox{\hyperlink{_fbx_converter_8cpp}{Fbx\+Converter.\+cpp}}\end{DoxyCompactItemize}

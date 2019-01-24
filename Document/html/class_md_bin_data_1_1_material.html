@@ -1,0 +1,1002 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FbxConverter: MdBinData::Material クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FbxConverter
+   &#160;<span id="projectnumber">version 1.0</span>
+   </div>
+   <div id="projectbrief">FBXから独自ファイルへのコンバーター</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_md_bin_data_1_1_material.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="class_md_bin_data_1_1_material-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">MdBinData::Material クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>マテリアルClass  
+ <a href="class_md_bin_data_1_1_material.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a>&gt;</code></p>
+<div class="dynheader">
+MdBinData::Material 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_md_bin_data_1_1_material__coll__graph.png" border="0" usemap="#_md_bin_data_1_1_material_coll__map" alt="Collaboration graph"/></div>
+<map name="_md_bin_data_1_1_material_coll__map" id="_md_bin_data_1_1_material_coll__map">
+<area shape="rect" id="node2" href="class_md_bin_data_1_1_color.html" title="色Class " alt="" coords="13,5,137,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material_1_1_texture.html">Texture</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャClass  <a href="class_md_bin_data_1_1_material_1_1_texture.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:abaa620135fd033cce415e7c949e9a4b6"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#abaa620135fd033cce415e7c949e9a4b6">getpName</a> ()</td></tr>
+<tr class="memdesc:abaa620135fd033cce415e7c949e9a4b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">名前取得関数  <a href="#abaa620135fd033cce415e7c949e9a4b6">[詳解]</a><br /></td></tr>
+<tr class="separator:abaa620135fd033cce415e7c949e9a4b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de4c3bff10499fb4fb861b7a13b6180"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_md_bin_data_1_1_color.html">Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a5de4c3bff10499fb4fb861b7a13b6180">getpAmbient</a> ()</td></tr>
+<tr class="memdesc:a5de4c3bff10499fb4fb861b7a13b6180"><td class="mdescLeft">&#160;</td><td class="mdescRight">アンビエント取得関数  <a href="#a5de4c3bff10499fb4fb861b7a13b6180">[詳解]</a><br /></td></tr>
+<tr class="separator:a5de4c3bff10499fb4fb861b7a13b6180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a66da1fbf79515b1bdff35b0278eb19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_md_bin_data_1_1_color.html">Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a3a66da1fbf79515b1bdff35b0278eb19">getpDiffuse</a> ()</td></tr>
+<tr class="memdesc:a3a66da1fbf79515b1bdff35b0278eb19"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディフューズ取得関数  <a href="#a3a66da1fbf79515b1bdff35b0278eb19">[詳解]</a><br /></td></tr>
+<tr class="separator:a3a66da1fbf79515b1bdff35b0278eb19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa486af195c8862860ec61245e3933a64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_md_bin_data_1_1_color.html">Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#aa486af195c8862860ec61245e3933a64">getpEmissive</a> ()</td></tr>
+<tr class="memdesc:aa486af195c8862860ec61245e3933a64"><td class="mdescLeft">&#160;</td><td class="mdescRight">エミッション取得関数  <a href="#aa486af195c8862860ec61245e3933a64">[詳解]</a><br /></td></tr>
+<tr class="separator:aa486af195c8862860ec61245e3933a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec6d9f8f6c8e733c9165d39eebd55cc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_md_bin_data_1_1_color.html">Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#aec6d9f8f6c8e733c9165d39eebd55cc1">getpBump</a> ()</td></tr>
+<tr class="memdesc:aec6d9f8f6c8e733c9165d39eebd55cc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">バンプ取得関数  <a href="#aec6d9f8f6c8e733c9165d39eebd55cc1">[詳解]</a><br /></td></tr>
+<tr class="separator:aec6d9f8f6c8e733c9165d39eebd55cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93eee0080dcebaa2f75fdfd6fc353ce0"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a93eee0080dcebaa2f75fdfd6fc353ce0">getpTransparent</a> ()</td></tr>
+<tr class="memdesc:a93eee0080dcebaa2f75fdfd6fc353ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">トランスペアレント取得関数  <a href="#a93eee0080dcebaa2f75fdfd6fc353ce0">[詳解]</a><br /></td></tr>
+<tr class="separator:a93eee0080dcebaa2f75fdfd6fc353ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dd95902f709e30a346dbc095e0eb900"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_md_bin_data_1_1_color.html">Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a3dd95902f709e30a346dbc095e0eb900">getpSpecular</a> ()</td></tr>
+<tr class="memdesc:a3dd95902f709e30a346dbc095e0eb900"><td class="mdescLeft">&#160;</td><td class="mdescRight">スペキュラ取得関数  <a href="#a3dd95902f709e30a346dbc095e0eb900">[詳解]</a><br /></td></tr>
+<tr class="separator:a3dd95902f709e30a346dbc095e0eb900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fad1db40f8d9466ac87be3782149104"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a2fad1db40f8d9466ac87be3782149104">getpPower</a> ()</td></tr>
+<tr class="memdesc:a2fad1db40f8d9466ac87be3782149104"><td class="mdescLeft">&#160;</td><td class="mdescRight">パワー取得関数  <a href="#a2fad1db40f8d9466ac87be3782149104">[詳解]</a><br /></td></tr>
+<tr class="separator:a2fad1db40f8d9466ac87be3782149104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa060a0f3fa72b5cfeef427c5a529e259"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#aa060a0f3fa72b5cfeef427c5a529e259">getpReflection</a> ()</td></tr>
+<tr class="memdesc:aa060a0f3fa72b5cfeef427c5a529e259"><td class="mdescLeft">&#160;</td><td class="mdescRight">リフレクション取得関数  <a href="#aa060a0f3fa72b5cfeef427c5a529e259">[詳解]</a><br /></td></tr>
+<tr class="separator:aa060a0f3fa72b5cfeef427c5a529e259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ac4c6f4a97143645a1b5c78d321ba71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a9ac4c6f4a97143645a1b5c78d321ba71">getTextureArraySize</a> ()</td></tr>
+<tr class="memdesc:a9ac4c6f4a97143645a1b5c78d321ba71"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ配列サイズ取得関数  <a href="#a9ac4c6f4a97143645a1b5c78d321ba71">[詳解]</a><br /></td></tr>
+<tr class="separator:a9ac4c6f4a97143645a1b5c78d321ba71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51888aa2e18d1d191818cad0ee07f45d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_md_bin_data_1_1_material_1_1_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a51888aa2e18d1d191818cad0ee07f45d">getpTexture</a> (int index)</td></tr>
+<tr class="memdesc:a51888aa2e18d1d191818cad0ee07f45d"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ取得関数  <a href="#a51888aa2e18d1d191818cad0ee07f45d">[詳解]</a><br /></td></tr>
+<tr class="separator:a51888aa2e18d1d191818cad0ee07f45d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a052ceb2c797f8a24c89d988510e874ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a052ceb2c797f8a24c89d988510e874ae">ReleaseTextureArray</a> ()</td></tr>
+<tr class="memdesc:a052ceb2c797f8a24c89d988510e874ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ解放関数  <a href="#a052ceb2c797f8a24c89d988510e874ae">[詳解]</a><br /></td></tr>
+<tr class="separator:a052ceb2c797f8a24c89d988510e874ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d6a7d5c0f7f11d84a155846c467a580"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a8d6a7d5c0f7f11d84a155846c467a580">AddTextureArray</a> (<a class="el" href="class_md_bin_data_1_1_material_1_1_texture.html">Texture</a> *texture)</td></tr>
+<tr class="memdesc:a8d6a7d5c0f7f11d84a155846c467a580"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ配列追加関数  <a href="#a8d6a7d5c0f7f11d84a155846c467a580">[詳解]</a><br /></td></tr>
+<tr class="separator:a8d6a7d5c0f7f11d84a155846c467a580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:a5c3a4ba9a609aedbbaee7e0590ea27fc"><td class="memTemplParams" colspan="2">template&lt;class Archive &gt; </td></tr>
+<tr class="memitem:a5c3a4ba9a609aedbbaee7e0590ea27fc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a5c3a4ba9a609aedbbaee7e0590ea27fc">serialize</a> (Archive &amp;archive, const unsigned version)</td></tr>
+<tr class="separator:a5c3a4ba9a609aedbbaee7e0590ea27fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a313cb12160a6bba5bee24cbae74ed091"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a313cb12160a6bba5bee24cbae74ed091">name_</a></td></tr>
+<tr class="memdesc:a313cb12160a6bba5bee24cbae74ed091"><td class="mdescLeft">&#160;</td><td class="mdescRight">名前  <a href="#a313cb12160a6bba5bee24cbae74ed091">[詳解]</a><br /></td></tr>
+<tr class="separator:a313cb12160a6bba5bee24cbae74ed091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c102b19537a444f94e541015e3ac7f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_md_bin_data_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a1c102b19537a444f94e541015e3ac7f5">ambient_</a></td></tr>
+<tr class="memdesc:a1c102b19537a444f94e541015e3ac7f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">アンビエント(環境光)  <a href="#a1c102b19537a444f94e541015e3ac7f5">[詳解]</a><br /></td></tr>
+<tr class="separator:a1c102b19537a444f94e541015e3ac7f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59cadfc22f9b91655f01414dc16f3e16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_md_bin_data_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a59cadfc22f9b91655f01414dc16f3e16">diffuse_</a></td></tr>
+<tr class="memdesc:a59cadfc22f9b91655f01414dc16f3e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">ディヒューズ(拡散反射光)  <a href="#a59cadfc22f9b91655f01414dc16f3e16">[詳解]</a><br /></td></tr>
+<tr class="separator:a59cadfc22f9b91655f01414dc16f3e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa38e2516efa84118397c533ff3e9b223"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_md_bin_data_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#aa38e2516efa84118397c533ff3e9b223">emissive_</a></td></tr>
+<tr class="memdesc:aa38e2516efa84118397c533ff3e9b223"><td class="mdescLeft">&#160;</td><td class="mdescRight">エミッシブ(放射光)  <a href="#aa38e2516efa84118397c533ff3e9b223">[詳解]</a><br /></td></tr>
+<tr class="separator:aa38e2516efa84118397c533ff3e9b223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a210d4e9c5d3bdba5144086bfb792eca5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_md_bin_data_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a210d4e9c5d3bdba5144086bfb792eca5">bump_</a></td></tr>
+<tr class="memdesc:a210d4e9c5d3bdba5144086bfb792eca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">バンプ(凹凸具合)  <a href="#a210d4e9c5d3bdba5144086bfb792eca5">[詳解]</a><br /></td></tr>
+<tr class="separator:a210d4e9c5d3bdba5144086bfb792eca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d6d026a2e515d99c43bce457a99fb58"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a1d6d026a2e515d99c43bce457a99fb58">transparent_</a></td></tr>
+<tr class="memdesc:a1d6d026a2e515d99c43bce457a99fb58"><td class="mdescLeft">&#160;</td><td class="mdescRight">トランスペアレント(透過度)  <a href="#a1d6d026a2e515d99c43bce457a99fb58">[詳解]</a><br /></td></tr>
+<tr class="separator:a1d6d026a2e515d99c43bce457a99fb58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c16d1b0970a1bfac1cbf5ae02511d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_md_bin_data_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a00c16d1b0970a1bfac1cbf5ae02511d4">specular_</a></td></tr>
+<tr class="memdesc:a00c16d1b0970a1bfac1cbf5ae02511d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">スペキュラ(鏡面反射)  <a href="#a00c16d1b0970a1bfac1cbf5ae02511d4">[詳解]</a><br /></td></tr>
+<tr class="separator:a00c16d1b0970a1bfac1cbf5ae02511d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8feee785a823f459b61c49da74441a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#a5b8feee785a823f459b61c49da74441a">power_</a></td></tr>
+<tr class="memdesc:a5b8feee785a823f459b61c49da74441a"><td class="mdescLeft">&#160;</td><td class="mdescRight">パワー(スペキュラの減衰強度)  <a href="#a5b8feee785a823f459b61c49da74441a">[詳解]</a><br /></td></tr>
+<tr class="separator:a5b8feee785a823f459b61c49da74441a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac33b9c6e70a1eb229007e6c4f9c94712"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#ac33b9c6e70a1eb229007e6c4f9c94712">reflection_</a></td></tr>
+<tr class="memdesc:ac33b9c6e70a1eb229007e6c4f9c94712"><td class="mdescLeft">&#160;</td><td class="mdescRight">リフレクション(反射強度)  <a href="#ac33b9c6e70a1eb229007e6c4f9c94712">[詳解]</a><br /></td></tr>
+<tr class="separator:ac33b9c6e70a1eb229007e6c4f9c94712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5872731e44ecb8de180ccafa689bc6a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_md_bin_data_1_1_material_1_1_texture.html">Texture</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#ad5872731e44ecb8de180ccafa689bc6a">texture_array_</a></td></tr>
+<tr class="memdesc:ad5872731e44ecb8de180ccafa689bc6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ配列  <a href="#ad5872731e44ecb8de180ccafa689bc6a">[詳解]</a><br /></td></tr>
+<tr class="separator:ad5872731e44ecb8de180ccafa689bc6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:ac98d07dd8f7b70e16ccb9a01abf56b9c"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_md_bin_data_1_1_material.html#ac98d07dd8f7b70e16ccb9a01abf56b9c">boost::serialization::access</a></td></tr>
+<tr class="memdesc:ac98d07dd8f7b70e16ccb9a01abf56b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">シリアライズ(I/O)関数  <a href="#ac98d07dd8f7b70e16ccb9a01abf56b9c">[詳解]</a><br /></td></tr>
+<tr class="separator:ac98d07dd8f7b70e16ccb9a01abf56b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>マテリアルClass </p>
+<p>マテリアルのClass </p>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00302">302</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a8d6a7d5c0f7f11d84a155846c467a580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d6a7d5c0f7f11d84a155846c467a580">&#9670;&nbsp;</a></span>AddTextureArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MdBinData::Material::AddTextureArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_md_bin_data_1_1_material_1_1_texture.html">Texture</a> *&#160;</td>
+          <td class="paramname"><em>texture</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テクスチャ配列追加関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*texture</td><td>テクスチャ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00545">545</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5de4c3bff10499fb4fb861b7a13b6180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de4c3bff10499fb4fb861b7a13b6180">&#9670;&nbsp;</a></span>getpAmbient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_md_bin_data_1_1_color.html">MdBinData::Color</a> * MdBinData::Material::getpAmbient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アンビエント取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Color*</td><td>アンビエント </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00152">152</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aec6d9f8f6c8e733c9165d39eebd55cc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec6d9f8f6c8e733c9165d39eebd55cc1">&#9670;&nbsp;</a></span>getpBump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_md_bin_data_1_1_color.html">MdBinData::Color</a> * MdBinData::Material::getpBump </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>バンプ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Color*</td><td>バンプ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00173">173</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3a66da1fbf79515b1bdff35b0278eb19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a66da1fbf79515b1bdff35b0278eb19">&#9670;&nbsp;</a></span>getpDiffuse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_md_bin_data_1_1_color.html">MdBinData::Color</a> * MdBinData::Material::getpDiffuse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ディフューズ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Color*</td><td>ディフューズ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00159">159</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa486af195c8862860ec61245e3933a64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa486af195c8862860ec61245e3933a64">&#9670;&nbsp;</a></span>getpEmissive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_md_bin_data_1_1_color.html">MdBinData::Color</a> * MdBinData::Material::getpEmissive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>エミッション取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Color*</td><td>エミッション </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00166">166</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abaa620135fd033cce415e7c949e9a4b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaa620135fd033cce415e7c949e9a4b6">&#9670;&nbsp;</a></span>getpName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * MdBinData::Material::getpName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>名前取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">std::string*</td><td>名前 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00145">145</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2fad1db40f8d9466ac87be3782149104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fad1db40f8d9466ac87be3782149104">&#9670;&nbsp;</a></span>getpPower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * MdBinData::Material::getpPower </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>パワー取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float*</td><td>パワー </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00194">194</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa060a0f3fa72b5cfeef427c5a529e259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa060a0f3fa72b5cfeef427c5a529e259">&#9670;&nbsp;</a></span>getpReflection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * MdBinData::Material::getpReflection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>リフレクション取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float*</td><td>リフレクション </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00201">201</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3dd95902f709e30a346dbc095e0eb900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dd95902f709e30a346dbc095e0eb900">&#9670;&nbsp;</a></span>getpSpecular()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_md_bin_data_1_1_color.html">MdBinData::Color</a> * MdBinData::Material::getpSpecular </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>スペキュラ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Color*</td><td>スペキュラー </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00187">187</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a51888aa2e18d1d191818cad0ee07f45d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51888aa2e18d1d191818cad0ee07f45d">&#9670;&nbsp;</a></span>getpTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_md_bin_data_1_1_material_1_1_texture.html">MdBinData::Material::Texture</a> * MdBinData::Material::getpTexture </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テクスチャ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>インデックス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="class_md_bin_data_1_1_material_1_1_texture.html" title="テクスチャClass ">Texture</a></td><td>テクスチャ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00215">215</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a93eee0080dcebaa2f75fdfd6fc353ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93eee0080dcebaa2f75fdfd6fc353ce0">&#9670;&nbsp;</a></span>getpTransparent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * MdBinData::Material::getpTransparent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>トランスペアレント取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">float*</td><td>トランスペアレント </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00180">180</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9ac4c6f4a97143645a1b5c78d321ba71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ac4c6f4a97143645a1b5c78d321ba71">&#9670;&nbsp;</a></span>getTextureArraySize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MdBinData::Material::getTextureArraySize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テクスチャ配列サイズ取得関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">int</td><td>サイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00208">208</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a052ceb2c797f8a24c89d988510e874ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a052ceb2c797f8a24c89d988510e874ae">&#9670;&nbsp;</a></span>ReleaseTextureArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MdBinData::Material::ReleaseTextureArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>テクスチャ解放関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a> の <a class="el" href="_md_bin_data_8cpp_source.html#l00533">533</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5c3a4ba9a609aedbbaee7e0590ea27fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c3a4ba9a609aedbbaee7e0590ea27fc">&#9670;&nbsp;</a></span>serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Archive &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MdBinData::Material::serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive &amp;&#160;</td>
+          <td class="paramname"><em>archive</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned&#160;</td>
+          <td class="paramname"><em>version</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00526">526</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">フレンドと関連関数の詳解</h2>
+<a id="ac98d07dd8f7b70e16ccb9a01abf56b9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac98d07dd8f7b70e16ccb9a01abf56b9c">&#9670;&nbsp;</a></span>boost::serialization::access</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class boost::serialization::access</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>シリアライズ(I/O)関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">archive</td><td>アーカイブ用クラス </td></tr>
+    <tr><td class="paramname">version</td><td>バージョン </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">void</td><td>なし </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00524">524</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a1c102b19537a444f94e541015e3ac7f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c102b19537a444f94e541015e3ac7f5">&#9670;&nbsp;</a></span>ambient_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_md_bin_data_1_1_color.html">Color</a> MdBinData::Material::ambient_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アンビエント(環境光) </p>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00388">388</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a210d4e9c5d3bdba5144086bfb792eca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a210d4e9c5d3bdba5144086bfb792eca5">&#9670;&nbsp;</a></span>bump_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_md_bin_data_1_1_color.html">Color</a> MdBinData::Material::bump_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>バンプ(凹凸具合) </p>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00391">391</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a59cadfc22f9b91655f01414dc16f3e16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59cadfc22f9b91655f01414dc16f3e16">&#9670;&nbsp;</a></span>diffuse_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_md_bin_data_1_1_color.html">Color</a> MdBinData::Material::diffuse_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ディヒューズ(拡散反射光) </p>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00389">389</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa38e2516efa84118397c533ff3e9b223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa38e2516efa84118397c533ff3e9b223">&#9670;&nbsp;</a></span>emissive_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_md_bin_data_1_1_color.html">Color</a> MdBinData::Material::emissive_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>エミッシブ(放射光) </p>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00390">390</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a313cb12160a6bba5bee24cbae74ed091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a313cb12160a6bba5bee24cbae74ed091">&#9670;&nbsp;</a></span>name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MdBinData::Material::name_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>名前 </p>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00387">387</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5b8feee785a823f459b61c49da74441a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b8feee785a823f459b61c49da74441a">&#9670;&nbsp;</a></span>power_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MdBinData::Material::power_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>パワー(スペキュラの減衰強度) </p>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00394">394</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac33b9c6e70a1eb229007e6c4f9c94712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac33b9c6e70a1eb229007e6c4f9c94712">&#9670;&nbsp;</a></span>reflection_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MdBinData::Material::reflection_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>リフレクション(反射強度) </p>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00395">395</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a00c16d1b0970a1bfac1cbf5ae02511d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c16d1b0970a1bfac1cbf5ae02511d4">&#9670;&nbsp;</a></span>specular_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_md_bin_data_1_1_color.html">Color</a> MdBinData::Material::specular_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>スペキュラ(鏡面反射) </p>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00393">393</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad5872731e44ecb8de180ccafa689bc6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5872731e44ecb8de180ccafa689bc6a">&#9670;&nbsp;</a></span>texture_array_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_md_bin_data_1_1_material_1_1_texture.html">Texture</a>*&gt; MdBinData::Material::texture_array_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テクスチャ配列 </p>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00396">396</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1d6d026a2e515d99c43bce457a99fb58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d6d026a2e515d99c43bce457a99fb58">&#9670;&nbsp;</a></span>transparent_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MdBinData::Material::transparent_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>トランスペアレント(透過度) </p>
+
+<p class="definition"> <a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a> の <a class="el" href="_md_bin_data_8h_source.html#l00392">392</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/FbxConverter/source/MdBinData/<a class="el" href="_md_bin_data_8h_source.html">MdBinData.h</a></li>
+<li>C:/HAL/PG関係/03_作成プログラム/03_HAL授業/就職作品/FbxConverter/source/MdBinData/<a class="el" href="_md_bin_data_8cpp_source.html">MdBinData.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_md_bin_data.html">MdBinData</a></li><li class="navelem"><a class="el" href="class_md_bin_data_1_1_material.html">Material</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

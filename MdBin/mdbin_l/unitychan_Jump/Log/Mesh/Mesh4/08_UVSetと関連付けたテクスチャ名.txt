@@ -1,4 +1,0 @@
-
-[MeshData]
-
-UVSet‚ÆŠÖ˜A•t‚¯‚½Texture–¼ : face_00.tga

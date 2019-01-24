@@ -1,0 +1,245 @@
+\hypertarget{class_md_bin_data_1_1_mesh_1_1_bone_weight}{}\section{Md\+Bin\+Data\+:\+:Mesh\+:\+:Bone\+Weight クラス}
+\label{class_md_bin_data_1_1_mesh_1_1_bone_weight}\index{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}}
+
+
+ボーン重み\+Class  
+
+
+
+
+{\ttfamily \#include $<$Md\+Bin\+Data.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_bone_weight_a0e88a654cd1a709780357cb5c612070e}{get\+Bone\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em ボーンインデックス取得関数 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_bone_weight_a3beb8b0ee437d812fe8c0cccd6acb194}{get\+Bone\+Weight}} (int index)
+\begin{DoxyCompactList}\small\item\em ボーンの重み取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_bone_weight_a219857a3874c416784d461366e867d57}{set\+Bone\+Index\+And\+Weight}} (int bone\+\_\+index, float bone\+\_\+weight)
+\begin{DoxyCompactList}\small\item\em ボーンインデックス\&重み設定関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_bone_weight_a01430f0a589f6276dffeab831c573708}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_bone_weight_a2c870f6c96315b6b9630cff3c24b79e7}{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM}} = 4
+\begin{DoxyCompactList}\small\item\em 最大ボーン数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_bone_weight_a2ffaf506ea648dc122ff380eb9f81010}{serialize}} (Archive \&archive, const unsigned version)
+\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_bone_weight_acfd3a3787786ddce83e1360d4c66dc4e}{bone\+\_\+index\+\_\+}} \mbox{[}\mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_bone_weight_a2c870f6c96315b6b9630cff3c24b79e7}{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em ボーンインデックス \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_bone_weight_a0122907a7aa6c928e0a14e6e577e4b80}{bone\+\_\+weight\+\_\+}} \mbox{[}\mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_bone_weight_a2c870f6c96315b6b9630cff3c24b79e7}{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em ボーンの重み \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_bone_weight_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\begin{DoxyCompactList}\small\item\em シリアライズ(I/O)関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+ボーン重み\+Class 
+
+ボーンの重み\+Class 
+
+ Md\+Bin\+Data.\+h の 749 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_bone_weight_a0e88a654cd1a709780357cb5c612070e}\label{class_md_bin_data_1_1_mesh_1_1_bone_weight_a0e88a654cd1a709780357cb5c612070e}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}!get\+Bone\+Index@{get\+Bone\+Index}}
+\index{get\+Bone\+Index@{get\+Bone\+Index}!Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}}
+\subsubsection{\texorpdfstring{get\+Bone\+Index()}{getBoneIndex()}}
+{\footnotesize\ttfamily int Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight\+::get\+Bone\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+ボーンインデックス取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & ボーンインデックス \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 299 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_bone_weight_a3beb8b0ee437d812fe8c0cccd6acb194}\label{class_md_bin_data_1_1_mesh_1_1_bone_weight_a3beb8b0ee437d812fe8c0cccd6acb194}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}!get\+Bone\+Weight@{get\+Bone\+Weight}}
+\index{get\+Bone\+Weight@{get\+Bone\+Weight}!Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}}
+\subsubsection{\texorpdfstring{get\+Bone\+Weight()}{getBoneWeight()}}
+{\footnotesize\ttfamily float Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight\+::get\+Bone\+Weight (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+ボーンの重み取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float} & ボーンの重み \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 306 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_bone_weight_a01430f0a589f6276dffeab831c573708}\label{class_md_bin_data_1_1_mesh_1_1_bone_weight_a01430f0a589f6276dffeab831c573708}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}!Init@{Init}}
+\index{Init@{Init}!Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 566 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_bone_weight_a2ffaf506ea648dc122ff380eb9f81010}\label{class_md_bin_data_1_1_mesh_1_1_bone_weight_a2ffaf506ea648dc122ff380eb9f81010}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}!serialize@{serialize}}
+\index{serialize@{serialize}!Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{archive,  }\item[{const unsigned}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+ Md\+Bin\+Data.\+h の 822 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_bone_weight_a219857a3874c416784d461366e867d57}\label{class_md_bin_data_1_1_mesh_1_1_bone_weight_a219857a3874c416784d461366e867d57}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}!set\+Bone\+Index\+And\+Weight@{set\+Bone\+Index\+And\+Weight}}
+\index{set\+Bone\+Index\+And\+Weight@{set\+Bone\+Index\+And\+Weight}!Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}}
+\subsubsection{\texorpdfstring{set\+Bone\+Index\+And\+Weight()}{setBoneIndexAndWeight()}}
+{\footnotesize\ttfamily void Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight\+::set\+Bone\+Index\+And\+Weight (\begin{DoxyParamCaption}\item[{int}]{bone\+\_\+index,  }\item[{float}]{bone\+\_\+weight }\end{DoxyParamCaption})}
+
+
+
+ボーンインデックス\&重み設定関数 
+
+
+\begin{DoxyParams}{引数}
+{\em bone\+\_\+index} & ボーンインデックス \\
+\hline
+{\em bone\+\_\+weight} & ボーンの重み \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int$\ast$} & ボーンインデックス \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 313 行目に定義があります。
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_bone_weight_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{class_md_bin_data_1_1_mesh_1_1_bone_weight_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}}
+\subsubsection{\texorpdfstring{boost\+::serialization\+::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+シリアライズ(I/O)関数 
+
+
+\begin{DoxyParams}{引数}
+{\em archive} & アーカイブ用クラス \\
+\hline
+{\em version} & バージョン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+h の 820 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_bone_weight_acfd3a3787786ddce83e1360d4c66dc4e}\label{class_md_bin_data_1_1_mesh_1_1_bone_weight_acfd3a3787786ddce83e1360d4c66dc4e}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}!bone\+\_\+index\+\_\+@{bone\+\_\+index\+\_\+}}
+\index{bone\+\_\+index\+\_\+@{bone\+\_\+index\+\_\+}!Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}}
+\subsubsection{\texorpdfstring{bone\+\_\+index\+\_\+}{bone\_index\_}}
+{\footnotesize\ttfamily int Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight\+::bone\+\_\+index\+\_\+\mbox{[}\mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_bone_weight_a2c870f6c96315b6b9630cff3c24b79e7}{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ボーンインデックス 
+
+
+
+ Md\+Bin\+Data.\+h の 762 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_bone_weight_a0122907a7aa6c928e0a14e6e577e4b80}\label{class_md_bin_data_1_1_mesh_1_1_bone_weight_a0122907a7aa6c928e0a14e6e577e4b80}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}!bone\+\_\+weight\+\_\+@{bone\+\_\+weight\+\_\+}}
+\index{bone\+\_\+weight\+\_\+@{bone\+\_\+weight\+\_\+}!Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}}
+\subsubsection{\texorpdfstring{bone\+\_\+weight\+\_\+}{bone\_weight\_}}
+{\footnotesize\ttfamily float Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight\+::bone\+\_\+weight\+\_\+\mbox{[}\mbox{\hyperlink{class_md_bin_data_1_1_mesh_1_1_bone_weight_a2c870f6c96315b6b9630cff3c24b79e7}{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ボーンの重み 
+
+
+
+ Md\+Bin\+Data.\+h の 763 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_mesh_1_1_bone_weight_a2c870f6c96315b6b9630cff3c24b79e7}\label{class_md_bin_data_1_1_mesh_1_1_bone_weight_a2c870f6c96315b6b9630cff3c24b79e7}} 
+\index{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}!M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM@{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM}}
+\index{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM@{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM}!Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight@{Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM}{MAX\_BONE\_NUM}}
+{\footnotesize\ttfamily const unsigned Md\+Bin\+Data\+::\+Mesh\+::\+Bone\+Weight\+::\+M\+A\+X\+\_\+\+B\+O\+N\+E\+\_\+\+N\+UM = 4\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+最大ボーン数 
+
+
+
+ Md\+Bin\+Data.\+h の 755 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Fbx\+Converter/source/\+Md\+Bin\+Data/\mbox{\hyperlink{_md_bin_data_8h}{Md\+Bin\+Data.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Fbx\+Converter/source/\+Md\+Bin\+Data/\mbox{\hyperlink{_md_bin_data_8cpp}{Md\+Bin\+Data.\+cpp}}\end{DoxyCompactItemize}

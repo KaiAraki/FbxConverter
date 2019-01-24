@@ -1,0 +1,601 @@
+\hypertarget{class_md_bin_data_1_1_material}{}\section{Md\+Bin\+Data\+:\+:Material クラス}
+\label{class_md_bin_data_1_1_material}\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+
+
+マテリアル\+Class  
+
+
+
+
+{\ttfamily \#include $<$Md\+Bin\+Data.\+h$>$}
+
+
+
+Md\+Bin\+Data\+:\+:Material 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{class_md_bin_data_1_1_material__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture}{Texture}}
+\begin{DoxyCompactList}\small\item\em テクスチャ\+Class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string $\ast$ \mbox{\hyperlink{class_md_bin_data_1_1_material_abaa620135fd033cce415e7c949e9a4b6}{getp\+Name}} ()
+\begin{DoxyCompactList}\small\item\em 名前取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_data_1_1_color}{Color}} $\ast$ \mbox{\hyperlink{class_md_bin_data_1_1_material_a5de4c3bff10499fb4fb861b7a13b6180}{getp\+Ambient}} ()
+\begin{DoxyCompactList}\small\item\em アンビエント取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_data_1_1_color}{Color}} $\ast$ \mbox{\hyperlink{class_md_bin_data_1_1_material_a3a66da1fbf79515b1bdff35b0278eb19}{getp\+Diffuse}} ()
+\begin{DoxyCompactList}\small\item\em ディフューズ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_data_1_1_color}{Color}} $\ast$ \mbox{\hyperlink{class_md_bin_data_1_1_material_aa486af195c8862860ec61245e3933a64}{getp\+Emissive}} ()
+\begin{DoxyCompactList}\small\item\em エミッション取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_data_1_1_color}{Color}} $\ast$ \mbox{\hyperlink{class_md_bin_data_1_1_material_aec6d9f8f6c8e733c9165d39eebd55cc1}{getp\+Bump}} ()
+\begin{DoxyCompactList}\small\item\em バンプ取得関数 \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{class_md_bin_data_1_1_material_a93eee0080dcebaa2f75fdfd6fc353ce0}{getp\+Transparent}} ()
+\begin{DoxyCompactList}\small\item\em トランスペアレント取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_data_1_1_color}{Color}} $\ast$ \mbox{\hyperlink{class_md_bin_data_1_1_material_a3dd95902f709e30a346dbc095e0eb900}{getp\+Specular}} ()
+\begin{DoxyCompactList}\small\item\em スペキュラ取得関数 \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{class_md_bin_data_1_1_material_a2fad1db40f8d9466ac87be3782149104}{getp\+Power}} ()
+\begin{DoxyCompactList}\small\item\em パワー取得関数 \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{class_md_bin_data_1_1_material_aa060a0f3fa72b5cfeef427c5a529e259}{getp\+Reflection}} ()
+\begin{DoxyCompactList}\small\item\em リフレクション取得関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_md_bin_data_1_1_material_a9ac4c6f4a97143645a1b5c78d321ba71}{get\+Texture\+Array\+Size}} ()
+\begin{DoxyCompactList}\small\item\em テクスチャ配列サイズ取得関数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture}{Texture}} $\ast$ \mbox{\hyperlink{class_md_bin_data_1_1_material_a51888aa2e18d1d191818cad0ee07f45d}{getp\+Texture}} (int index)
+\begin{DoxyCompactList}\small\item\em テクスチャ取得関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_data_1_1_material_a052ceb2c797f8a24c89d988510e874ae}{Release\+Texture\+Array}} ()
+\begin{DoxyCompactList}\small\item\em テクスチャ解放関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_md_bin_data_1_1_material_a8d6a7d5c0f7f11d84a155846c467a580}{Add\+Texture\+Array}} (\mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture}{Texture}} $\ast$texture)
+\begin{DoxyCompactList}\small\item\em テクスチャ配列追加関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{class_md_bin_data_1_1_material_a5c3a4ba9a609aedbbaee7e0590ea27fc}{serialize}} (Archive \&archive, const unsigned version)
+\end{DoxyCompactItemize}
+\subsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_md_bin_data_1_1_material_a313cb12160a6bba5bee24cbae74ed091}{name\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 名前 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_data_1_1_color}{Color}} \mbox{\hyperlink{class_md_bin_data_1_1_material_a1c102b19537a444f94e541015e3ac7f5}{ambient\+\_\+}}
+\begin{DoxyCompactList}\small\item\em アンビエント(環境光) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_data_1_1_color}{Color}} \mbox{\hyperlink{class_md_bin_data_1_1_material_a59cadfc22f9b91655f01414dc16f3e16}{diffuse\+\_\+}}
+\begin{DoxyCompactList}\small\item\em ディヒューズ(拡散反射光) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_data_1_1_color}{Color}} \mbox{\hyperlink{class_md_bin_data_1_1_material_aa38e2516efa84118397c533ff3e9b223}{emissive\+\_\+}}
+\begin{DoxyCompactList}\small\item\em エミッシブ(放射光) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_data_1_1_color}{Color}} \mbox{\hyperlink{class_md_bin_data_1_1_material_a210d4e9c5d3bdba5144086bfb792eca5}{bump\+\_\+}}
+\begin{DoxyCompactList}\small\item\em バンプ(凹凸具合) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_md_bin_data_1_1_material_a1d6d026a2e515d99c43bce457a99fb58}{transparent\+\_\+}}
+\begin{DoxyCompactList}\small\item\em トランスペアレント(透過度) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_bin_data_1_1_color}{Color}} \mbox{\hyperlink{class_md_bin_data_1_1_material_a00c16d1b0970a1bfac1cbf5ae02511d4}{specular\+\_\+}}
+\begin{DoxyCompactList}\small\item\em スペキュラ(鏡面反射) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_md_bin_data_1_1_material_a5b8feee785a823f459b61c49da74441a}{power\+\_\+}}
+\begin{DoxyCompactList}\small\item\em パワー(スペキュラの減衰強度) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_md_bin_data_1_1_material_ac33b9c6e70a1eb229007e6c4f9c94712}{reflection\+\_\+}}
+\begin{DoxyCompactList}\small\item\em リフレクション(反射強度) \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture}{Texture}} $\ast$ $>$ \mbox{\hyperlink{class_md_bin_data_1_1_material_ad5872731e44ecb8de180ccafa689bc6a}{texture\+\_\+array\+\_\+}}
+\begin{DoxyCompactList}\small\item\em テクスチャ配列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_md_bin_data_1_1_material_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\begin{DoxyCompactList}\small\item\em シリアライズ(I/O)関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+マテリアル\+Class 
+
+マテリアルの\+Class 
+
+ Md\+Bin\+Data.\+h の 302 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a8d6a7d5c0f7f11d84a155846c467a580}\label{class_md_bin_data_1_1_material_a8d6a7d5c0f7f11d84a155846c467a580}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!Add\+Texture\+Array@{Add\+Texture\+Array}}
+\index{Add\+Texture\+Array@{Add\+Texture\+Array}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{Add\+Texture\+Array()}{AddTextureArray()}}
+{\footnotesize\ttfamily void Md\+Bin\+Data\+::\+Material\+::\+Add\+Texture\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture}{Texture}} $\ast$}]{texture }\end{DoxyParamCaption})}
+
+
+
+テクスチャ配列追加関数 
+
+
+\begin{DoxyParams}{引数}
+{\em $\ast$texture} & テクスチャ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 545 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a5de4c3bff10499fb4fb861b7a13b6180}\label{class_md_bin_data_1_1_material_a5de4c3bff10499fb4fb861b7a13b6180}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!getp\+Ambient@{getp\+Ambient}}
+\index{getp\+Ambient@{getp\+Ambient}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{getp\+Ambient()}{getpAmbient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_data_1_1_color}{Md\+Bin\+Data\+::\+Color}} $\ast$ Md\+Bin\+Data\+::\+Material\+::getp\+Ambient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+アンビエント取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Color$\ast$} & アンビエント \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 152 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_aec6d9f8f6c8e733c9165d39eebd55cc1}\label{class_md_bin_data_1_1_material_aec6d9f8f6c8e733c9165d39eebd55cc1}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!getp\+Bump@{getp\+Bump}}
+\index{getp\+Bump@{getp\+Bump}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{getp\+Bump()}{getpBump()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_data_1_1_color}{Md\+Bin\+Data\+::\+Color}} $\ast$ Md\+Bin\+Data\+::\+Material\+::getp\+Bump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+バンプ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Color$\ast$} & バンプ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 173 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a3a66da1fbf79515b1bdff35b0278eb19}\label{class_md_bin_data_1_1_material_a3a66da1fbf79515b1bdff35b0278eb19}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!getp\+Diffuse@{getp\+Diffuse}}
+\index{getp\+Diffuse@{getp\+Diffuse}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{getp\+Diffuse()}{getpDiffuse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_data_1_1_color}{Md\+Bin\+Data\+::\+Color}} $\ast$ Md\+Bin\+Data\+::\+Material\+::getp\+Diffuse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ディフューズ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Color$\ast$} & ディフューズ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 159 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_aa486af195c8862860ec61245e3933a64}\label{class_md_bin_data_1_1_material_aa486af195c8862860ec61245e3933a64}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!getp\+Emissive@{getp\+Emissive}}
+\index{getp\+Emissive@{getp\+Emissive}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{getp\+Emissive()}{getpEmissive()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_data_1_1_color}{Md\+Bin\+Data\+::\+Color}} $\ast$ Md\+Bin\+Data\+::\+Material\+::getp\+Emissive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+エミッション取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Color$\ast$} & エミッション \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 166 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_abaa620135fd033cce415e7c949e9a4b6}\label{class_md_bin_data_1_1_material_abaa620135fd033cce415e7c949e9a4b6}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!getp\+Name@{getp\+Name}}
+\index{getp\+Name@{getp\+Name}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{getp\+Name()}{getpName()}}
+{\footnotesize\ttfamily std\+::string $\ast$ Md\+Bin\+Data\+::\+Material\+::getp\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+名前取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em std\+::string$\ast$} & 名前 \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 145 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a2fad1db40f8d9466ac87be3782149104}\label{class_md_bin_data_1_1_material_a2fad1db40f8d9466ac87be3782149104}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!getp\+Power@{getp\+Power}}
+\index{getp\+Power@{getp\+Power}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{getp\+Power()}{getpPower()}}
+{\footnotesize\ttfamily float $\ast$ Md\+Bin\+Data\+::\+Material\+::getp\+Power (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+パワー取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float$\ast$} & パワー \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 194 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_aa060a0f3fa72b5cfeef427c5a529e259}\label{class_md_bin_data_1_1_material_aa060a0f3fa72b5cfeef427c5a529e259}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!getp\+Reflection@{getp\+Reflection}}
+\index{getp\+Reflection@{getp\+Reflection}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{getp\+Reflection()}{getpReflection()}}
+{\footnotesize\ttfamily float $\ast$ Md\+Bin\+Data\+::\+Material\+::getp\+Reflection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+リフレクション取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float$\ast$} & リフレクション \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 201 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a3dd95902f709e30a346dbc095e0eb900}\label{class_md_bin_data_1_1_material_a3dd95902f709e30a346dbc095e0eb900}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!getp\+Specular@{getp\+Specular}}
+\index{getp\+Specular@{getp\+Specular}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{getp\+Specular()}{getpSpecular()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_data_1_1_color}{Md\+Bin\+Data\+::\+Color}} $\ast$ Md\+Bin\+Data\+::\+Material\+::getp\+Specular (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+スペキュラ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em Color$\ast$} & スペキュラー \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 187 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a51888aa2e18d1d191818cad0ee07f45d}\label{class_md_bin_data_1_1_material_a51888aa2e18d1d191818cad0ee07f45d}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!getp\+Texture@{getp\+Texture}}
+\index{getp\+Texture@{getp\+Texture}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{getp\+Texture()}{getpTexture()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture}{Md\+Bin\+Data\+::\+Material\+::\+Texture}} $\ast$ Md\+Bin\+Data\+::\+Material\+::getp\+Texture (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+テクスチャ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em index} & インデックス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture}{Texture}}} & テクスチャ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 215 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a93eee0080dcebaa2f75fdfd6fc353ce0}\label{class_md_bin_data_1_1_material_a93eee0080dcebaa2f75fdfd6fc353ce0}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!getp\+Transparent@{getp\+Transparent}}
+\index{getp\+Transparent@{getp\+Transparent}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{getp\+Transparent()}{getpTransparent()}}
+{\footnotesize\ttfamily float $\ast$ Md\+Bin\+Data\+::\+Material\+::getp\+Transparent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+トランスペアレント取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em float$\ast$} & トランスペアレント \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 180 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a9ac4c6f4a97143645a1b5c78d321ba71}\label{class_md_bin_data_1_1_material_a9ac4c6f4a97143645a1b5c78d321ba71}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!get\+Texture\+Array\+Size@{get\+Texture\+Array\+Size}}
+\index{get\+Texture\+Array\+Size@{get\+Texture\+Array\+Size}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{get\+Texture\+Array\+Size()}{getTextureArraySize()}}
+{\footnotesize\ttfamily int Md\+Bin\+Data\+::\+Material\+::get\+Texture\+Array\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+テクスチャ配列サイズ取得関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em int} & サイズ \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 208 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a052ceb2c797f8a24c89d988510e874ae}\label{class_md_bin_data_1_1_material_a052ceb2c797f8a24c89d988510e874ae}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!Release\+Texture\+Array@{Release\+Texture\+Array}}
+\index{Release\+Texture\+Array@{Release\+Texture\+Array}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{Release\+Texture\+Array()}{ReleaseTextureArray()}}
+{\footnotesize\ttfamily void Md\+Bin\+Data\+::\+Material\+::\+Release\+Texture\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+テクスチャ解放関数 
+
+
+\begin{DoxyParams}{引数}
+{\em void} & なし \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+cpp の 533 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a5c3a4ba9a609aedbbaee7e0590ea27fc}\label{class_md_bin_data_1_1_material_a5c3a4ba9a609aedbbaee7e0590ea27fc}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!serialize@{serialize}}
+\index{serialize@{serialize}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void Md\+Bin\+Data\+::\+Material\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{archive,  }\item[{const unsigned}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+ Md\+Bin\+Data.\+h の 526 行目に定義があります。
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{class_md_bin_data_1_1_material_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{boost\+::serialization\+::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+シリアライズ(I/O)関数 
+
+
+\begin{DoxyParams}{引数}
+{\em archive} & アーカイブ用クラス \\
+\hline
+{\em version} & バージョン \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em void} & なし \\
+\hline
+\end{DoxyRetVals}
+
+
+ Md\+Bin\+Data.\+h の 524 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a1c102b19537a444f94e541015e3ac7f5}\label{class_md_bin_data_1_1_material_a1c102b19537a444f94e541015e3ac7f5}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!ambient\+\_\+@{ambient\+\_\+}}
+\index{ambient\+\_\+@{ambient\+\_\+}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{ambient\+\_\+}{ambient\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_data_1_1_color}{Color}} Md\+Bin\+Data\+::\+Material\+::ambient\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+アンビエント(環境光) 
+
+
+
+ Md\+Bin\+Data.\+h の 388 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a210d4e9c5d3bdba5144086bfb792eca5}\label{class_md_bin_data_1_1_material_a210d4e9c5d3bdba5144086bfb792eca5}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!bump\+\_\+@{bump\+\_\+}}
+\index{bump\+\_\+@{bump\+\_\+}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{bump\+\_\+}{bump\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_data_1_1_color}{Color}} Md\+Bin\+Data\+::\+Material\+::bump\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+バンプ(凹凸具合) 
+
+
+
+ Md\+Bin\+Data.\+h の 391 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a59cadfc22f9b91655f01414dc16f3e16}\label{class_md_bin_data_1_1_material_a59cadfc22f9b91655f01414dc16f3e16}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!diffuse\+\_\+@{diffuse\+\_\+}}
+\index{diffuse\+\_\+@{diffuse\+\_\+}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{diffuse\+\_\+}{diffuse\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_data_1_1_color}{Color}} Md\+Bin\+Data\+::\+Material\+::diffuse\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ディヒューズ(拡散反射光) 
+
+
+
+ Md\+Bin\+Data.\+h の 389 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_aa38e2516efa84118397c533ff3e9b223}\label{class_md_bin_data_1_1_material_aa38e2516efa84118397c533ff3e9b223}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!emissive\+\_\+@{emissive\+\_\+}}
+\index{emissive\+\_\+@{emissive\+\_\+}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{emissive\+\_\+}{emissive\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_data_1_1_color}{Color}} Md\+Bin\+Data\+::\+Material\+::emissive\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+エミッシブ(放射光) 
+
+
+
+ Md\+Bin\+Data.\+h の 390 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a313cb12160a6bba5bee24cbae74ed091}\label{class_md_bin_data_1_1_material_a313cb12160a6bba5bee24cbae74ed091}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!name\+\_\+@{name\+\_\+}}
+\index{name\+\_\+@{name\+\_\+}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{name\+\_\+}{name\_}}
+{\footnotesize\ttfamily std\+::string Md\+Bin\+Data\+::\+Material\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+名前 
+
+
+
+ Md\+Bin\+Data.\+h の 387 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a5b8feee785a823f459b61c49da74441a}\label{class_md_bin_data_1_1_material_a5b8feee785a823f459b61c49da74441a}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!power\+\_\+@{power\+\_\+}}
+\index{power\+\_\+@{power\+\_\+}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{power\+\_\+}{power\_}}
+{\footnotesize\ttfamily float Md\+Bin\+Data\+::\+Material\+::power\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+パワー(スペキュラの減衰強度) 
+
+
+
+ Md\+Bin\+Data.\+h の 394 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_ac33b9c6e70a1eb229007e6c4f9c94712}\label{class_md_bin_data_1_1_material_ac33b9c6e70a1eb229007e6c4f9c94712}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!reflection\+\_\+@{reflection\+\_\+}}
+\index{reflection\+\_\+@{reflection\+\_\+}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{reflection\+\_\+}{reflection\_}}
+{\footnotesize\ttfamily float Md\+Bin\+Data\+::\+Material\+::reflection\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+リフレクション(反射強度) 
+
+
+
+ Md\+Bin\+Data.\+h の 395 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a00c16d1b0970a1bfac1cbf5ae02511d4}\label{class_md_bin_data_1_1_material_a00c16d1b0970a1bfac1cbf5ae02511d4}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!specular\+\_\+@{specular\+\_\+}}
+\index{specular\+\_\+@{specular\+\_\+}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{specular\+\_\+}{specular\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_md_bin_data_1_1_color}{Color}} Md\+Bin\+Data\+::\+Material\+::specular\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+スペキュラ(鏡面反射) 
+
+
+
+ Md\+Bin\+Data.\+h の 393 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_ad5872731e44ecb8de180ccafa689bc6a}\label{class_md_bin_data_1_1_material_ad5872731e44ecb8de180ccafa689bc6a}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!texture\+\_\+array\+\_\+@{texture\+\_\+array\+\_\+}}
+\index{texture\+\_\+array\+\_\+@{texture\+\_\+array\+\_\+}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{texture\+\_\+array\+\_\+}{texture\_array\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_md_bin_data_1_1_material_1_1_texture}{Texture}}$\ast$$>$ Md\+Bin\+Data\+::\+Material\+::texture\+\_\+array\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+テクスチャ配列 
+
+
+
+ Md\+Bin\+Data.\+h の 396 行目に定義があります。
+
+\mbox{\Hypertarget{class_md_bin_data_1_1_material_a1d6d026a2e515d99c43bce457a99fb58}\label{class_md_bin_data_1_1_material_a1d6d026a2e515d99c43bce457a99fb58}} 
+\index{Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}!transparent\+\_\+@{transparent\+\_\+}}
+\index{transparent\+\_\+@{transparent\+\_\+}!Md\+Bin\+Data\+::\+Material@{Md\+Bin\+Data\+::\+Material}}
+\subsubsection{\texorpdfstring{transparent\+\_\+}{transparent\_}}
+{\footnotesize\ttfamily float Md\+Bin\+Data\+::\+Material\+::transparent\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+トランスペアレント(透過度) 
+
+
+
+ Md\+Bin\+Data.\+h の 392 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Fbx\+Converter/source/\+Md\+Bin\+Data/\mbox{\hyperlink{_md_bin_data_8h}{Md\+Bin\+Data.\+h}}\item 
+C\+:/\+H\+A\+L/\+P\+G関係/03\+\_\+作成プログラム/03\+\_\+\+H\+A\+L授業/就職作品/\+Fbx\+Converter/source/\+Md\+Bin\+Data/\mbox{\hyperlink{_md_bin_data_8cpp}{Md\+Bin\+Data.\+cpp}}\end{DoxyCompactItemize}
