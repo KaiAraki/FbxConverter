@@ -8,6 +8,8 @@ FBXファイルから独自形式へ変換するコンバーター。
 [![coverage_status][url_shields_coverage]](#)
 [![coverage_license][url_shields_license]](#)
 
+![起動画面][url_screen]
+
 Table of Contents
 --------------------
 * [Description](#Description)
@@ -21,6 +23,7 @@ Table of Contents
 Description
 --------------------
 FBXからDirectXとOpenGLそれぞれで使いたいデーターを抽出し、boost::serializationでシリアライズ化している。
+
 
 Features
 --------------------
@@ -45,7 +48,7 @@ Usage
 
 Document
 --------------------
-* Document by Doxygen.
+* [Document][url_document] by [Doxygen][url_doxygen].
 
 Author
 --------------------
@@ -61,7 +64,10 @@ Copyright &copy; 2019 Kai Araki
 [url_shields_build]: https://img.shields.io/badge/build-passing-brightgreen.svg
 [url_shields_coverage]: https://img.shields.io/badge/build-passing-brightgreen.svg
 [url_shields_license]: https://img.shields.io/badge/license-MIT-blue.svg
+[url_screen]: https://coron4444.github.io/FbxConverter/resource/image.png
 [url_fbx_sdk]: https://www.autodesk.com/developer-network/platform-technologies/fbx-sdk-archives
 [url_boost]: https://www.boost.org/users/history/version_1_69_0.html
+[url_document]: https://coron4444.github.io/FbxConverter/Document/html/index.html
+[url_doxygen]: http://www.doxygen.jp/
 [url_author]: https://github.com/Coron4444
 [url_mit]: https://opensource.org/licenses/mit-license.php
