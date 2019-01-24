@@ -2,6 +2,7 @@ FBXConverter
 ====================
 
 FBXファイルから独自形式へ変換するコンバーター。
+![Build status][Mark_build]
 
 ## Description
 FBXからDirectXとOpenGLそれぞれで使いたいデーターを抽出し、boost::serializationでシリアライズ化している。
