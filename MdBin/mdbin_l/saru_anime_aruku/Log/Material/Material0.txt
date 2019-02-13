@@ -1,0 +1,24 @@
+
+[MaterialData]
+
+ƒ}ƒeƒŠƒAƒ‹”Ô† : 0
+
+Name          : phong4
+
+Ambient       : {0, 0, 0}
+
+Diffuse       : {1, 1, 1}
+
+Emissive      : {0, 0, 0}
+
+Bump          : {0, 0, 0}
+
+Transparent   : 0
+
+Specular      : {0, 0, 0}
+
+Power         : 20
+
+Reflection    : 0.5
+
+TextureName   : saru_uv_1.jpg

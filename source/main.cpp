@@ -32,7 +32,7 @@ int main(void)
 	if (!fbx_converter.Init())
 	{
 		fbx_converter.Uninit();
-		std::cout << "※初期化に失敗" << std::endl;
+		printf("※初期化に失敗\n");
 		rewind(stdin);
 		getchar();
 		return -1;
@@ -40,11 +40,11 @@ int main(void)
 	
 	// 変換
 	std::string file_path;
-	std::cout << "FBXファイルパスの入力(Drag&Dropも可)\n⇒";
+	printf("FBXファイルパスの入力(Drag&Dropも可)\n⇒");
 	std::cin >> file_path;
 	if (!fbx_converter.ConvertToMdBin(&file_path))
 	{
-		std::cout << "※FBXの変換に失敗" << std::endl;
+		printf("※FBXの変換に失敗\n");
 	}
 	
 	// 終了

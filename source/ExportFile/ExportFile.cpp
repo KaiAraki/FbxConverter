@@ -43,7 +43,7 @@ void ExportFile::setAxis(FbxAxisSystem axis)
 //****************************************
 void ExportFile::Export(std::string* file_path)
 {
-	std::cout << "\n[ExportOfMdBinFile]\n" << std::endl;
+	printf("\n[ExportOfMdBinFile]\n\n");
 
 	// ファイル名作成
 	CreateFileName(file_path);
@@ -55,7 +55,7 @@ void ExportFile::Export(std::string* file_path)
 	if (!ExportOfMdBinFile()) return;
 	ExportOfLogFile();
 
-	std::cout << "\nファイル出力完了\n" << std::endl;
+	printf("\nファイル出力完了\n\n");
 }
 
 
@@ -78,12 +78,12 @@ bool ExportFile::ExportOfMdBinFile()
 	if (ifstream)
 	{
 		ifstream.close();
-		std::cout << "\n同じファイル名『" << export_file_name << "』があります。" << std::endl;
-		std::cout << "上書きしますか？ Yes[y], No[n]" << std::endl;
+		printf("\n同じファイル名『%s』があります。\n", export_file_name.c_str());
+		printf("上書きしますか？ Yes[y], No[n]\n");
 		std::string temp;
 		do
 		{
-			std::cout << "⇒";
+			printf("⇒");
 			std::cin >> temp;
 		} while (temp != "y" && temp != "n");
 
@@ -91,7 +91,7 @@ bool ExportFile::ExportOfMdBinFile()
 	}
 
 	// 出力
-	std::cout << "\n出力中･･･\n" << std::endl;
+	printf("\n出力中･･･\n\n");
 	MdBinData::ExportData(md_bin_data_, export_path);
 	return true;
 }

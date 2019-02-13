@@ -25,7 +25,7 @@ bool FbxConverter::Init()
 	manager_ = FbxManager::Create();
 	if (!manager_)
 	{
-		std::cout << "※マネージャの作成に失敗" << std::endl;
+		printf("※マネージャの作成に失敗\n");
 		return false;
 	}
 
@@ -33,7 +33,7 @@ bool FbxConverter::Init()
 	FbxIOSettings* io_settings_ = FbxIOSettings::Create(manager_, IOSROOT);
 	if (!io_settings_)
 	{
-		std::cout << "※FbxIOSettingsの作成に失敗" << std::endl;
+		printf("※FbxIOSettingsの作成に失敗\n");
 		return false;
 	}
 	manager_->SetIOSettings(io_settings_);
@@ -48,7 +48,7 @@ bool FbxConverter::Init()
 	scene_ = FbxScene::Create(manager_, "scene");
 	if (!scene_)
 	{
-		std::cout << "※シーンの作成に失敗" << std::endl;
+		printf("※※シーンの作成に失敗\n");
 		return false;
 	}
 
@@ -62,7 +62,7 @@ void FbxConverter::Uninit()
 	// マネージャ解放(関連する全オブジェクトが解放される)
 	manager_->Destroy();
 
-	std::cout << "\n★FBXの変換終了...";
+	printf("\n★FBXの変換終了...");
 }
 
 
@@ -72,14 +72,14 @@ bool FbxConverter::ConvertToMdBin(std::string* file_path)
 	// FBXの読み込み
 	if (!Load(file_path))
 	{
-		std::cout << "※FBXの読み込み失敗" << std::endl;
+		printf("※FBXの読み込み失敗\n");
 		return false;
 	}
 
 	// FBXからデーターを抽出
 	if (!ExtractData())
 	{
-		std::cout << "※データの抽出に失敗" << std::endl;
+		printf("※データの抽出に失敗\n");
 		return false;
 	}
 
@@ -93,13 +93,13 @@ bool FbxConverter::ConvertToMdBin(std::string* file_path)
 
 bool FbxConverter::Load(std::string* file_path)
 {
-	std::cout << "\n[Load]\n" << std::endl;
+	printf("\n[Load]\n\n");
 
 	// インポータ―の作成
 	FbxImporter* importer = FbxImporter::Create(manager_, "");
 	if (!importer)
 	{
-		std::cout << "※インポータ―の作成に失敗" << std::endl;
+		printf("※インポータ―の作成に失敗\n");
 		return false;
 	}
 
@@ -108,13 +108,13 @@ bool FbxConverter::Load(std::string* file_path)
 	ConvertToFullPathOfUTF8(&temp_file_path);
 	if (!importer->Initialize(temp_file_path.c_str(), -1, manager_->GetIOSettings()))
 	{
-		std::cout << "※インポータ―の初期化に失敗" << std::endl;
+		printf("※インポータ―の初期化に失敗\n");
 		return false;
 	}
 
 	// シーンの流し込み
 	importer->Import(scene_);
-	std::cout << "★シーンを作成" << std::endl;
+	printf("★シーンを作成\n");
 
 	// フレーム情報抽出
 	ExtractFrameData(importer);
@@ -124,10 +124,10 @@ bool FbxConverter::Load(std::string* file_path)
 
 	// 座標系の変換
 	std::string temp;
-	std::cout << "\n★どちらの座標系にしますか？ DirectX[y], OpenGL[n]" << std::endl;
+	printf("\n★どちらの座標系にしますか？ DirectX[y], OpenGL[n]\n");
 	do
 	{
-		std::cout << "⇒";
+		printf("⇒");
 		std::cin >> temp;
 	} while (temp != "y" && temp != "n");
 
@@ -150,10 +150,10 @@ bool FbxConverter::Load(std::string* file_path)
 	}
 
 	// α値反転の確認
-	std::cout << "\n★α値を反転しますか？ Yes[y], No[n]" << std::endl;
+	printf("\n★α値を反転しますか？ Yes[y], No[n]\n");
 	do
 	{
-		std::cout << "⇒";
+		printf("⇒");
 		std::cin >> temp;
 	} while (temp != "y" && temp != "n");
 	is_reverse_alpha_ = temp == "y";
@@ -162,25 +162,25 @@ bool FbxConverter::Load(std::string* file_path)
 	FbxGeometryConverter geometry_converter(manager_);
 	if (geometry_converter.Triangulate(scene_, true))
 	{
-		std::cout << "\n★全ポリゴンを三角形ポリゴンへ変換" << std::endl;
+		printf("\n★全ポリゴンを三角形ポリゴンへ変換\n");
 		geometry_converter.RemoveBadPolygonsFromMeshes(scene_);
 	}
 
 	// マテリアルごとにメッシュを分割
 	if (geometry_converter.SplitMeshesPerMaterial(scene_, true))
 	{
-		std::cout << "\n★マテリアルごとにメッシュを分割" << std::endl;
+		printf("\n★マテリアルごとにメッシュを分割\n");
 	}
 
 	// ルートノードの取得
 	root_node_ = scene_->GetRootNode();
 	if (!root_node_)
 	{
-		std::cout << "\n※ルートノードの取得に失敗" << std::endl;
+		printf("\n※ルートノードの取得に失敗\n");
 		return false;
 	}
 
-	std::cout << "\n************************************************************" << std::endl;
+	printf("\n************************************************************\n");
 
 	// 出力ファイルの初期化
 	export_file_.setMdBinData(&md_bin_data_);
@@ -198,7 +198,7 @@ void FbxConverter::ExtractFrameData(FbxImporter* importer)
 	period_.SetTime(0, 0, 0, 1, 0, time_mode);
 
 	int animation_stack_count = importer->GetAnimStackCount();
-	std::cout << "\n★テイク数：" << animation_stack_count << std::endl;
+	printf("\n★テイク数：%d\n", animation_stack_count);
 
 	for (int i = 0; i < animation_stack_count; i++)
 	{
@@ -216,14 +216,14 @@ void FbxConverter::ExtractFrameData(FbxImporter* importer)
 	}
 	if (all_animation_frame_num_ > 0)
 	{
-		std::cout << "⇒アニメーション情報：有" << std::endl;
-		std::cout << "⇒START_FRAME_NUM：" << animation_start_frame_num_ << std::endl;
-		std::cout << "⇒STOP_FRAME_NUM：" << animation_stop_frame_num_ << std::endl;
-		std::cout << "⇒ALL_FRAME_NUM：" << all_animation_frame_num_ << std::endl;
+		printf("⇒アニメーション情報：有\n");
+		printf("⇒START_FRAME_NUM：%d\n", animation_start_frame_num_);
+		printf("⇒STOP_FRAME_NUM：%d\n", animation_stop_frame_num_);
+		printf("⇒ALL_FRAME_NUM：%d\n", all_animation_frame_num_);
 	}
 	else
 	{
-		std::cout << "⇒アニメーション情報：無" << std::endl;
+		printf("⇒アニメーション情報：無\n");
 	}
 }
 
