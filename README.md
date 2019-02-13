@@ -62,7 +62,7 @@ Paddington is licensed under the [MIT][url_mit] license.
 Copyright &copy; 2019 Kai Araki
 
 
-[url_shields_version]: https://img.shields.io/badge/version-v1.0-blue.svg
+[url_shields_version]: https://img.shields.io/badge/version-v1.1-blue.svg
 [url_shields_build]: https://img.shields.io/badge/build-passing-brightgreen.svg
 [url_shields_coverage]: https://img.shields.io/badge/coverage-100%25-brightgreen.svg
 [url_shields_license]: https://img.shields.io/badge/license-MIT-blue.svg
